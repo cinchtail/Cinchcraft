@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "cinchcraft:block/pineapple_plant_stage0"
+  },
+  "render_type": "cutout"
+}

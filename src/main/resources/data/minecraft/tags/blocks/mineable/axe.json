@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "cinchcraft:carved_melon",
+    "cinchcraft:apple_log",
+    "cinchcraft:apple_wood",
+    "cinchcraft:stripped_apple_log",
+    "cinchcraft:stripped_apple_wood",
+    "cinchcraft:apple_planks",
+    "cinchcraft:apple_stairs",
+    "cinchcraft:apple_slab",
+    "cinchcraft:apple_fence",
+    "cinchcraft:apple_button",
+    "cinchcraft:apple_pressure_plate",
+    "cinchcraft:apple_fence_gate"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "cinchcraft:block/mangrove_barrel_bottom",
+    "side": "cinchcraft:block/mangrove_barrel_side",
+    "top": "cinchcraft:block/mangrove_barrel_top_open"
+  }
+}

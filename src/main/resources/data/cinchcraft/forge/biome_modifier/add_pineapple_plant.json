@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_pineapple_biomes",
+  "feature": "cinchcraft:pineapple_placed"
+}

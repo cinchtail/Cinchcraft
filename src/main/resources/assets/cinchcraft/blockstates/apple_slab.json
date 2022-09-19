@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "cinchcraft:block/apple_slab"
+    },
+    "type=double": {
+      "model": "cinchcraft:block/apple_planks"
+    },
+    "type=top": {
+      "model": "cinchcraft:block/apple_slab_top"
+    }
+  }
+}

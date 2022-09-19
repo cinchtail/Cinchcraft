@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cinchcraft:ruby_ore",
+    "cinchcraft:block_of_ruby",
+    "cinchcraft:deepslate_ruby_ore",
+    "cinchcraft:nether_ruby_ore",
+    "cinchcraft:nether_diamond_ore",
+    "cinchcraft:nether_emerald_ore"
+
+  ]
+}

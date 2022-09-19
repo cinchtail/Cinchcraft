@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side_tall",
+  "textures": {
+    "wall": "cinchcraft:block/crimson_mossy_nether_bricks"
+  }
+}

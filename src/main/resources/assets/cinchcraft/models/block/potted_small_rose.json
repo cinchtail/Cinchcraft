@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "cinchcraft:block/small_rose"
+  },
+  "render_type": "cutout"
+}

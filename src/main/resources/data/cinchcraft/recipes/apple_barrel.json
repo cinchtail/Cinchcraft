@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "cinchcraft:apple_planks"
+    },
+    "S": {
+      "item": "cinchcraft:apple_slab"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "P P",
+    "PSP"
+  ],
+  "result": {
+    "item": "cinchcraft:apple_barrel"
+  }
+}

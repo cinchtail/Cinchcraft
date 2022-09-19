@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "cinchcraft:stone_wall",
+    "cinchcraft:smooth_stone_wall",
+    "cinchcraft:polished_granite_wall",
+    "cinchcraft:polished_andesite_wall",
+    "cinchcraft:polished_diorite_wall",
+    "cinchcraft:prismarine_brick_wall",
+    "cinchcraft:dark_prismarine_wall",
+    "cinchcraft:cut_sandstone_wall",
+    "cinchcraft:smooth_sandstone_wall",
+    "cinchcraft:cut_red_sandstone_wall",
+    "cinchcraft:smooth_red_sandstone_wall",
+    "cinchcraft:quartz_wall",
+    "cinchcraft:smooth_quartz_wall",
+    "cinchcraft:purpur_wall",
+    "cinchcraft:tuff_wall",
+    "cinchcraft:calcite_wall",
+    "cinchcraft:dripstone_wall",
+    "cinchcraft:quartz_brick_wall",
+    "cinchcraft:mossy_nether_brick_wall",
+    "cinchcraft:warped_mossy_nether_brick_wall",
+    "cinchcraft:crimson_mossy_nether_brick_wall"
+  ]
+}

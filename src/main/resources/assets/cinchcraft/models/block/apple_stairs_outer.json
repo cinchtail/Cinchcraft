@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "cinchcraft:block/apple_planks",
+    "top": "cinchcraft:block/apple_planks",
+    "side": "cinchcraft:block/apple_planks"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cinchcraft:blueberries"
+    },
+    {
+      "item": "cinchcraft:blueberries"
+    },
+    {
+      "item": "cinchcraft:blueberries"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "cinchcraft:blueberry_pie"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "cinchcraft:block/mossy_nether_bricks",
+    "side": "cinchcraft:block/mossy_nether_bricks",
+    "top": "cinchcraft:block/mossy_nether_bricks"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_butter_cup_biomes",
+  "feature": "cinchcraft:butter_cup_placed"
+}

@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_bubble_flower_biomes",
+  "feature": "cinchcraft:bubble_flower_placed"
+}

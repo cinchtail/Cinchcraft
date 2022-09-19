@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "cinchcraft:block/warped_mossy_nether_bricks"
+  }
+}

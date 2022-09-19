@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "cinchcraft:block/crocus_in_pot"
+  },
+  "render_type": "cutout"
+}

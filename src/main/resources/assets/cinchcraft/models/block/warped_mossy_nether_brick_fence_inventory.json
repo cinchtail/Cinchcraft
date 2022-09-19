@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "cinchcraft:block/warped_mossy_nether_bricks"
+  }
+}

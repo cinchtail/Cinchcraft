@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:gold_ingot"
+  },
+  "result": "cinchcraft:gold_button"
+}

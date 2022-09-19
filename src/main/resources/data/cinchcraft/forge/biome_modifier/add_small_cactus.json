@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_small_cactus_biomes",
+  "feature": "cinchcraft:small_cactus_placed"
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "cinchcraft:block/reeds_bottom"
+    },
+    "half=upper": {
+      "model": "cinchcraft:block/reeds_top"
+    }
+  }
+}

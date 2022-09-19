@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_crocus_biomes",
+  "feature": "cinchcraft:crocus_placed"
+}

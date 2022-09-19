@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cinchcraft:mossy_nether_bricks"
+  },
+  "result": "cinchcraft:mossy_nether_brick_wall"
+}

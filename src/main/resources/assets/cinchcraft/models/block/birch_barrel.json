@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "cinchcraft:block/birch_barrel_bottom",
+    "side": "cinchcraft:block/birch_barrel_side",
+    "top": "cinchcraft:block/birch_barrel_top"
+  }
+}

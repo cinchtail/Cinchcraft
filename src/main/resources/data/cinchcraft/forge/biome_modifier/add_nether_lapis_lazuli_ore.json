@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "cinchcraft:nether_lapis_lazuli_ore_placed",
+  "step": "underground_ores"
+}
