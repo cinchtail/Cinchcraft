@@ -254,9 +254,8 @@ public class ModBlocks {
             () -> new ReedsBlock(BlockBehaviour.Properties.copy(Blocks.LILAC).sound(SoundType.SMALL_DRIPLEAF)),
             ModCreativeModeTab.CINCHCRAFT_TAB);
 
-    public static final RegistryObject<Block> STALK = registerBlock("stalk",
-            () -> new StalkBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)),
-            ModCreativeModeTab.CINCHCRAFT_TAB);
+    public static final RegistryObject<Block> STALK = BLOCKS.register("stalk",
+            () -> new StalkBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)));
 
     public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button",
             () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)

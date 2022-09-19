@@ -4,6 +4,7 @@ import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.cinchcraft;
 import com.cinchtail.cinchcraft.item.custom.CompostItem;
 import com.cinchtail.cinchcraft.item.custom.ModArmorItem;
+import com.cinchtail.cinchcraft.item.custom.StalkItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -174,6 +175,10 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.PINEAPPLE_PLANT.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
                             .food(new FoodProperties.Builder().nutrition(6).saturationMod(0.5F).build())));
+
+    public static final RegistryObject<Item> STALK = ITEMS.register("stalk",
+            () -> new StalkItem(ModBlocks.STALK.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
