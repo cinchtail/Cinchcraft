@@ -255,7 +255,7 @@ public class ModBlocks {
             ModCreativeModeTab.CINCHCRAFT_TAB);
 
     public static final RegistryObject<Block> STALK = BLOCKS.register("stalk",
-            () -> new StalkBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)));
+            () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)));
 
     public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button",
             () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
