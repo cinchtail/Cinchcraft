@@ -40,6 +40,18 @@
   "item.cinchcraft.chainmail": "Chainmail",
   "item.cinchcraft.pineapple": "Pineapple",
   "item.cinchcraft.stalk": "Stalk",
+  "item.cinchcraft.apple_log": "Apple Log",
+  "item.cinchcraft.apple_planks": "Apple Planks",
+  "item.cinchcraft.apple_wood": "Apple Wood",
+  "item.cinchcraft.stripped_apple_log": "Stripped apple Log",
+  "item.cinchcraft.stripped_apple_wood": "Stripped apple Wood",
+  "item.cinchcraft.apple_leaves": "Apple Leaves",
+  "item.cinchcraft.apple_slab": "Apple Slab",
+  "item.cinchcraft.apple_stairs": "Apple Stairs",
+  "item.cinchcraft.apple_fence": "Apple Fence",
+  "item.cinchcraft.apple_button": "Apple Button",
+  "item.cinchcraft.apple_pressure_plate": "Apple Pressure Plate",
+  "item.cinchcraft.apple_fence_gate": "Apple Fence Gate",
 
   "block.minecraft.barrel": "Spruce Barrel",
 

@@ -272,18 +272,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> POLISHED_DEEPLSATE_PRESSURE_PLATE = registerBlock("polished_deepslate_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.POLISHED_DEEPSLATE)), ModCreativeModeTab.CINCHCRAFT_TAB);
-    public static final RegistryObject<Block> APPLE_LOG = registerBlock("apple_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
-            ModCreativeModeTab.CINCHCRAFT_TAB);
-    public static final RegistryObject<Block> APPLE_WOOD = registerBlock("apple_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)),
-            ModCreativeModeTab.CINCHCRAFT_TAB);
-    public static final RegistryObject<Block> STRIPPED_APPLE_LOG = registerBlock("stripped_apple_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)),
-            ModCreativeModeTab.CINCHCRAFT_TAB);
-    public static final RegistryObject<Block> STRIPPED_APPLE_WOOD = registerBlock("stripped_apple_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)),
-            ModCreativeModeTab.CINCHCRAFT_TAB);
+    public static final RegistryObject<Block> APPLE_LOG = BLOCKS.register("apple_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> APPLE_WOOD = BLOCKS.register("apple_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_APPLE_LOG = BLOCKS.register("stripped_apple_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_APPLE_WOOD = BLOCKS.register("stripped_apple_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<Block> APPLE_PLANKS = registerBlock("apple_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
                 @Override
@@ -310,32 +306,29 @@ public class ModBlocks {
             () -> new AppleLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
     public static final RegistryObject<Block> APPLE_SAPLING = registerBlock("apple_sapling",
-            () -> new SaplingBlock(new AppleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.CINCHCRAFT_TAB);
+            () -> new SaplingBlock(new AppleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)),ModCreativeModeTab.CINCHCRAFT_TAB);
 
-    public static final RegistryObject<Block> APPLE_STAIRS = registerBlock("apple_stairs",
+    public static final RegistryObject<Block> APPLE_STAIRS = BLOCKS.register("apple_stairs",
             () -> new StairBlock(() -> ModBlocks.APPLE_PLANKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1.5f)),
-            ModCreativeModeTab.CINCHCRAFT_TAB);
+                    BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1.5f)));
 
-    public static final RegistryObject<Block> APPLE_SLAB = registerBlock("apple_slab",
+    public static final RegistryObject<Block> APPLE_SLAB = BLOCKS.register("apple_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)
-                    .strength(1.5f)), ModCreativeModeTab.CINCHCRAFT_TAB);
-
-    public static final RegistryObject<Block> APPLE_FENCE = registerBlock("apple_fence",
+                    .strength(1.5f)));
+    public static final RegistryObject<Block> APPLE_FENCE = BLOCKS.register("apple_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(1.5f).sound(SoundType.WOOD)), ModCreativeModeTab.CINCHCRAFT_TAB);
-
-    public static final RegistryObject<Block> APPLE_FENCE_GATE = registerBlock("apple_fence_gate",
+                    .strength(1.5f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> APPLE_FENCE_GATE = BLOCKS.register("apple_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(1.5f).sound(SoundType.WOOD)), ModCreativeModeTab.CINCHCRAFT_TAB);
+                    .strength(1.5f).sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> APPLE_BUTTON = registerBlock("apple_button",
+    public static final RegistryObject<Block> APPLE_BUTTON = BLOCKS.register("apple_button",
             () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(1f).noCollission().sound(SoundType.WOOD)), ModCreativeModeTab.CINCHCRAFT_TAB);
+                    .strength(1f).noCollission().sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> APPLE_PRESSURE_PLATE = registerBlock("apple_pressure_plate",
+    public static final RegistryObject<Block> APPLE_PRESSURE_PLATE = BLOCKS.register("apple_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(1.5f).sound(SoundType.WOOD)), ModCreativeModeTab.CINCHCRAFT_TAB);
+                    .strength(1.5f).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> APPLE_WALL_SIGN = registerBlockWithoutBlockItem("apple_wall_sign",
             () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.APPLE));
     public static final RegistryObject<Block> APPLE_SIGN = registerBlockWithoutBlockItem("apple_sign",

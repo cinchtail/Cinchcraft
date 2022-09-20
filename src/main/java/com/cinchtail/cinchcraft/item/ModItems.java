@@ -2,9 +2,7 @@ package com.cinchtail.cinchcraft.item;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.cinchcraft;
-import com.cinchtail.cinchcraft.item.custom.CompostItem;
-import com.cinchtail.cinchcraft.item.custom.ModArmorItem;
-import com.cinchtail.cinchcraft.item.custom.StalkItem;
+import com.cinchtail.cinchcraft.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -170,7 +168,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> CHAINMAIL = ITEMS.register("chainmail",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
-
     public static final RegistryObject<Item> PINEAPPLE = ITEMS.register("pineapple",
             () -> new ItemNameBlockItem(ModBlocks.PINEAPPLE_PLANT.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
@@ -179,6 +176,47 @@ public class ModItems {
     public static final RegistryObject<Item> STALK = ITEMS.register("stalk",
             () -> new StalkItem(ModBlocks.STALK.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> APPLE_LOG = ITEMS.register("apple_log",
+            () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_LOG.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> APPLE_WOOD = ITEMS.register("apple_wood",
+            () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_WOOD.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> STRIPPED_APPLE_LOG = ITEMS.register("stripped_apple_log",
+            () -> new ModWoodenFullBlockItem(ModBlocks.STRIPPED_APPLE_LOG.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> STRIPPED_APPLE_WOOD = ITEMS.register("stripped_apple_wood",
+            () -> new ModWoodenFullBlockItem(ModBlocks.STRIPPED_APPLE_WOOD.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> APPLE_STAIRS = ITEMS.register("apple_stairs",
+            () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_STAIRS.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> APPLE_SLAB = ITEMS.register("apple_slab",
+            () -> new ModWoodenSlabItem(ModBlocks.APPLE_SLAB.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> APPLE_FENCE = ITEMS.register("apple_fence",
+            () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_FENCE.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> APPLE_FENCE_GATE = ITEMS.register("apple_fence_gate",
+            () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_FENCE_GATE.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> APPLE_BUTTON = ITEMS.register("apple_button",
+            () -> new ModWoodenButtonItem(ModBlocks.APPLE_BUTTON.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> APPLE_PRESSURE_PLATE = ITEMS.register("apple_pressure_plate",
+            () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_PRESSURE_PLATE.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
