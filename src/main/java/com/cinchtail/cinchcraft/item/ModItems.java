@@ -18,14 +18,17 @@ public class ModItems {
 
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
     public static final RegistryObject<Item> COMPOST = ITEMS.register("compost",
             () -> new CompostItem(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
 
     public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",
             () -> new BowlFoodItem(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB).stacksTo(1).food(ModFoods.VEGETABLE_STEW)));
+
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
             () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
@@ -158,6 +161,7 @@ public class ModItems {
     public static final RegistryObject<Item> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor",
             () -> new HorseArmorItem(6, "emerald",
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB).stacksTo(1)));
+
     public static final RegistryObject<Item> CARROT_SEEDS = ITEMS.register("carrot_seeds",
             () -> new ItemNameBlockItem(Blocks.CARROTS,
                     new Item.Properties()));
@@ -168,6 +172,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> CHAINMAIL = ITEMS.register("chainmail",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
     public static final RegistryObject<Item> PINEAPPLE = ITEMS.register("pineapple",
             () -> new ItemNameBlockItem(ModBlocks.PINEAPPLE_PLANT.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
@@ -217,6 +222,9 @@ public class ModItems {
             () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_PRESSURE_PLATE.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
+    public static final RegistryObject<Item> OAK_CHEST = ITEMS.register("oak_chest",
+            () -> new ModWoodenFullBlockItem(ModBlocks.OAK_CHEST.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

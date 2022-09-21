@@ -1,5 +1,6 @@
 {
   "variants": {
-    "": { "model": "cinchcraft:block/apple_sign" }
+    "": {
+      "model": "cinchcraft:block/apple_sign" }
   }
 }

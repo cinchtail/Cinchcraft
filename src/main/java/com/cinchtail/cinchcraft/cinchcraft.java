@@ -5,6 +5,7 @@ import com.cinchtail.cinchcraft.block.entity.ModBlockEntities;
 import com.cinchtail.cinchcraft.block.entity.ModWoodTypes;
 import com.cinchtail.cinchcraft.effect.ModEffects;
 import com.cinchtail.cinchcraft.event.MelonShearingHandler;
+import com.cinchtail.cinchcraft.event.NoCarrotPlantingHandler;
 import com.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import com.cinchtail.cinchcraft.item.ModItems;
 import com.cinchtail.cinchcraft.potion.ModPotions;
@@ -14,6 +15,7 @@ import com.cinchtail.cinchcraft.villager.ModVillagers;
 import com.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import com.cinchtail.cinchcraft.world.feature.ModConfiguredFeatures;
 import com.cinchtail.cinchcraft.world.feature.ModPlacedFeatures;
+import com.cinchtail.minecraft.item.ItemOverriding;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
@@ -48,6 +50,8 @@ public class cinchcraft
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ItemOverriding.register(modEventBus);
+
         ModSounds.register(modEventBus);
 
         ModPotions.register(modEventBus);
@@ -61,6 +65,9 @@ public class cinchcraft
         ModConfiguredFeatures.register(modEventBus);
 
         ModPlacedFeatures.register(modEventBus);
+
+        //NoCarrotPlantingHandler.register(modEventBus);
+        //MelonShearingHandler.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

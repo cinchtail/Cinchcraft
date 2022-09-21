@@ -16,6 +16,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ColorResolver;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
@@ -37,9 +38,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLOCK_OF_RUBY = registerBlock("block_of_ruby",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).strength(5f).requiresCorrectToolForDrops()),
             ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<Block> NETHER_RUBY_ORE = registerBlock("nether_ruby_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE),
                     UniformInt.of(1, 5)), ModCreativeModeTab.CINCHCRAFT_TAB);
@@ -80,6 +83,7 @@ public class ModBlocks {
             () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_WALL.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()),
             ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<Block> SMOOTH_STONE_WALL = registerBlock("smooth_stone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.CINCHCRAFT_TAB);
@@ -221,21 +225,28 @@ public class ModBlocks {
     public static final RegistryObject<Block> MOSSY_NETHER_BRICK_FENCE = registerBlock("mossy_nether_brick_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<Block> BUTTER_CUP = registerBlock("butter_cup",
             () -> new FlowerBlock(MobEffects.DARKNESS, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()),
             ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<FlowerPotBlock> POTTED_BUTTER_CUP = BLOCKS.register("potted_butter_cup",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.BUTTER_CUP, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
     public static final RegistryObject<Block> SMALL_ROSE = registerBlock("small_rose",
             () -> new FlowerBlock(MobEffects.HEALTH_BOOST, 4, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()),
             ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_ROSE = BLOCKS.register("potted_small_rose",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_ROSE, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
     public static final RegistryObject<Block> CROCUS = registerBlock("crocus",
             () -> new FlowerBlock(MobEffects.INVISIBILITY, 5, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()),
             ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<FlowerPotBlock> POTTED_CROCUS = BLOCKS.register("potted_crocus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.CROCUS, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
     public static final RegistryObject<Block> BUBBLE_FLOWER = registerBlock("bubble_flower",
             () -> new BubbleFlowerBlock(MobEffects.LEVITATION, 4, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()),
             ModCreativeModeTab.CINCHCRAFT_TAB);
@@ -272,14 +283,19 @@ public class ModBlocks {
     public static final RegistryObject<Block> POLISHED_DEEPLSATE_PRESSURE_PLATE = registerBlock("polished_deepslate_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.POLISHED_DEEPSLATE)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<Block> APPLE_LOG = BLOCKS.register("apple_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
     public static final RegistryObject<Block> APPLE_WOOD = BLOCKS.register("apple_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+
     public static final RegistryObject<Block> STRIPPED_APPLE_LOG = BLOCKS.register("stripped_apple_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+
     public static final RegistryObject<Block> STRIPPED_APPLE_WOOD = BLOCKS.register("stripped_apple_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
     public static final RegistryObject<Block> APPLE_PLANKS = registerBlock("apple_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
                 @Override
@@ -297,11 +313,14 @@ public class ModBlocks {
                     return 5;
                 }
             }, ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<Block> SMALL_CACTUS = registerBlock("small_cactus",
             () -> new SmallCactusBlock(MobEffects.DARKNESS, 0, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()),
             ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_CACTUS = BLOCKS.register("potted_small_cactus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_CACTUS, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
     public static final RegistryObject<Block> APPLE_LEAVES = registerBlock("apple_leaves",
             () -> new AppleLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
@@ -315,9 +334,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> APPLE_SLAB = BLOCKS.register("apple_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)
                     .strength(1.5f)));
+
     public static final RegistryObject<Block> APPLE_FENCE = BLOCKS.register("apple_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(1.5f).sound(SoundType.WOOD)));
+
     public static final RegistryObject<Block> APPLE_FENCE_GATE = BLOCKS.register("apple_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(1.5f).sound(SoundType.WOOD)));
@@ -329,8 +350,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> APPLE_PRESSURE_PLATE = BLOCKS.register("apple_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(1.5f).sound(SoundType.WOOD)));
+
     public static final RegistryObject<Block> APPLE_WALL_SIGN = registerBlockWithoutBlockItem("apple_wall_sign",
             () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.APPLE));
+
     public static final RegistryObject<Block> APPLE_SIGN = registerBlockWithoutBlockItem("apple_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.APPLE));
 
@@ -383,6 +406,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHISELED_RED_NETHER_BRICKS = registerBlock("chiseled_red_nether_bricks",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)),
             ModCreativeModeTab.CINCHCRAFT_TAB);
+
     public static final RegistryObject<Block> PINEAPPLE_PLANT = BLOCKS.register("pineapple_plant",
             () -> new PineapplePlantBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().sound(SoundType.CROP)));
 
@@ -422,9 +446,8 @@ public class ModBlocks {
             () -> new ModBarrelBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f).sound(SoundType.WOOD)),
             ModCreativeModeTab.CINCHCRAFT_TAB);
 
-    /*public static final RegistryObject<Block> OAK_CHEST = registerBlock("oak_chest",
-            () -> new ModChestBlock(BlockBehaviour.Properties.copy(Blocks.CHEST).strength(2.5f).sound(SoundType.WOOD)),
-    ModCreativeModeTab.CINCHCRAFT_TAB);*/
+    public static final RegistryObject<Block> OAK_CHEST = BLOCKS.register("oak_chest",
+            () -> new ChestBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD), () -> BlockEntityType.CHEST));
 
     /*public static final RegistryObject<Block> COPPER_BUTTON = registerBlock("copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON)
