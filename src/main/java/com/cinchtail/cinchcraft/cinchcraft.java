@@ -4,8 +4,8 @@ import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.block.entity.ModBlockEntities;
 import com.cinchtail.cinchcraft.block.entity.ModWoodTypes;
 import com.cinchtail.cinchcraft.effect.ModEffects;
-import com.cinchtail.cinchcraft.event.MelonShearingHandler;
-import com.cinchtail.cinchcraft.event.NoCarrotPlantingHandler;
+import com.cinchtail.cinchcraft.event.ModEvents;
+import com.cinchtail.cinchcraft.event.VillagerTrades;
 import com.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import com.cinchtail.cinchcraft.item.ModItems;
 import com.cinchtail.cinchcraft.potion.ModPotions;
@@ -66,13 +66,10 @@ public class cinchcraft
 
         ModPlacedFeatures.register(modEventBus);
 
-        //NoCarrotPlantingHandler.register(modEventBus);
-        //MelonShearingHandler.register(modEventBus);
-
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(new WanderingTraderTrades());
-        MinecraftForge.EVENT_BUS.register(new MelonShearingHandler());
+        MinecraftForge.EVENT_BUS.register(new ModEvents());
 
 
 
