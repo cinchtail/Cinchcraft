@@ -1,0 +1,73 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:netherite_pickaxe"
+    },
+    "title": "All the Picks",
+    "description": "Get every single pickaxe!",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:adventure/fall_from_world_height",
+  "criteria": {
+    "pickaxes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:wood_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:stone_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "cinchcraft:blackstone_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "cinchcraft:deepslate_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:gold_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "cinchcraft:emerald_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "cinchcraft:ruby_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:diamond_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:netherite_pickaxe"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pickaxes"
+    ]
+  ]
+}

@@ -1,6 +1,6 @@
-package com.cinchtail.minecraft.item;
+package com.cinchtail.cinchcraft.minecraft.item;
 
-import com.cinchtail.minecraft.item.custom.ReplacedCarrotItem;
+import com.cinchtail.cinchcraft.minecraft.item.custom.ReplacedCarrotItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;

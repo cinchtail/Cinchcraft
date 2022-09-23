@@ -164,7 +164,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> CARROT_SEEDS = ITEMS.register("carrot_seeds",
             () -> new ItemNameBlockItem(Blocks.CARROTS,
-                    new Item.Properties()));
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static final RegistryObject<Item> APPLE_SIGN = ITEMS.register("apple_sign",
             () -> new SignItem(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB).stacksTo(16),
@@ -224,6 +224,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> OAK_CHEST = ITEMS.register("oak_chest",
             () -> new ModWoodenFullBlockItem(ModBlocks.OAK_CHEST.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> GLOWSTONE_TORCH = ITEMS.register("glowstone_torch",
+            () -> new ModStandingAndWallBlockItem(ModBlocks.GLOWSTONE_TORCH.get(), ModBlocks.GLOWSTONE_WALL_TORCH.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static void register(IEventBus eventBus){

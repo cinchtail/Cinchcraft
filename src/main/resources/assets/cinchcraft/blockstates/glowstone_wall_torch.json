@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "cinchcraft:block/glowstone_wall_torch"
+    },
+    "facing=north": {
+      "model": "cinchcraft:block/glowstone_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "cinchcraft:block/glowstone_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "cinchcraft:block/glowstone_wall_torch",
+      "y": 180
+    }
+  }
+}

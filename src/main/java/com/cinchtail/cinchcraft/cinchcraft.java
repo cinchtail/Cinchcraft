@@ -5,9 +5,9 @@ import com.cinchtail.cinchcraft.block.entity.ModBlockEntities;
 import com.cinchtail.cinchcraft.block.entity.ModWoodTypes;
 import com.cinchtail.cinchcraft.effect.ModEffects;
 import com.cinchtail.cinchcraft.event.ModEvents;
-import com.cinchtail.cinchcraft.event.VillagerTrades;
 import com.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import com.cinchtail.cinchcraft.item.ModItems;
+import com.cinchtail.cinchcraft.minecraft.block.BlocksOverriding;
 import com.cinchtail.cinchcraft.potion.ModPotions;
 import com.cinchtail.cinchcraft.sound.ModSounds;
 import com.cinchtail.cinchcraft.util.BetterBrewingRecipe;
@@ -15,7 +15,7 @@ import com.cinchtail.cinchcraft.villager.ModVillagers;
 import com.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import com.cinchtail.cinchcraft.world.feature.ModConfiguredFeatures;
 import com.cinchtail.cinchcraft.world.feature.ModPlacedFeatures;
-import com.cinchtail.minecraft.item.ItemOverriding;
+import com.cinchtail.cinchcraft.minecraft.item.ItemOverriding;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
@@ -24,7 +24,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.WoodButtonBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
@@ -51,6 +50,7 @@ public class cinchcraft
         ModBlocks.register(modEventBus);
 
         ItemOverriding.register(modEventBus);
+        BlocksOverriding.register(modEventBus);
 
         ModSounds.register(modEventBus);
 

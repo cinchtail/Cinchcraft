@@ -53,6 +53,7 @@
   "item.cinchcraft.apple_pressure_plate": "Apple Pressure Plate",
   "item.cinchcraft.apple_fence_gate": "Apple Fence Gate",
   "item.cinchcraft.oak_chest": "Oak Chest",
+  "item.cinchcraft.glowstone_torch": "Glowstone Torch",
 
   "block.minecraft.barrel": "Spruce Barrel",
 
@@ -174,5 +175,7 @@
   "block.cinchcraft.apple_barrel": "Apple Barrel",
   "block.cinchcraft.crimson_barrel": "Crimson Barrel",
   "block.cinchcraft.warped_barrel": "Warped Barrel",
-  "block.cinchcraft.oak_chest": "Oak Chest"
+  "block.cinchcraft.oak_chest": "Oak Chest",
+  "block.cinchcraft.glowstone_torch": "Glowstone Torch",
+  "block.cinchcraft.glowstone_wall_torch": "Glowstone Wall Torch"
 }

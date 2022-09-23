@@ -54,5 +54,7 @@ public class WanderingTraderTrades {
                 , 4, 10));
         event.getRareTrades().add(new BasicItemListing(2, new ItemStack(ModItems.PINEAPPLE.get(), 1)
                 , 5, 3));
+        event.getGenericTrades().add(new BasicItemListing(2, new ItemStack(ModBlocks.APPLE_SAPLING.get(), 1)
+                , 5, 3));
     }
 }

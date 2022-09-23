@@ -1,4 +1,4 @@
-package com.cinchtail.minecraft.item.custom;
+package com.cinchtail.cinchcraft.minecraft.item.custom;
 
 import net.minecraft.world.item.Item;
 

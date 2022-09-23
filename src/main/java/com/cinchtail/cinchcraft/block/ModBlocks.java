@@ -8,6 +8,7 @@ import com.cinchtail.cinchcraft.item.ModItems;
 import com.cinchtail.cinchcraft.world.feature.tree.AppleTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -19,6 +20,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
@@ -30,6 +32,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -509,6 +512,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> OAK_CHEST = BLOCKS.register("oak_chest",
             () -> new ModChestBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD), () -> BlockEntityType.CHEST));
 
+    public static final RegistryObject<Block> GLOWSTONE_TORCH = BLOCKS.register("glowstone_torch",
+            () -> new TorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
+                    .noOcclusion().sound(SoundType.WOOD).instabreak().lightLevel((blockState) -> 14).sound(SoundType.WOOD), ParticleTypes.ASH));
+
+    public static final RegistryObject<Block> GLOWSTONE_WALL_TORCH = BLOCKS.register("glowstone_wall_torch",
+            () -> new WallTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
+                    .noOcclusion().sound(SoundType.WOOD).instabreak().lightLevel((blockState) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
+
     /*public static final RegistryObject<Block> COPPER_BUTTON = registerBlock("copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON)
                     .strength(1f).noCollission().sound(SoundType.METAL)), ModCreativeModeTab.CINCHCRAFT_TAB);
@@ -575,5 +586,10 @@ public class ModBlocks {
         static void registerBlockColor(RegisterColorHandlersEvent.Block event) {
             event.register(((state, btGetter, pos, tintIndex) -> btGetter == null || pos == null ? 0 : btGetter.getBlockTint(pos, COLOR_RESOLVER)), APPLE_LEAVES.get());
         }
+    }
+    private static ToIntFunction<BlockState> litBlockEmission(int i) {
+        return (blockState) -> {
+            return blockState.getValue(BlockStateProperties.LIT) ? i : 0;
+        };
     }
 }
