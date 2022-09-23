@@ -10,13 +10,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ItemOverriding {
-    public static final DeferredRegister<Item> OVERRIDEN_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
             "minecraft");
 
-    public static final RegistryObject<Item> CARROT = OVERRIDEN_ITEMS.register("carrot",
+    public static final RegistryObject<Item> CARROT = ITEMS.register("carrot",
             () -> new ReplacedCarrotItem(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)
                     .food(new FoodProperties.Builder().nutrition(3).saturationMod(.6f).build())));
 
     public static void register(IEventBus modEventBus) {
+        ITEMS.register(modEventBus);
     }
 }
