@@ -19,7 +19,7 @@
                   "block": "minecraft:carrots",
                   "condition": "minecraft:block_state_property",
                   "properties": {
-                    "age": "3"
+                    "age": "7"
                   }
                 }
               ],
@@ -32,7 +32,7 @@
           ]
         }
       ],
-      "rolls": 1.0
+      "rolls": 2.0
     },
     {
       "bonus_rolls": 0.0,
@@ -41,7 +41,7 @@
           "block": "minecraft:carrots",
           "condition": "minecraft:block_state_property",
           "properties": {
-            "age": "4"
+            "age": "7"
           }
         }
       ],
