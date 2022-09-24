@@ -91,14 +91,14 @@ public class ModConfiguredFeatures {
             () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SMALL_CACTUS.get()))))));
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> APPLE_TREE = CONFIGURED_FEATURE.register("apple_tree", () -> new ConfiguredFeature<>(
-                    Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> APPLE_TREE =
+            FeatureUtils.register("apple", Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                     BlockStateProvider.simple(ModBlocks.APPLE_LOG.get()),
                     new StraightTrunkPlacer(2, 2, 3),
                     BlockStateProvider.simple(ModBlocks.APPLE_LEAVES.get()),
                     new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                     new TwoLayersFeatureSize(1, 0, 2))
-                    .dirt(BlockStateProvider.simple(Blocks.DIRT)).build()));
+                    .dirt(BlockStateProvider.simple(Blocks.DIRT)).build());
 
     public static final Holder<PlacedFeature> APPLE_CHECKED = PlacementUtils.register("apple_checked", APPLE_TREE,
             PlacementUtils.filteredByBlockSurvival(ModBlocks.APPLE_SAPLING.get()));
@@ -111,10 +111,6 @@ public class ModConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?, ?>> PINEAPPLE_PLANT = CONFIGURED_FEATURE.register("pineapple_plant",
             () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(15, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PINEAPPLE_PLANT.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
-
-
-
-
 
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURE.register(eventBus);

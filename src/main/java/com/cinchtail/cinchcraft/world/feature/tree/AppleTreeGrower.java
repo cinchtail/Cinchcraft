@@ -12,6 +12,6 @@ public class AppleTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
-        return ModConfiguredFeatures.APPLE_TREE.getHolder().get();
+        return ModConfiguredFeatures.APPLE_TREE;
     }
 }
