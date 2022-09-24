@@ -3,6 +3,7 @@ package com.cinchtail.cinchcraft.item;
 import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.cinchcraft;
 import com.cinchtail.cinchcraft.item.custom.*;
+import com.cinchtail.cinchcraft.minecraft.block.BlocksOverriding;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -163,7 +164,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB).stacksTo(1)));
 
     public static final RegistryObject<Item> CARROT_SEEDS = ITEMS.register("carrot_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),
+            () -> new CarrotSeedItem(BlocksOverriding.CARROTS.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static final RegistryObject<Item> APPLE_SIGN = ITEMS.register("apple_sign",
