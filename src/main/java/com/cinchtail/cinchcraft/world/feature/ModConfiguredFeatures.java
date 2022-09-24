@@ -4,6 +4,7 @@ import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.block.custom.BlueBerryBushBlock;
 import com.cinchtail.cinchcraft.cinchcraft;
 import com.google.common.base.Suppliers;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
@@ -12,6 +13,7 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
@@ -19,6 +21,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.BushFoliagePlac
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -96,6 +99,14 @@ public class ModConfiguredFeatures {
                     new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                     new TwoLayersFeatureSize(1, 0, 2))
                     .dirt(BlockStateProvider.simple(Blocks.DIRT)).build()));
+
+    public static final Holder<PlacedFeature> APPLE_CHECKED = PlacementUtils.register("apple_checked", APPLE_TREE,
+            PlacementUtils.filteredByBlockSurvival(ModBlocks.APPLE_SAPLING.get()));
+
+    public static final Holder<ConfiguredFeature<RandomFeatureConfiguration, ?>> APPLE_SPAWN =
+            FeatureUtils.register("apple_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(APPLE_CHECKED,
+                            0.5F)), APPLE_CHECKED));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> PINEAPPLE_PLANT = CONFIGURED_FEATURE.register("pineapple_plant",
             () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(15, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,

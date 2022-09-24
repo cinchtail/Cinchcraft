@@ -80,6 +80,11 @@ public class ModPlacedFeatures {
                     List.of(RarityFilter.onAverageOnceEvery(42),
                             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 
+    public static final RegistryObject<PlacedFeature> APPLE_PLACED = PLACED_FEATURES.register("apple_placed",
+            () -> new PlacedFeature((ModConfiguredFeatures.APPLE_SPAWN.getHolder().get()),
+                    List.of(RarityFilter.onAverageOnceEvery(42),
+                            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+
     public static final RegistryObject<PlacedFeature> PINEAPPLE_PLACED = PLACED_FEATURES.register("pineapple_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.PINEAPPLE_PLANT.getHolder().get(),
                     List.of(RarityFilter.onAverageOnceEvery(16),
