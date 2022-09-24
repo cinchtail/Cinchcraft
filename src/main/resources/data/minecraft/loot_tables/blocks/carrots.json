@@ -16,7 +16,7 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "block": "cinchcraft:carrot_seed",
+                  "block": "minecraft:carrots",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "age": "3"
@@ -38,10 +38,10 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "minecraft:carrot",
+          "block": "minecraft:carrots",
           "condition": "minecraft:block_state_property",
           "properties": {
-            "age": "7"
+            "age": "4"
           }
         }
       ],
