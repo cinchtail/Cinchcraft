@@ -29,9 +29,9 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 
-    public AppleLeavesBlock(Properties p_54422_) {
-        super(p_54422_);
-        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
+    public AppleLeavesBlock(Properties properties) {
+        super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0).setValue(DISTANCE, 7).setValue(PERSISTENT, Boolean.FALSE).setValue(WATERLOGGED, Boolean.FALSE));
     }
 
     public boolean isRandomlyTicking(BlockState p_57284_) {
