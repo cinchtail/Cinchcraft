@@ -572,7 +572,7 @@ public class ModBlocks {
         BLOCKS.register(eventBus);
     }
 
-    @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+   /* @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     private static class ClientHandler {
 
         private static final ColorResolver COLOR_RESOLVER = (biome, x, z) -> biome.getFoliageColor();
@@ -586,7 +586,7 @@ public class ModBlocks {
         static void registerBlockColor(RegisterColorHandlersEvent.Block event) {
             event.register(((state, btGetter, pos, tintIndex) -> btGetter == null || pos == null ? 0 : btGetter.getBlockTint(pos, COLOR_RESOLVER)), APPLE_LEAVES.get());
         }
-    }
+    }*/
     private static ToIntFunction<BlockState> litBlockEmission(int i) {
         return (blockState) -> {
             return blockState.getValue(BlockStateProperties.LIT) ? i : 0;

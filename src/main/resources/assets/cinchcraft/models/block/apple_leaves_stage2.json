@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "all": "cinchcraft:block/apple_leaves"
+    "all": "cinchcraft:block/apple_leaves_stage2"
   },
   "render_type": "translucent"
 }

@@ -53,11 +53,11 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
         boolean flag = i == 3;
         if (!flag && player.getItemInHand(interactionHand).is(ModItems.COMPOST.get()) || player.getItemInHand(interactionHand).is(Items.BONE_MEAL)) {
             return InteractionResult.PASS;
-        } else if (i > 1) {
-            int j = 1 + level.random.nextInt(2);
+        } else if (i > 2) {
+            int j = 2 + level.random.nextInt(2);
             popResource(level, pos, new ItemStack(Items.APPLE, j + (flag ? 1 : 0)));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
-            BlockState blockstate = blockState.setValue(AGE, 1);
+            BlockState blockstate = blockState.setValue(AGE, 0);
             level.setBlock(pos, blockstate, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));
             return InteractionResult.sidedSuccess(level.isClientSide);
@@ -66,8 +66,8 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
         }
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
-        blockBlockStateBuilder.add(AGE);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
+        state.add(AGE, PERSISTENT, WATERLOGGED, DISTANCE);
     }
 
     public boolean isValidBonemealTarget(BlockGetter blockGetter, BlockPos pos, BlockState blockState, boolean b) {
