@@ -1,8 +1,10 @@
 package com.cinchtail.cinchcraft.world.feature;
 
+import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.cinchcraft;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -81,6 +83,15 @@ public class ModPlacedFeatures {
             () -> new PlacedFeature(ModConfiguredFeatures.PINEAPPLE_PLANT.getHolder().get(),
                     List.of(RarityFilter.onAverageOnceEvery(16),
                             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+
+    public static final RegistryObject<PlacedFeature> APPLE_TREE_CHECKED = PLACED_FEATURES.register("apple_tree_checked",
+            () -> new PlacedFeature(ModConfiguredFeatures.APPLE_TREE.getHolder().get(),
+                    List.of(PlacementUtils.filteredByBlockSurvival(ModBlocks.APPLE_SAPLING.get()))));
+
+    public static final RegistryObject<PlacedFeature> APPLE_TREE_PLACED = PLACED_FEATURES.register("apple_tree_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.APPLE_TREE_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(
+                    RarityFilter.onAverageOnceEvery(46))));
+
 
 
     public static List<PlacementModifier> orePlacement(PlacementModifier placementModifier, PlacementModifier placementModifier1) {

@@ -27,21 +27,21 @@ public class GlowStoneTorchBlock extends TorchBlock implements SimpleWaterlogged
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
     }
     @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext p_51454_) {
-        FluidState fluidstate = p_51454_.getLevel().getFluidState(p_51454_.getClickedPos());
+    public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
+        FluidState fluidstate = placeContext.getLevel().getFluidState(placeContext.getClickedPos());
         boolean flag = fluidstate.getType() == Fluids.WATER;
-        return Objects.requireNonNull(super.getStateForPlacement(p_51454_)).setValue(WATERLOGGED, flag);
+        return Objects.requireNonNull(super.getStateForPlacement(placeContext)).setValue(WATERLOGGED, flag);
     }
 
-    public BlockState updateShape(BlockState p_51461_, Direction p_51462_, BlockState p_51463_, LevelAccessor p_51464_, BlockPos p_51465_, BlockPos p_51466_) {
-        if (p_51461_.getValue(WATERLOGGED)) {
-            p_51464_.scheduleTick(p_51465_, Fluids.WATER, Fluids.WATER.getTickDelay(p_51464_));
+    public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState1, LevelAccessor levelAccessor, BlockPos pos, BlockPos pos1) {
+        if (blockState.getValue(WATERLOGGED)) {
+            levelAccessor.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
         }
 
-        return super.updateShape(p_51461_, p_51462_, p_51463_, p_51464_, p_51465_, p_51466_);
+        return super.updateShape(blockState, direction, blockState1, levelAccessor, pos, pos1);
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_51468_) {
-        p_51468_.add(WATERLOGGED);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
+        blockBlockStateBuilder.add(WATERLOGGED);
     }
 }
