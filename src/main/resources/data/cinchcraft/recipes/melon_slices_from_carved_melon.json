@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "copper_ingot",
+  "ingredients": [
+    {
+      "item": "cinchcraft:carved_melon"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "item": "minecraft:melon_slice"
+  }
+}
