@@ -22,10 +22,6 @@ public class ItemOverriding {
             () -> new ReplacedCarrotItem(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)
                     .food(new FoodProperties.Builder().nutrition(3).saturationMod(.6f).build())));
 
-    public static final RegistryObject<Item> STONECUTTER = ITEMS.register("stonecutter",
-            () -> new ItemNameBlockItem(Blocks.STONECUTTER,
-                    new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
-
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
     }
