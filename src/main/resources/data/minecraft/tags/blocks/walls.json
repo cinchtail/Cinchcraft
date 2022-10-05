@@ -21,6 +21,9 @@
     "cinchcraft:quartz_brick_wall",
     "cinchcraft:mossy_nether_brick_wall",
     "cinchcraft:warped_mossy_nether_brick_wall",
-    "cinchcraft:crimson_mossy_nether_brick_wall"
+    "cinchcraft:crimson_mossy_nether_brick_wall",
+    "cinchcraft:polished_tuff_wall",
+    "cinchcraft:polished_calcite_wall",
+    "cinchcraft:polished_dripstone_wall"
   ]
 }

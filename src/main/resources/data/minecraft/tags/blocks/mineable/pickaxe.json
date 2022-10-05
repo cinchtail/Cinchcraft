@@ -62,6 +62,18 @@
     "cinchcraft:crimson_mossy_nether_brick_wall",
     "cinchcraft:crimson_mossy_nether_brick_slab",
     "cinchcraft:crimson_mossy_nether_brick_stairs",
-    "cinchcraft:crimson_mossy_nether_brick_fence"
+    "cinchcraft:crimson_mossy_nether_brick_fence",
+    "cinchcraft:polished_tuff",
+    "cinchcraft:polished_tuff_wall",
+    "cinchcraft:polished_tuff_slab",
+    "cinchcraft:polished_tuff_stairs",
+    "cinchcraft:polished_calcite",
+    "cinchcraft:polished_calcite_wall",
+    "cinchcraft:polished_calcite_slab",
+    "cinchcraft:polished_calcite_stairs",
+    "cinchcraft:polished_dripstone",
+    "cinchcraft:polished_dripstone_wall",
+    "cinchcraft:polished_dripstone_slab",
+    "cinchcraft:polished_dripstone_stairs"
   ]
 }

@@ -509,12 +509,29 @@ public class ModBlocks {
             () -> new ModChestBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD), () -> BlockEntityType.CHEST));
 
     public static final RegistryObject<Block> GLOWSTONE_TORCH = BLOCKS.register("glowstone_torch",
-            () -> new GlowStoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
+            () -> new TorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
                     .noOcclusion().sound(SoundType.WOOD).instabreak().lightLevel((blockState) -> 14).sound(SoundType.WOOD), ParticleTypes.ASH));
 
     public static final RegistryObject<Block> GLOWSTONE_WALL_TORCH = BLOCKS.register("glowstone_wall_torch",
-            () -> new GlowStoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
+            () -> new WallTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
                     .noOcclusion().sound(SoundType.WOOD).instabreak().lightLevel((blockState) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
+
+    public static final RegistryObject<Block> POLISHED_TUFF = registerBlock("polished_tuff",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.TUFF).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_TUFF_STAIRS = registerBlock("polished_tuff_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_TUFF_SLAB = registerBlock("polished_tuff_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_TUFF_WALL = registerBlock("polished_tuff_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
     /*public static final RegistryObject<Block> COPPER_BUTTON = BLOCKS.register("copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of(Material.METAL,

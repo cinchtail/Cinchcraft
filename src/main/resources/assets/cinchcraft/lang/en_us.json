@@ -178,5 +178,17 @@
   "block.cinchcraft.warped_barrel": "Warped Barrel",
   "block.cinchcraft.oak_chest": "Oak Chest",
   "block.cinchcraft.glowstone_torch": "Glowstone Torch",
-  "block.cinchcraft.glowstone_wall_torch": "Glowstone Wall Torch"
+  "block.cinchcraft.glowstone_wall_torch": "Glowstone Wall Torch",
+  "block.cinchcraft.polished_tuff": "Polished Tuff",
+  "block.cinchcraft.polished_tuff_wall": "Polished Tuff Wall",
+  "block.cinchcraft.polished_tuff_slab": "Polished Tuff Slab",
+  "block.cinchcraft.polished_tuff_stairs": "Polished Tuff Stairs",
+  "block.cinchcraft.polished_calcite": "Polished Calcite",
+  "block.cinchcraft.polished_calcite_wall": "Polished Calcite Wall",
+  "block.cinchcraft.polished_calcite_slab": "Polished Calcite Slab",
+  "block.cinchcraft.polished_calcite_stairs": "Polished Calcite Stairs",
+  "block.cinchcraft.polished_dripstone": "Polished Dripstone",
+  "block.cinchcraft.polished_dripstone_wall": "Polished Dripstone Wall",
+  "block.cinchcraft.polished_dripstone_slab": "Polished Dripstone Slab",
+  "block.cinchcraft.polished_dripstone_stairs": "Polished Dripstone Stairs"
 }
