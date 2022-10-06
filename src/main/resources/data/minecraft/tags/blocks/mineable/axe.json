@@ -12,6 +12,16 @@
     "cinchcraft:apple_fence",
     "cinchcraft:apple_button",
     "cinchcraft:apple_pressure_plate",
-    "cinchcraft:apple_fence_gate"
+    "cinchcraft:apple_fence_gate",
+    "cinchcraft:apple_barrel",
+    "cinchcraft:birch_barrel",
+    "cinchcraft:oak_barrel",
+    "cinchcraft:dark_oak_barrel",
+    "cinchcraft:jungle_barrel",
+    "cinchcraft:mangrove_barrel",
+    "cinchcraft:crimson_barrel",
+    "cinchcraft:warped_barrel",
+    "cinchcraft:acacia_barrel"
+
   ]
 }
