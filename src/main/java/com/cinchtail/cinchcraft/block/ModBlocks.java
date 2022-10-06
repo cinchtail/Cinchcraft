@@ -533,6 +533,41 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
+    public static final RegistryObject<Block> POLISHED_CALCITE = registerBlock("polished_calcite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1f).sound(SoundType.TUFF).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_CALCITE_STAIRS = registerBlock("polished_calcite_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_CALCITE_SLAB = registerBlock("polished_calcite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_CALCITE_WALL = registerBlock("polished_calcite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_DRIPSTONE_BLOCK = registerBlock("polished_dripstone_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.TUFF).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_DRIPSTONE_STAIRS = registerBlock("polished_dripstone_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_DRIPSTONE_SLAB = registerBlock("polished_dripstone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> POLISHED_DRIPSTONE_WALL = registerBlock("polished_dripstone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
+
     /*public static final RegistryObject<Block> COPPER_BUTTON = BLOCKS.register("copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of(Material.METAL,
                     MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(1f).sound(SoundType.COPPER)));
