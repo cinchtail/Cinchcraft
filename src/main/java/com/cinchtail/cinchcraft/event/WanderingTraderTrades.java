@@ -56,5 +56,7 @@ public class WanderingTraderTrades {
                 , 5, 3));
         event.getGenericTrades().add(new BasicItemListing(5, new ItemStack(ModBlocks.APPLE_SAPLING.get(), 1)
                 , 8, 3));
+        event.getGenericTrades().add(new BasicItemListing(2, new ItemStack(ModBlocks.SMALL_CACTUS.get(), 1)
+                , 8, 3));
     }
 }

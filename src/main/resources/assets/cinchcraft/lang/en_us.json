@@ -59,6 +59,7 @@
   "block.minecraft.barrel": "Spruce Barrel",
 
   "item.minecraft.beetroot_soup": "Beetroot Stew",
+  "item.minecraft.sunflower": "Sunflower Head",
 
   "itemGroup.cinchcraft": "Cinchcraft",
 
@@ -190,5 +191,6 @@
   "block.cinchcraft.polished_dripstone_block": "Polished Dripstone Block",
   "block.cinchcraft.polished_dripstone_wall": "Polished Dripstone Wall",
   "block.cinchcraft.polished_dripstone_slab": "Polished Dripstone Slab",
-  "block.cinchcraft.polished_dripstone_stairs": "Polished Dripstone Stairs"
+  "block.cinchcraft.polished_dripstone_stairs": "Polished Dripstone Stairs",
+  "block.cinchcraft.chiseled_mud_bricks": "Chiseled Mud Bricks"
 }

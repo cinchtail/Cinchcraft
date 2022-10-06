@@ -74,6 +74,9 @@
     "cinchcraft:polished_dripstone_block",
     "cinchcraft:polished_dripstone_wall",
     "cinchcraft:polished_dripstone_slab",
-    "cinchcraft:polished_dripstone_stairs"
+    "cinchcraft:polished_dripstone_stairs",
+    "cinchcraft:chiseled_red_nether_bricks",
+    "cinchcraft:chiseled_mud_bricks",
+    "cinchcraft:cracked_red_nether_bricks"
   ]
 }
