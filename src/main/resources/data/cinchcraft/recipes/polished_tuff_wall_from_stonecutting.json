@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cinchcraft:polished_tuff"
+  },
+  "result": "cinchcraft:polished_tuff_wall"
+}
