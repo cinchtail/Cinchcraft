@@ -296,22 +296,7 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> APPLE_PLANKS = registerBlock("apple_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 20;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 5;
-                }
-            }, ModCreativeModeTab.CINCHCRAFT_TAB);
+            () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
     public static final RegistryObject<Block> SMALL_CACTUS = registerBlock("small_cactus",
             () -> new SmallCactusBlock(MobEffects.DARKNESS, 0, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()),
@@ -330,80 +315,20 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_CACTUS, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
 
     public static final RegistryObject<Block> APPLE_STAIRS = BLOCKS.register("apple_stairs",
-            () -> new StairBlock(() -> ModBlocks.APPLE_PLANKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1.5f)) {
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 20;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 5;
-                }
-            });
+            () -> new ModFlammableStairBlock(() -> ModBlocks.APPLE_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1.5f)));
 
     public static final RegistryObject<Block> APPLE_SLAB = BLOCKS.register("apple_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)
-                    .strength(1.5f)) {
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 20;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 5;
-                }
-            });
+            () -> new ModFlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)
+                    .strength(1.5f)));
 
     public static final RegistryObject<Block> APPLE_FENCE = BLOCKS.register("apple_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(1.5f).sound(SoundType.WOOD)){
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 20;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 5;
-                }
-            });
+            () -> new ModFlammableFenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(1.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> APPLE_FENCE_GATE = BLOCKS.register("apple_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(1.5f).sound(SoundType.WOOD)){
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 20;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 5;
-                }
-            });
+            () -> new ModFlammableFenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(1.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> APPLE_BUTTON = BLOCKS.register("apple_button",
             () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.WOOD)
