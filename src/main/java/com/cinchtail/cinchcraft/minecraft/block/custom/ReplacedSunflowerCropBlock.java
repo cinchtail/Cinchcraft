@@ -172,6 +172,6 @@ public class ReplacedSunflowerCropBlock extends DoublePlantBlock implements Bone
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
-        blockBlockStateBuilder.add(AGE);
+        blockBlockStateBuilder.add(AGE).add(HALF);
     }
 }
