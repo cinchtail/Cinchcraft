@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "cinchcraft:block/mossy_cobbled_deepslate",
+    "side": "cinchcraft:block/mossy_cobbled_deepslate",
+    "top": "cinchcraft:block/mossy_cobbled_deepslate"
+  }
+}

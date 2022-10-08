@@ -571,6 +571,23 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()),
             ModCreativeModeTab.CINCHCRAFT_TAB);
 
+    public static final RegistryObject<Block> MOSSY_COBBLED_DEEPSLATE = registerBlock("mossy_cobbled_deepslate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> MOSSY_COBBLED_DEEPSLATE_STAIRS = registerBlock("mossy_cobbled_deepslate_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> MOSSY_COBBLED_DEEPSLATE_SLAB = registerBlock("mossy_cobbled_deepslate_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> MOSSY_COBBLED_DEEPSLATE_WALL = registerBlock("mossy_cobbled_deepslate_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
 
     /*public static final RegistryObject<Block> COPPER_BUTTON = BLOCKS.register("copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of(Material.METAL,

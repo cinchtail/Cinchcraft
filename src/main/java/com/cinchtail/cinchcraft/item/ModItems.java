@@ -232,7 +232,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static final RegistryObject<Item> SUNFLOWER_SEEDS = ITEMS.register("sunflower_seeds",
-            () -> new ItemNameBlockItem(Blocks.SUNFLOWER,
+            () -> new ItemNameBlockItem(BlocksOverriding.SUNFLOWER.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
                             .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
 

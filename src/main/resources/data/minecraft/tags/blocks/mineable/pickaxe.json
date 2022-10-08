@@ -77,6 +77,10 @@
     "cinchcraft:polished_dripstone_stairs",
     "cinchcraft:chiseled_red_nether_bricks",
     "cinchcraft:chiseled_mud_bricks",
-    "cinchcraft:cracked_red_nether_bricks"
+    "cinchcraft:cracked_red_nether_bricks",
+    "cinchcraft:mossy_cobbled_deepslate",
+    "cinchcraft:mossy_cobbled_deepslate_wall",
+    "cinchcraft:mossy_cobbled_deepslate_slab",
+    "cinchcraft:mossy_cobbled_deepslate_stairs"
   ]
 }

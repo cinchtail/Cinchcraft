@@ -192,5 +192,9 @@
   "block.cinchcraft.polished_dripstone_wall": "Polished Dripstone Wall",
   "block.cinchcraft.polished_dripstone_slab": "Polished Dripstone Slab",
   "block.cinchcraft.polished_dripstone_stairs": "Polished Dripstone Stairs",
-  "block.cinchcraft.chiseled_mud_bricks": "Chiseled Mud Bricks"
+  "block.cinchcraft.chiseled_mud_bricks": "Chiseled Mud Bricks",
+  "block.cinchcraft.mossy_cobbled_deepslate": "Mossy Cobbled Deepslate",
+  "block.cinchcraft.mossy_cobbled_deepslate_wall": "Mossy Cobbled Deepslate Wall",
+  "block.cinchcraft.mossy_cobbled_deepslate_slab": "Mossy Cobbled Deepslate Slab",
+  "block.cinchcraft.mossy_cobbled_deepslate_stairs": "Mossy Cobbled Deepslate Stairs"
 }

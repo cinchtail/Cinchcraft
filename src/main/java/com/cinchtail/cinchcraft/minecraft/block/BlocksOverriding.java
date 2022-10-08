@@ -29,9 +29,9 @@ public class BlocksOverriding {
             () -> new ReplacedMelonBlock(BlockBehaviour.Properties.of(Material.VEGETABLE,
                     MaterialColor.COLOR_LIGHT_GREEN).strength(1.0F).sound(SoundType.WOOD)));
 
-    /*public static final RegistryObject<Block> SUNFLOWER = BLOCKS.register("sunflower",
-            () -> new ReplacedSunflowerCropBlock(BlockBehaviour.Properties.of(Material.PLANT)
-                    .noCollission().instabreak().sound(SoundType.CROP).offsetType(BlockBehaviour.OffsetType.XZ)));*/
+    public static final RegistryObject<Block> SUNFLOWER = BLOCKS.register("sunflower",
+            () -> new DoublePlantBlock(BlockBehaviour.Properties.of(Material.PLANT)
+                    .noCollission().instabreak().sound(SoundType.CROP).offsetType(BlockBehaviour.OffsetType.XZ)));
 
     public static void register(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);
