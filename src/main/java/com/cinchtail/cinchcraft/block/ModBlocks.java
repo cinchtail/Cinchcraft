@@ -326,6 +326,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> APPLE_SAPLING = registerBlock("apple_sapling",
             () -> new SaplingBlock(new AppleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)),ModCreativeModeTab.CINCHCRAFT_TAB);
 
+    public static final RegistryObject<FlowerPotBlock> POTTED_APPLE_SAPLING = BLOCKS.register("potted_apple_sapling",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_CACTUS, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
+
     public static final RegistryObject<Block> APPLE_STAIRS = BLOCKS.register("apple_stairs",
             () -> new StairBlock(() -> ModBlocks.APPLE_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1.5f)) {
@@ -585,6 +588,23 @@ public class ModBlocks {
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
     public static final RegistryObject<Block> MOSSY_COBBLED_DEEPSLATE_WALL = registerBlock("mossy_cobbled_deepslate_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICKS = registerBlock("mossy_deepslate_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICK_STAIRS = registerBlock("mossy_deepslate_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)),
+            ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> MOSSY_MOSSY_DEEPSLATE_BRICK_SLAB = registerBlock("mossy_deepslate_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)), ModCreativeModeTab.CINCHCRAFT_TAB);
+
+    public static final RegistryObject<Block> MOSSY_MOSSY_DEEPSLATE_BRICK_WALL = registerBlock("mossy_deepslate_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)), ModCreativeModeTab.CINCHCRAFT_TAB);
 

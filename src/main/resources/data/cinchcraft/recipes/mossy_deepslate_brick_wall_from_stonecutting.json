@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "cinchcraft:mossy_deepslate_bricks"
+  },
+  "result": "cinchcraft:mossy_deepslate_brick_wall"
+}

@@ -2,6 +2,7 @@ package com.cinchtail.cinchcraft.minecraft.item;
 
 import com.cinchtail.cinchcraft.item.ModCreativeModeTab;
 import com.cinchtail.cinchcraft.minecraft.item.custom.ReplacedCarrotItem;
+import com.cinchtail.cinchcraft.minecraft.item.custom.ReplacedItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -20,7 +21,7 @@ public class ItemOverriding {
                     .food(new FoodProperties.Builder().nutrition(3).saturationMod(.6f).build())));
 
     public static final RegistryObject<Item> SUNFLOWER = ITEMS.register("sunflower",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB).craftRemainder(Items.YELLOW_DYE)));
+            () -> new ReplacedItem(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB).craftRemainder(Items.YELLOW_DYE)));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

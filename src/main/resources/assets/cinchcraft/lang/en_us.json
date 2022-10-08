@@ -196,5 +196,10 @@
   "block.cinchcraft.mossy_cobbled_deepslate": "Mossy Cobbled Deepslate",
   "block.cinchcraft.mossy_cobbled_deepslate_wall": "Mossy Cobbled Deepslate Wall",
   "block.cinchcraft.mossy_cobbled_deepslate_slab": "Mossy Cobbled Deepslate Slab",
-  "block.cinchcraft.mossy_cobbled_deepslate_stairs": "Mossy Cobbled Deepslate Stairs"
+  "block.cinchcraft.mossy_cobbled_deepslate_stairs": "Mossy Cobbled Deepslate Stairs",
+  "block.cinchcraft.mossy_deepslate_bricks": "Mossy Deepslate Bricks",
+  "block.cinchcraft.mossy_deepslate_brick_wall": "Mossy Deepslate Brick Wall",
+  "block.cinchcraft.mossy_deepslate_brick_slab": "Mossy Deepslate Brick Slab",
+  "block.cinchcraft.mossy_deepslate_brick_stairs": "Mossy Deepslate Brick Stairs",
+  "Block.cinchcraft.potted_apple_sapling": "Potted Apple Sapling"
 }

@@ -81,6 +81,10 @@
     "cinchcraft:mossy_cobbled_deepslate",
     "cinchcraft:mossy_cobbled_deepslate_wall",
     "cinchcraft:mossy_cobbled_deepslate_slab",
-    "cinchcraft:mossy_cobbled_deepslate_stairs"
+    "cinchcraft:mossy_cobbled_deepslate_stairs",
+    "cinchcraft:mossy_deepslate_bricks",
+    "cinchcraft:mossy_deepslate_brick_wall",
+    "cinchcraft:mossy_deepslate_brick_slab",
+    "cinchcraft:mossy_deepslate_brick_stairs"
   ]
 }
