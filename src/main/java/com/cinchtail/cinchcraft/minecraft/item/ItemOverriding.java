@@ -17,7 +17,7 @@ public class ItemOverriding {
             "minecraft");
 
     public static final RegistryObject<Item> CARROT = ITEMS.register("carrot",
-            () -> new ReplacedCarrotItem(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)
+            () -> new ReplacedItem(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)
                     .food(new FoodProperties.Builder().nutrition(3).saturationMod(.6f).build())));
 
     public static final RegistryObject<Item> SUNFLOWER = ITEMS.register("sunflower",
