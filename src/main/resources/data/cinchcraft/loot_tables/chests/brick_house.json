@@ -54,7 +54,17 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:sweet_berries",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
           "name": "cinchcraft:deepslate_axe",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:compass",
           "weight": 2
         },
         {
@@ -79,7 +89,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:wheat",
+          "name": "minecraft:bread",
           "weight": 10
         }
       ],
