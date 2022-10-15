@@ -5,7 +5,7 @@
   "max_distance_from_center": 80,
   "biomes": "#cinchcraft:has_structure/swamp_ruin_1",
   "step": "surface_structures",
-  "terrain_adaptation": "rigid",
+  "terrain_adaptation": "beard_thin",
   "start_height": {
     "absolute": -3
   },
