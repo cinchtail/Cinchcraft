@@ -18,7 +18,7 @@
             }
           ],
           "name": "minecraft:diamond",
-          "weight": 5
+          "weight": 7
         },
         {
           "type": "minecraft:item",
@@ -114,53 +114,60 @@
             }
           ],
           "name": "minecraft:rotten_flesh",
-          "weight": 16
+          "weight": 12
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:saddle",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_horse_armor",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cinchcraft:ruby_horse_armor",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cinchcraft:emerald_horse_armor",
           "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_horse_armor"
+          "name": "minecraft:golden_horse_armor",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "cinchcraft:ruby_horse_armor"
+          "name": "minecraft:diamond_horse_armor",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
-          "name": "cinchcraft:emerald_horse_armor"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_horse_armor"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_horse_armor"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:bundle"
+          "name": "minecraft:bundle",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
-              "levels": 30.0,
+              "levels": 20.0,
               "treasure": true
             }
           ],
-          "name": "minecraft:book"
+          "name": "minecraft:book",
+          "weight": 6
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 6.0,
-        "min": 2.0
+        "max": 8.0,
+        "min": 4.0
       }
     }
   ]

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "minecraft:block/sweet_berry_bush_stage1"
+    "cross": "cinchcraft:block/blueberry_bush_stage1"
   },
   "render_type": "cutout"
 }

@@ -9,6 +9,10 @@
     {
       "structure": "cinchcraft:small_house_ruin",
       "weight": 1
+    },
+    {
+      "structure": "cinchcraft:medium_house_ruin",
+      "weight": 1
     }
   ],
   "placement": {

@@ -6,35 +6,8 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:apple",
-          "weight": 15
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:coal",
-          "weight": 15
+          "name": "minecraft:ruby",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -49,32 +22,8 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "cinchcraft:blueberries",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:sweet_berries",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "cinchcraft:deepslate_axe",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:compass",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:carrot",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:emerald"
+          "name": "minecraft:emerald",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -84,30 +33,100 @@
               "count": {
                 "type": "minecraft:uniform",
                 "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:iron_ingot",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 9.0,
                 "min": 2.0
               },
               "function": "minecraft:set_count"
             }
           ],
+          "name": "minecraft:gold_nugget",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "name": "minecraft:bread",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "cinchcraft:blueberry_pie",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_helmet",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_boots",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:apple",
           "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:saddle",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 10.0,
+              "treasure": true
+            }
+          ],
+          "name": "minecraft:book"
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 8.0,
+        "max": 3.0,
         "min": 2.0
       }
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:spyglass"
-        }
-      ],
-      "rolls": 1.0
     }
   ]
 }
+///give Dev minecraft:chest{BlockEntityTag:{LootTable:"cinchcraft:chests/medium_house_ruin"}}
