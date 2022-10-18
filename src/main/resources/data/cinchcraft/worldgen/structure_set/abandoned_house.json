@@ -13,6 +13,10 @@
     {
       "structure": "cinchcraft:medium_house_ruin",
       "weight": 1
+    },
+    {
+      "structure": "cinchcraft:abandoned_farm_house",
+      "weight": 1
     }
   ],
   "placement": {

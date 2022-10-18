@@ -66,7 +66,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> BLUE_BERRIE_PLACED = PLACED_FEATURES.register("blue_berrie_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.BLUE_BERRIE.getHolder().get(),
-                     List.of(RarityFilter.onAverageOnceEvery(16),
+                     List.of(RarityFilter.onAverageOnceEvery(18),
                     InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 
     public static final RegistryObject<PlacedFeature> BUBBLE_FLOWER_PLACED = PLACED_FEATURES.register("bubble_flower_placed",
@@ -81,7 +81,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> PINEAPPLE_PLACED = PLACED_FEATURES.register("pineapple_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.PINEAPPLE_PLANT.getHolder().get(),
-                    List.of(RarityFilter.onAverageOnceEvery(16),
+                    List.of(RarityFilter.onAverageOnceEvery(24),
                             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 
     public static final RegistryObject<PlacedFeature> APPLE_TREE_CHECKED = PLACED_FEATURES.register("apple_tree_checked",
@@ -90,7 +90,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> APPLE_TREE_PLACED = PLACED_FEATURES.register("apple_tree_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.APPLE_TREE_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(
-                    RarityFilter.onAverageOnceEvery(46))));
+                    RarityFilter.onAverageOnceEvery(48))));
 
 
 
