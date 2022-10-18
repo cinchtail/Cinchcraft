@@ -26,7 +26,7 @@
   // So a start height that gives -5 will sink the structure 5 blocks into the terrain. Here, we will spawn this structure 60 blocks above the terrain.
   "terrain_adaptation": "beard_thin",
   "start_height": {
-    "absolute": 2
+    "absolute": 0
   },
 
   // Makes our sky fan structure take the terrain's top y value and add it to the start_height y value above.
