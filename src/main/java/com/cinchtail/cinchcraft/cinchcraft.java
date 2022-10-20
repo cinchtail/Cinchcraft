@@ -67,7 +67,7 @@ public class cinchcraft
 
         ModPlacedFeatures.register(modEventBus);
 
-        ModLootModifiers.register((modEventBus));
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
