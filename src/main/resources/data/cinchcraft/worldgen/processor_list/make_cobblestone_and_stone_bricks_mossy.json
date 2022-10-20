@@ -5,7 +5,7 @@
       "rules": [
         {
           "input_predicate": {
-            "block": "minecraft:stone_bricks",
+            "block": "minecraft:cobblestone",
             "probability": 0.5,
             "predicate_type": "minecraft:random_block_match"
           },
@@ -13,7 +13,20 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:mossy_stone_bricks"
+            "Name": "minecraft:mossy_cobblestone"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:cobblestone_slab",
+            "probability": 0.5,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:mossy_cobblestone_slab"
           }
         },
         {
@@ -31,7 +44,7 @@
         },
         {
           "input_predicate": {
-            "block": "minecraft:stone_brick_stairs",
+            "block": "minecraft:stone_bricks",
             "probability": 0.5,
             "predicate_type": "minecraft:random_block_match"
           },
@@ -39,7 +52,7 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:mossy_stone_brick_stairs"
+            "Name": "minecraft:mossy_stone_bricks"
           }
         }
       ]

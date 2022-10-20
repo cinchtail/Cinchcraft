@@ -7,6 +7,7 @@ import com.cinchtail.cinchcraft.effect.ModEffects;
 import com.cinchtail.cinchcraft.event.ModEvents;
 import com.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import com.cinchtail.cinchcraft.item.ModItems;
+import com.cinchtail.cinchcraft.loot.ModLootModifiers;
 import com.cinchtail.cinchcraft.minecraft.block.BlocksOverriding;
 import com.cinchtail.cinchcraft.potion.ModPotions;
 import com.cinchtail.cinchcraft.sound.ModSounds;
@@ -65,6 +66,8 @@ public class cinchcraft
         ModConfiguredFeatures.register(modEventBus);
 
         ModPlacedFeatures.register(modEventBus);
+
+        ModLootModifiers.register((modEventBus));
 
         modEventBus.addListener(this::commonSetup);
 

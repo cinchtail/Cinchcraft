@@ -72,11 +72,9 @@ public class VillageAddition {
         Registry<StructureTemplatePool> templatePoolRegistry = event.getServer().registryAccess().registry(Registry.TEMPLATE_POOL_REGISTRY).orElseThrow();
         Registry<StructureProcessorList> processorListRegistry = event.getServer().registryAccess().registry(Registry.PROCESSOR_LIST_REGISTRY).orElseThrow();
 
-        // Adds our piece to all village houses pool
-        // Note, the resourcelocation is getting the pool files from the data folder. Not assets folder.
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/plains/houses"),
-                "cinchcraft:plains_bee_keeper_house", 30);
+                "cinchcraft:plains_bee_keeper_house", 20);
 
         //addBuildingToPool(templatePoolRegistry, processorListRegistry,
         //        new ResourceLocation("minecraft:village/snowy/houses"),
