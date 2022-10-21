@@ -37,6 +37,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
+import terrablender.api.Regions;
+import terrablender.api.SurfaceRuleManager;
 
 @Mod(cinchcraft.MOD_ID)
 public class cinchcraft
@@ -85,10 +87,10 @@ public class cinchcraft
         event.enqueueWork(ModVillagers::registerPOIs);
 
         // Given we only add two biomes, we should keep our weight relatively low.
-        //Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 2));
+        Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 2));
 
         // Register our surface rules
-        //SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());
     }
 
     {

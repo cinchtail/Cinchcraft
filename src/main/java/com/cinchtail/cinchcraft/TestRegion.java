@@ -3,14 +3,14 @@ package com.cinchtail.cinchcraft;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
 import org.checkerframework.checker.units.qual.Temperature;
+import net.minecraft.resources.ResourceLocation;
+import terrablender.api.*;
 
 
-import javax.swing.plaf.synth.Region;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -32,13 +32,13 @@ public class TestRegion extends Region
 
             // More complex example:
             // Replace specific parameter points for the frozen peaks with our cold_blue biome
-            List<Climate.ParameterPoint> frozenPeaksPoints = new ParameterPointListBuilder()
+            List<Climate.ParameterPoint> frozenPeaksPoints = new ParameterUtils.ParameterPointListBuilder()
                     .temperature(Temperature.ICY, Temperature.COOL, Temperature.NEUTRAL)
-                    .humidity(Humidity.ARID, Humidity.DRY, Humidity.NEUTRAL, Humidity.WET, Humidity.HUMID)
-                    .continentalness(Continentalness.span(Continentalness.COAST, Continentalness.FAR_INLAND), Continentalness.span(Continentalness.MID_INLAND, Continentalness.FAR_INLAND))
-                    .erosion(Erosion.EROSION_0, Erosion.EROSION_1)
-                    .depth(Depth.SURFACE, Depth.FLOOR)
-                    .weirdness(Weirdness.HIGH_SLICE_VARIANT_ASCENDING, Weirdness.PEAK_VARIANT, Weirdness.HIGH_SLICE_VARIANT_DESCENDING)
+                    .humidity(ParameterUtils.Humidity.ARID, ParameterUtils.Humidity.DRY, ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.WET, ParameterUtils.Humidity.HUMID)
+                    .continentalness(ParameterUtils.Continentalness.span(ParameterUtils.Continentalness.COAST, ParameterUtils.Continentalness.FAR_INLAND), ParameterUtils.Continentalness.span(ParameterUtils.Continentalness.MID_INLAND, ParameterUtils.Continentalness.FAR_INLAND))
+                    .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_1)
+                    .depth(ParameterUtils.Depth.SURFACE, ParameterUtils.Depth.FLOOR)
+                    .weirdness(ParameterUtils.Weirdness.HIGH_SLICE_VARIANT_ASCENDING, ParameterUtils.Weirdness.PEAK_VARIANT, ParameterUtils.Weirdness.HIGH_SLICE_VARIANT_DESCENDING)
                     .build();
 
             frozenPeaksPoints.forEach(point -> builder.replaceBiome(point, TestBiomes.COLD_BLUE));
