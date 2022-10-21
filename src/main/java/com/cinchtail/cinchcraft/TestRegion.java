@@ -1,4 +1,4 @@
-/*package com.cinchtail.cinchcraft;
+package com.cinchtail.cinchcraft;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
@@ -7,14 +7,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
-import terrablender.api.Region;
-import terrablender.api.RegionType;
+import org.checkerframework.checker.units.qual.Temperature;
+
 
 import javax.swing.plaf.synth.Region;
 import java.util.List;
 import java.util.function.Consumer;
 
-import static terrablender.api.ParameterUtils.*;
 
 public class TestRegion extends Region
 {
@@ -45,4 +44,4 @@ public class TestRegion extends Region
             frozenPeaksPoints.forEach(point -> builder.replaceBiome(point, TestBiomes.COLD_BLUE));
         });
     }
-}*/
+}

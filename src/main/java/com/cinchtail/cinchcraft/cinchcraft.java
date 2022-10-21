@@ -21,6 +21,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
@@ -83,6 +84,11 @@ public class cinchcraft
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModVillagers::registerPOIs);
 
+        // Given we only add two biomes, we should keep our weight relatively low.
+        //Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 2));
+
+        // Register our surface rules
+        //SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());
     }
 
     {
