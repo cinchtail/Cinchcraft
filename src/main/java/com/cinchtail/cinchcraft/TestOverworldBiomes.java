@@ -27,7 +27,7 @@ import net.minecraft.world.level.biome.*;
 
 import javax.annotation.Nullable;
 
-public class OverworldBiomes
+public class TestOverworldBiomes
 {
     @Nullable
     private static final Music NORMAL_MUSIC = null;
