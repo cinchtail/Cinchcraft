@@ -6,7 +6,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
-import org.checkerframework.checker.units.qual.Temperature;
 import net.minecraft.resources.ResourceLocation;
 import terrablender.api.*;
 
@@ -19,7 +18,7 @@ public class TestRegion extends Region
 {
     public TestRegion(ResourceLocation name, int weight)
     {
-        super(name, com.ibm.icu.util.Region.RegionType.OVERWORLD, weight);
+        super(name, RegionType.OVERWORLD, weight);
     }
 
     @Override
@@ -33,7 +32,7 @@ public class TestRegion extends Region
             // More complex example:
             // Replace specific parameter points for the frozen peaks with our cold_blue biome
             List<Climate.ParameterPoint> frozenPeaksPoints = new ParameterUtils.ParameterPointListBuilder()
-                    .temperature(Temperature.ICY, Temperature.COOL, Temperature.NEUTRAL)
+                    .temperature(ParameterUtils.Temperature.ICY, ParameterUtils.Temperature.COOL, ParameterUtils.Temperature.NEUTRAL)
                     .humidity(ParameterUtils.Humidity.ARID, ParameterUtils.Humidity.DRY, ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.WET, ParameterUtils.Humidity.HUMID)
                     .continentalness(ParameterUtils.Continentalness.span(ParameterUtils.Continentalness.COAST, ParameterUtils.Continentalness.FAR_INLAND), ParameterUtils.Continentalness.span(ParameterUtils.Continentalness.MID_INLAND, ParameterUtils.Continentalness.FAR_INLAND))
                     .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_1)

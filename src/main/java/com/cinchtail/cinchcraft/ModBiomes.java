@@ -35,8 +35,8 @@ public class ModBiomes
 
     public static void registerBiomes()
     {
-        //register(TestBiomes.HOT_RED, TestOverworldBiomes::hotRed);
-        //register(TestBiomes.COLD_BLUE, TestOverworldBiomes::coldBlue);
+        register(TestBiomes.HOT_RED, TestOverworldBiomes::hotRed);
+        register(TestBiomes.COLD_BLUE, TestOverworldBiomes::coldBlue);
     }
 
     public static RegistryObject<Biome> register(ResourceKey<Biome> key, Supplier<Biome> biomeSupplier)
