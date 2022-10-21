@@ -46,6 +46,10 @@ public class cinchcraft
     public cinchcraft()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::commonSetup);
+
+        ModBiomes.BIOME_REGISTER.register(modEventBus);
+        ModBiomes.registerBiomes();
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -74,13 +78,11 @@ public class cinchcraft
         MinecraftForge.EVENT_BUS.register(new WanderingTraderTrades());
         MinecraftForge.EVENT_BUS.register(new ModEvents());
 
-
-
-
         MinecraftForge.EVENT_BUS.register(this);
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModVillagers::registerPOIs);
+
     }
 
     {

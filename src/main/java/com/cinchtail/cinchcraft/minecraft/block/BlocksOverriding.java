@@ -35,7 +35,7 @@ public class BlocksOverriding {
                     .noCollission().sound(SoundType.SWEET_BERRY_BUSH)));
 
     public static final RegistryObject<Block> MOSS_CARPET = BLOCKS.register("moss_carpet",
-            () -> new MossCarpetBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_GREEN).strength(0.1F).sound(SoundType.MOSS_CARPET)));
+            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_GREEN).strength(0.1F).sound(SoundType.MOSS_CARPET)));
 
     /*public static final RegistryObject<Block> COMPOSTER = BLOCKS.register("composter",
             () -> new ComposterBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.6F).sound(SoundType.WOOD)));*/
