@@ -25,7 +25,7 @@ import net.minecraft.world.level.biome.*;
 
 import javax.annotation.Nullable;
 
-public class TestOverworldBiomes
+public class OverworldBiomes
 {
     @Nullable
     private static final Music NORMAL_MUSIC = null;
@@ -39,12 +39,22 @@ public class TestOverworldBiomes
 
     private static Biome biome(Biome.Precipitation precipitation, float temperature, float downfall, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder, @Nullable Music music)
     {
-        return biome(precipitation, temperature, downfall, 4159204, 329011, spawnBuilder, biomeBuilder, music);
-    }
-
-    private static Biome biome(Biome.Precipitation precipitation, float temperature, float downfall, int waterColor, int waterFogColor, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder, @Nullable Music music)
-    {
-        return (new Biome.BiomeBuilder()).precipitation(precipitation).temperature(temperature).downfall(downfall).specialEffects((new BiomeSpecialEffects.Builder()).waterColor(waterColor).waterFogColor(waterFogColor).fogColor(12638463).skyColor(calculateSkyColor(temperature)).ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).backgroundMusic(music).build()).mobSpawnSettings(spawnBuilder.build()).generationSettings(biomeBuilder.build()).build();
+        return (new Biome.BiomeBuilder())
+                .precipitation(precipitation)
+                .temperature(temperature)
+                .downfall(downfall)
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(4159204)
+                        .waterFogColor(4159204)
+                        .fogColor(12638463)
+                        .skyColor(calculateSkyColor(temperature))
+                        .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                        .foliageColorOverride(2129960)
+                        .grassColorOverride(2129960)
+                        .build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .generationSettings(biomeBuilder.build())
+                .build();
     }
 
     private static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder)
@@ -60,7 +70,7 @@ public class TestOverworldBiomes
     public static Biome mixedforest()
     {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-        BiomeDefaultFeatures.farmAnimals(spawnBuilder);
+        BiomeDefaultFeatures.plainsSpawns(spawnBuilder);
 
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
@@ -69,14 +79,6 @@ public class TestOverworldBiomes
         BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
         BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
-        BiomeDefaultFeatures.addDesertVegetation(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
-        BiomeDefaultFeatures.addDesertExtraVegetation(biomeBuilder);
-        BiomeDefaultFeatures.addDesertExtraDecoration(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultMonsterRoom(biomeBuilder);
-        BiomeDefaultFeatures.addBirchTrees(biomeBuilder);
-        BiomeDefaultFeatures.addFerns(biomeBuilder);
-        BiomeDefaultFeatures.addTaigaTrees(biomeBuilder);
-        return biome(Biome.Precipitation.RAIN, 2.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+        return biome(Biome.Precipitation.RAIN, 1.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
 }

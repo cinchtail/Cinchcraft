@@ -88,8 +88,6 @@ public class cinchcraft
 
         // Given we only add two biomes, we should keep our weight relatively low.
         Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 1));
-
-        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());
     }
 
     {
