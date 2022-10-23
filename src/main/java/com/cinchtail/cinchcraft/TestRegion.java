@@ -24,14 +24,15 @@ public class TestRegion extends Region
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper)
     {
-        this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
-            // Simple example:
-            // Replace the Vanilla desert with our hot_red biome
-            builder.replaceBiome(Biomes.DESERT, TestBiomes.HOT_RED);
+        //this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
+            //builder.replaceBiome(Biomes.FOREST, TestBiomes.MIXED_FOREST, ParameterUtils.ParameterPointListBuilder()
+                    //.temperature(ParameterUtils.Temperature.NEUTRAL).humidity(ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.WET)
+                    //.continentalness(ParameterUtils.Continentalness.span(ParameterUtils.Continentalness.COAST, ParameterUtils.Continentalness.FAR_INLAND),
+                            //ParameterUtils.Continentalness.span(ParameterUtils.Continentalness.MID_INLAND, ParameterUtils.Continentalness.FAR_INLAND)));
 
             // More complex example:
             // Replace specific parameter points for the frozen peaks with our cold_blue biome
-            List<Climate.ParameterPoint> frozenPeaksPoints = new ParameterUtils.ParameterPointListBuilder()
+            /*List<Climate.ParameterPoint> frozenPeaksPoints = new ParameterUtils.ParameterPointListBuilder()
                     .temperature(ParameterUtils.Temperature.ICY, ParameterUtils.Temperature.COOL, ParameterUtils.Temperature.NEUTRAL)
                     .humidity(ParameterUtils.Humidity.ARID, ParameterUtils.Humidity.DRY, ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.WET, ParameterUtils.Humidity.HUMID)
                     .continentalness(ParameterUtils.Continentalness.span(ParameterUtils.Continentalness.COAST, ParameterUtils.Continentalness.FAR_INLAND), ParameterUtils.Continentalness.span(ParameterUtils.Continentalness.MID_INLAND, ParameterUtils.Continentalness.FAR_INLAND))
@@ -41,6 +42,6 @@ public class TestRegion extends Region
                     .build();
 
             frozenPeaksPoints.forEach(point -> builder.replaceBiome(point, TestBiomes.COLD_BLUE));
-        });
+        });*/
     }
 }

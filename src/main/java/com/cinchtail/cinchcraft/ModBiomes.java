@@ -35,7 +35,7 @@ public class ModBiomes
 
     public static void registerBiomes()
     {
-        register(TestBiomes.HOT_RED, TestOverworldBiomes::hotRed);
+        register(TestBiomes.MIXED_FOREST, TestOverworldBiomes::mixedforest);
         register(TestBiomes.COLD_BLUE, TestOverworldBiomes::coldBlue);
     }
 

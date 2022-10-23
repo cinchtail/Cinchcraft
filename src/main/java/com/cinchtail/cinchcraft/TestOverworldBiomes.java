@@ -59,7 +59,7 @@ public class TestOverworldBiomes
         BiomeDefaultFeatures.addSurfaceFreezing(builder);
     }
 
-    public static Biome hotRed()
+    public static Biome mixedforest()
     {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.desertSpawns(spawnBuilder);

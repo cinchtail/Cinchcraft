@@ -25,7 +25,7 @@ import net.minecraft.world.level.biome.Biome;
 
 public class TestBiomes
 {
-    public static final ResourceKey<Biome> HOT_RED = register("hot_red");
+    public static final ResourceKey<Biome> MIXED_FOREST = register("mixed_forest");
     public static final ResourceKey<Biome> COLD_BLUE = register("cold_blue");
 
     private static ResourceKey<Biome> register(String name)
