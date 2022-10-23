@@ -36,7 +36,6 @@ public class ModBiomes
     public static void registerBiomes()
     {
         register(TestBiomes.MIXED_FOREST, TestOverworldBiomes::mixedforest);
-        register(TestBiomes.COLD_BLUE, TestOverworldBiomes::coldBlue);
     }
 
     public static RegistryObject<Biome> register(ResourceKey<Biome> key, Supplier<Biome> biomeSupplier)

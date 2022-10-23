@@ -87,14 +87,12 @@ public class cinchcraft
         event.enqueueWork(ModVillagers::registerPOIs);
 
         // Given we only add two biomes, we should keep our weight relatively low.
-        Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 2));
+        Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 1));
 
-        // Register our surface rules
         SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());
     }
 
     {
-        // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
