@@ -23,7 +23,6 @@ public class ModItems {
     public static final RegistryObject<Item> COMPOST = ITEMS.register("compost",
             () -> new CompostItem(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
-
     public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
@@ -235,6 +234,10 @@ public class ModItems {
             () -> new ItemNameBlockItem(BlocksOverriding.SUNFLOWER.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
                             .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
+
+    public static final RegistryObject<Item> APPLE_TRAPDOOR = ITEMS.register("apple_trapdoor",
+            () -> new ModWoodenSlabItem(ModBlocks.APPLE_TRAPDOOR.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
