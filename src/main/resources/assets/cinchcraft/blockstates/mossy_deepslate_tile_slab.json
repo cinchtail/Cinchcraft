@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "cinchcraft:block/mossy_deepslate_tile_slab"
+    },
+    "type=double": {
+      "model": "cinchcraft:block/mossy_deepslate_tiles"
+    },
+    "type=top": {
+      "model": "cinchcraft:block/mossy_deepslate_tile_slab_top"
+    }
+  }
+}

@@ -49,8 +49,8 @@ public class OverworldBiomes
                         .fogColor(12638463)
                         .skyColor(calculateSkyColor(temperature))
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
-                        .foliageColorOverride(2129960)
-                        .grassColorOverride(2129960)
+                        .foliageColorOverride(0x70bb40)
+                        .grassColorOverride(0x70bb40)
                         .build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .generationSettings(biomeBuilder.build())
@@ -75,11 +75,15 @@ public class OverworldBiomes
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         globalOverworldGeneration(biomeBuilder);
+        BiomeDefaultFeatures.addBirchTrees(biomeBuilder);
+        BiomeDefaultFeatures.addMountainForestTrees(biomeBuilder);
+        BiomeDefaultFeatures.addBadlandsTrees(biomeBuilder);
+        BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
         BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
-        BiomeDefaultFeatures.addBirchTrees(biomeBuilder);
+        BiomeDefaultFeatures.addPlainVegetation(biomeBuilder);
         return biome(Biome.Precipitation.RAIN, 1.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
 }

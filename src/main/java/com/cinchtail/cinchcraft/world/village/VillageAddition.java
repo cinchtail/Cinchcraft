@@ -74,7 +74,7 @@ public class VillageAddition {
 
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/plains/houses"),
-                "cinchcraft:plains_bee_keeper_house", 20);
+                "cinchcraft:plains_bee_keeper_house", 15);
 
         //addBuildingToPool(templatePoolRegistry, processorListRegistry,
         //        new ResourceLocation("minecraft:village/snowy/houses"),
