@@ -551,7 +551,11 @@ public class ModBlocks {
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
     public static final RegistryObject<Block> APPLE_TRAPDOOR = BLOCKS.register("apple_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F)
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3.0F)
+                    .sound(SoundType.WOOD).noOcclusion()));
+
+    public static final RegistryObject<Block> APPLE_DOOR = BLOCKS.register("apple_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3.0F)
                     .sound(SoundType.WOOD).noOcclusion()));
 
 

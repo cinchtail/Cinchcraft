@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right_open",
+  "textures": {
+    "bottom": "cinchcraft:block/apple_door_bottom",
+    "top": "cinchcraft:block/apple_door_top"
+  },
+  "render_type": "cutout"
+}
