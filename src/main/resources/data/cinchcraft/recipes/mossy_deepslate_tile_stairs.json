@@ -6,12 +6,12 @@
     }
   },
   "pattern": [
-    "#",
-    "##",
+    "#  ",
+    "## ",
     "###"
   ],
   "result": {
-    "count": 6,
+    "count": 4,
     "item": "cinchcraft:mossy_deepslate_tile_stairs"
   }
 }
