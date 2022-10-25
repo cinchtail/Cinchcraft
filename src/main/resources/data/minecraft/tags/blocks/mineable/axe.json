@@ -21,7 +21,9 @@
     "cinchcraft:mangrove_barrel",
     "cinchcraft:crimson_barrel",
     "cinchcraft:warped_barrel",
-    "cinchcraft:acacia_barrel"
+    "cinchcraft:acacia_barrel",
+    "cinchcraft:apple_door",
+    "cinchcraft:apple_trapdoor"
 
   ]
 }
