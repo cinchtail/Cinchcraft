@@ -89,6 +89,14 @@
     "cinchcraft:mossy_deepslate_tiles",
     "cinchcraft:mossy_deepslate_tile_wall",
     "cinchcraft:mossy_deepslate_tile_slab",
-    "cinchcraft:mossy_deepslate_tile_stairs"
+    "cinchcraft:mossy_deepslate_tile_stairs",
+    "cinchcraft:copper_button",
+    "cinchcraft:exposed_copper_button",
+    "cinchcraft:weathered_copper_button",
+    "cinchcraft:oxidized_copper_button",
+    "cinchcraft:waxed_copper_button",
+    "cinchcraft:waxed_exposed_copper_button",
+    "cinchcraft:waxed_weathered_copper_button",
+    "cinchcraft:waxed_oxidized_copper_button"
   ]
 }

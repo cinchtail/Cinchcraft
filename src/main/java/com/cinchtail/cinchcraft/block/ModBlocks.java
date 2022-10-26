@@ -559,33 +559,37 @@ public class ModBlocks {
                     .sound(SoundType.WOOD).noOcclusion()));
 
 
-    /*public static final RegistryObject<Block> COPPER_BUTTON = BLOCKS.register("copper_button",
+    public static final RegistryObject<Block> COPPER_BUTTON = BLOCKS.register("copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of(Material.METAL,
-                    MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(1f).sound(SoundType.COPPER)));
+                    MaterialColor.COLOR_ORANGE).strength(1f).sound(SoundType.COPPER)));
 
-    public static final RegistryObject<Block> EXPOSED_COPPER_BUTTON = BLOCKS.register("exposed_button",
+    public static final RegistryObject<Block> EXPOSED_COPPER_BUTTON = BLOCKS.register("exposed_copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.of(Material.METAL,
-                    MaterialColor.TERRACOTTA_LIGHT_GRAY).requiresCorrectToolForDrops().strength(1f).sound(SoundType.COPPER)));
+                    MaterialColor.TERRACOTTA_LIGHT_GRAY).strength(1f).sound(SoundType.COPPER)));
 
     public static final RegistryObject<Block> WEATHERED_COPPER_BUTTON = BLOCKS.register("weathered_copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.of(Material.METAL,
-                    MaterialColor.WARPED_STEM).requiresCorrectToolForDrops().strength(1f).sound(SoundType.COPPER)));
+                    MaterialColor.WARPED_STEM).strength(1f).sound(SoundType.COPPER)));
 
     public static final RegistryObject<Block> OXIDIZED_COPPER_BUTTON = BLOCKS.register("oxidized_copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.of(Material.METAL,
-                    MaterialColor.WARPED_NYLIUM).requiresCorrectToolForDrops().strength(1f).sound(SoundType.COPPER)));
+                    MaterialColor.WARPED_NYLIUM).strength(1f).sound(SoundType.COPPER)));
 
-    public static final RegistryObject<Block> WAXED_COPPER_BUTTON = BLOCKS.register("waxed_copper_button",
-            () -> new CopperButtonBlock(BlockBehaviour.Properties.copy(ModBlocks.COPPER_BUTTON.get())));
+    public static final RegistryObject<Block> WAXED_COPPER_BUTTON = registerBlock("waxed_copper_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(1f).noCollission().sound(SoundType.COPPER)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
-    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_BUTTON = BLOCKS.register("waxed_exposed_button",
-            () -> new CopperButtonBlock(BlockBehaviour.Properties.copy(ModBlocks.EXPOSED_COPPER_BUTTON.get())));
+    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_BUTTON = registerBlock("waxed_exposed_copper_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(1f).noCollission().sound(SoundType.COPPER)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
-    public static final RegistryObject<Block> WAXED_WEATHERED_BUTTON = BLOCKS.register("waxed_weathered_button",
-            () -> new CopperButtonBlock(BlockBehaviour.Properties.copy(ModBlocks.WEATHERED_COPPER_BUTTON.get())));
+    public static final RegistryObject<Block> WAXED_WEATHERED_BUTTON = registerBlock("waxed_weathered_copper_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(1f).noCollission().sound(SoundType.COPPER)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
-    public static final RegistryObject<Block> WAXED_OXIDIZED_BUTTON = BLOCKS.register("waxed_oxidized_button",
-            () -> new CopperButtonBlock(BlockBehaviour.Properties.copy(ModBlocks.OXIDIZED_COPPER_BUTTON.get())));*/
+    public static final RegistryObject<Block> WAXED_OXIDIZED_BUTTON = registerBlock("waxed_oxidized_copper_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(1f).noCollission().sound(SoundType.COPPER)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

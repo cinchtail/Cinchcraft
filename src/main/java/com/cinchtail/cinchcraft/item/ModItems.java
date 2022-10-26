@@ -243,6 +243,22 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.APPLE_DOOR.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
+    public static final RegistryObject<Item> COPPER_BUTTON = ITEMS.register("copper_button",
+            () -> new ItemNameBlockItem(ModBlocks.COPPER_BUTTON.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> EXPOSED_COPPER_BUTTON = ITEMS.register("exposed_copper_button",
+            () -> new ItemNameBlockItem(ModBlocks.EXPOSED_COPPER_BUTTON.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> WEATHERED_COPPER_BUTTON = ITEMS.register("weathered_copper_button",
+            () -> new ItemNameBlockItem(ModBlocks.WEATHERED_COPPER_BUTTON.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> OXIDIZED_COPPER_BUTTON = ITEMS.register("oxidized_copper_button",
+            () -> new ItemNameBlockItem(ModBlocks.OXIDIZED_COPPER_BUTTON.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

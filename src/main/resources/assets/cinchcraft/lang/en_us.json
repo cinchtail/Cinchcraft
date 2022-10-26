@@ -57,6 +57,10 @@
   "item.cinchcraft.sunflower_seeds": "Sunflower Seeds",
   "item.cinchcraft.apple_trapdoor": "Apple Trapdoor",
   "item.cinchcraft.apple_door": "Apple Door",
+  "item.cinchcraft.copper_button": "Copper Button",
+  "item.cinchcraft.exposed_copper_button": "Exposed Copper Button",
+  "item.cinchcraft.weathered_copper_button": "Weathered Copper Button",
+  "item.cinchcraft.oxidized_copper_button": "Oxidized Copper Button",
 
   "block.minecraft.barrel": "Spruce Barrel",
 
@@ -207,5 +211,10 @@
   "block.cinchcraft.mossy_deepslate_tiles": "Mossy Deepslate Tiles",
   "block.cinchcraft.mossy_deepslate_tile_wall": "Mossy Deepslate Tile Wall",
   "block.cinchcraft.mossy_deepslate_tile_slab": "Mossy Deepslate Tile Slab",
-  "block.cinchcraft.mossy_deepslate_tile_stairs": "Mossy Deepslate Tile Stairs"
+  "block.cinchcraft.mossy_deepslate_tile_stairs": "Mossy Deepslate Tile Stairs",
+  "block.cinchcraft.waxed_copper_button": "Waxed Copper Button",
+  "block.cinchcraft.waxed_exposed_copper_button": "Waxed Exposed Copper Button",
+  "block.cinchcraft.waxed_weathered_copper_button": "Waxed Weathered Copper Button",
+  "block.cinchcraft.waxed_oxidized_copper_button": "Waxed Oxidized Copper Button"
+
 }
