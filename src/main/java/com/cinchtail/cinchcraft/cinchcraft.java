@@ -38,7 +38,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 import terrablender.api.Regions;
-import terrablender.api.SurfaceRuleManager;
 
 @Mod(cinchcraft.MOD_ID)
 public class cinchcraft

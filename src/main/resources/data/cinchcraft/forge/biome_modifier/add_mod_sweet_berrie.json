@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_mod_sweet_berrie_biomes",
+  "feature": "cinchcraft:mod_sweet_berrie_placed"
+}

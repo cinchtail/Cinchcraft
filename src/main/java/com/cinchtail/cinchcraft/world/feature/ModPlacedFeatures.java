@@ -92,6 +92,11 @@ public class ModPlacedFeatures {
             () -> new PlacedFeature(ModConfiguredFeatures.APPLE_TREE_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(
                     RarityFilter.onAverageOnceEvery(48))));
 
+    public static final RegistryObject<PlacedFeature> MOD_SWEET_BERRIE_PLACED = PLACED_FEATURES.register("mod_sweet_berrie_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.MOD_SWEET_BERRIE.getHolder().get(),
+                    List.of(RarityFilter.onAverageOnceEvery(18),
+                            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+
 
 
     public static List<PlacementModifier> orePlacement(PlacementModifier placementModifier, PlacementModifier placementModifier1) {
