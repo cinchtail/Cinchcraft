@@ -84,6 +84,7 @@ public class OverworldBiomes
         BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addPlainVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addRareBerryBushes(biomeBuilder);
         return biome(Biome.Precipitation.RAIN, 1.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
 }

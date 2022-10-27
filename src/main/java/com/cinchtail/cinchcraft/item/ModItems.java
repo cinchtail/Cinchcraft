@@ -236,11 +236,11 @@ public class ModItems {
                             .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
 
     public static final RegistryObject<Item> APPLE_TRAPDOOR = ITEMS.register("apple_trapdoor",
-            () -> new ItemNameBlockItem(ModBlocks.APPLE_TRAPDOOR.get(),
+            () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_TRAPDOOR.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static final RegistryObject<Item> APPLE_DOOR = ITEMS.register("apple_door",
-            () -> new ItemNameBlockItem(ModBlocks.APPLE_DOOR.get(),
+            () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_DOOR.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static final RegistryObject<Item> COPPER_BUTTON = ITEMS.register("copper_button",

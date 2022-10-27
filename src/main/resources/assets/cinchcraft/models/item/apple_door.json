@@ -1,3 +1,6 @@
 {
-  "parent": "cinchcraft:block/apple_door_bottom"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "cinchcraft:item/apple_door"
+  }
 }
