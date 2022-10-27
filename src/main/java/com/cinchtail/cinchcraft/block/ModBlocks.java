@@ -558,7 +558,6 @@ public class ModBlocks {
             () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3.0F)
                     .sound(SoundType.WOOD).noOcclusion()));
 
-
     public static final RegistryObject<Block> COPPER_BUTTON = BLOCKS.register("copper_button",
             () -> new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of(Material.METAL,
                     MaterialColor.COLOR_ORANGE).strength(1f).sound(SoundType.COPPER)));
