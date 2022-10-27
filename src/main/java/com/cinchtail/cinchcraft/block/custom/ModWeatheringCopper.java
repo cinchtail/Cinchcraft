@@ -65,4 +65,3 @@ public interface ModWeatheringCopper extends ChangeOverTimeBlock<WeatheringCoppe
         OXIDIZED;
     }
 }
-

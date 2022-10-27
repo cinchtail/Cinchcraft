@@ -76,20 +76,12 @@ public class VillageAddition {
                 new ResourceLocation("minecraft:village/plains/houses"),
                 "cinchcraft:plains_bee_keeper_house", 15);
 
-        //addBuildingToPool(templatePoolRegistry, processorListRegistry,
-        //        new ResourceLocation("minecraft:village/snowy/houses"),
-        //        "modid:structure_nbt_resourcelocation", 5);
-        //
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/savanna/houses"),
                 "cinchcraft:savanna_weaponsmith_is_to_rare", 20);
 
-        //addBuildingToPool(templatePoolRegistry, processorListRegistry,
-        //        new ResourceLocation("minecraft:village/taiga/houses"),
-        //        "modid:structure_nbt_resourcelocation", 5);
-        //
-        //addBuildingToPool(templatePoolRegistry, processorListRegistry,
-        //        new ResourceLocation("minecraft:village/desert/houses"),
-        //        "modid:structure_nbt_resourcelocation", 5);
+        addBuildingToPool(templatePoolRegistry, processorListRegistry,
+                new ResourceLocation("minecraft:village/taiga/houses"),
+                "cinchcraft:taiga_bee_keeper_house", 15);
     }
 }
