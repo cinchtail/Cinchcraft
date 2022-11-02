@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_strawberry_biomes",
+  "feature": "cinchcraft:strawberry_placed"
+}

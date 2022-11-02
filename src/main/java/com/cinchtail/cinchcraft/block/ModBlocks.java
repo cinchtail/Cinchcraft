@@ -590,6 +590,9 @@ public class ModBlocks {
             () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(1f).noCollission().sound(SoundType.COPPER)), ModCreativeModeTab.CINCHCRAFT_TAB);
 
+    public static final RegistryObject<Block> STRAWBERRY_PLANT = BLOCKS.register("strawberry_plant",
+            () -> new StrawberryPlantBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().sound(SoundType.CROP)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -259,6 +259,11 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.OXIDIZED_COPPER_BUTTON.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
+    public static final RegistryObject<Item> STRAWBERRIES = ITEMS.register("strawberries",
+            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_PLANT.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
+                            .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

@@ -113,6 +113,10 @@ public class ModConfiguredFeatures {
             () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
 
+    public static final RegistryObject<ConfiguredFeature<?, ?>> STRAWBERRY = CONFIGURED_FEATURE.register("strawberry",
+            () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                    new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STRAWBERRY_PLANT.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
+
 
 
 

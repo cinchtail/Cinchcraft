@@ -97,6 +97,11 @@ public class ModPlacedFeatures {
                     List.of(RarityFilter.onAverageOnceEvery(18),
                             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 
+    public static final RegistryObject<PlacedFeature> STRAWBERRY_PLACED = PLACED_FEATURES.register("strawberry_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.STRAWBERRY.getHolder().get(),
+                    List.of(RarityFilter.onAverageOnceEvery(22),
+                            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+
 
 
     public static List<PlacementModifier> orePlacement(PlacementModifier placementModifier, PlacementModifier placementModifier1) {
