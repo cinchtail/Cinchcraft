@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 
@@ -21,10 +22,11 @@ import java.util.Objects;
 
 public class GlowStoneWallTorchBlock extends WallTorchBlock implements SimpleWaterloggedBlock {
 
+    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public GlowStoneWallTorchBlock(Properties properties, ParticleOptions particleOptions) {
         super(properties, particleOptions);
-        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
+        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE ));
     }
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
@@ -42,7 +44,7 @@ public class GlowStoneWallTorchBlock extends WallTorchBlock implements SimpleWat
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
-        blockBlockStateBuilder.add(WATERLOGGED);
+        blockBlockStateBuilder.add(WATERLOGGED).add(FACING);
     }
     public FluidState getFluidState(BlockState p_153492_) {
         return p_153492_.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(p_153492_);
