@@ -25,7 +25,7 @@ public class VillageAddition {
     /**
      * Adds the building to the targeted pool.
      * We will call this in addNewVillageBuilding method further down to add to every village.
-     *
+     * <p>
      * Note: This is an additive operation which means multiple mods can do this and they stack with each other safely.
      */
     private static void addBuildingToPool(Registry<StructureTemplatePool> templatePoolRegistry,
@@ -56,7 +56,7 @@ public class VillageAddition {
      * Mod compat is best done here.
      */
     @SubscribeEvent
-    public static void addNewVillageBuilding(final ServerAboutToStartEvent event) {
+    public static void addNewPlainsVillageBuilding(final ServerAboutToStartEvent event) {
         Registry<StructureTemplatePool> templatePoolRegistry = event.getServer().registryAccess().registry(Registry.TEMPLATE_POOL_REGISTRY).orElseThrow();
         Registry<StructureProcessorList> processorListRegistry = event.getServer().registryAccess().registry(Registry.PROCESSOR_LIST_REGISTRY).orElseThrow();
 
@@ -65,12 +65,18 @@ public class VillageAddition {
                 "cinchcraft:plains_bee_keeper_house", 15);
 
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
-                new ResourceLocation("minecraft:village/taiga/houses"),
-                "cinchcraft:taiga_bee_keeper_house", 15);
-
-        addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/savanna/houses"),
                 "cinchcraft:savanna_weaponsmith_is_to_rare", 20);
 
+    }
+
+    @SubscribeEvent
+    public static void addNewTaigaVillageBuilding(final ServerAboutToStartEvent event) {
+        Registry<StructureTemplatePool> templatePoolRegistry = event.getServer().registryAccess().registry(Registry.TEMPLATE_POOL_REGISTRY).orElseThrow();
+        Registry<StructureProcessorList> processorListRegistry = event.getServer().registryAccess().registry(Registry.PROCESSOR_LIST_REGISTRY).orElseThrow();
+
+        addBuildingToPool(templatePoolRegistry, processorListRegistry,
+                new ResourceLocation("minecraft:village/taiga/houses"),
+                "cinchcraft:taiga_bee_keeper_house", 100);
     }
 }
