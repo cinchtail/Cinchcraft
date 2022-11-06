@@ -3,7 +3,9 @@ package com.cinchtail.cinchcraft.block.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -41,6 +43,10 @@ public class GlowStoneWallTorchBlock extends WallTorchBlock implements SimpleWat
         }
 
         return super.updateShape(blockState, direction, blockState1, levelAccessor, pos, pos1);
+    }
+
+    @Override
+    public void animateTick(BlockState blockState, Level level, BlockPos pos, RandomSource randomSource) {
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {

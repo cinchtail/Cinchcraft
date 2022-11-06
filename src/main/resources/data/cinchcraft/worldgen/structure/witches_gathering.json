@@ -24,9 +24,9 @@
   // start_height can be used to spawn at a random fixed y value by doing something like: "max_inclusive": { "below_top": 10 }, "min_inclusive": { "above_bottom": 32 }
   // If project_start_to_heightmap is present, the y value chosen in start_height will be added to the terrain's y value.
   // So a start height that gives -5 will sink the structure 5 blocks into the terrain. Here, we will spawn this structure 60 blocks above the terrain.
-  "terrain_adaptation": "rigid",
+  "terrain_adaptation": "beard_thin",
   "start_height": {
-    "absolute": -4
+    "absolute": 0
   },
 
   // Makes our sky fan structure take the terrain's top y value and add it to the start_height y value above.

@@ -26,9 +26,7 @@ import java.util.Objects;
 public class GlowStoneTorchBlock extends TorchBlock implements SimpleWaterloggedBlock {
 
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
-
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-
     public GlowStoneTorchBlock(Properties properties, ParticleOptions particleOptions) {
         super(properties, particleOptions);
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
@@ -46,6 +44,10 @@ public class GlowStoneTorchBlock extends TorchBlock implements SimpleWaterlogged
         }
 
         return super.updateShape(blockState, direction, blockState1, levelAccessor, pos, pos1);
+    }
+
+    @Override
+    public void animateTick(BlockState blockState, Level level, BlockPos pos, RandomSource randomSource) {
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
