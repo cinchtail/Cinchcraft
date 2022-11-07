@@ -27,7 +27,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class PineapplePlantBlock extends BushBlock implements BonemealableBlock {
-    public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
     private static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
     private static final VoxelShape MID_GROWTH_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
@@ -49,8 +48,8 @@ public class PineapplePlantBlock extends BushBlock implements BonemealableBlock 
         }
     }
 
-    public boolean isRandomlyTicking(BlockState p_57284_) {
-        return p_57284_.getValue(AGE) < 3;
+    public boolean isRandomlyTicking(BlockState blockState) {
+        return blockState.getValue(AGE) < 3;
     }
 
     public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos pos, RandomSource randomSource) {
@@ -70,7 +69,7 @@ public class PineapplePlantBlock extends BushBlock implements BonemealableBlock 
         } else if (i > 2) {
             int j = 2 + level.random.nextInt(2);
             popResource(level, pos, new ItemStack(ModItems.PINEAPPLE.get()));
-            level.playSound((Player)null, pos, SoundEvents.CROP_PLANTED, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+            level.playSound(null, pos, SoundEvents.CROP_PLANTED, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             BlockState blockstate = blockState.setValue(AGE, 1);
             level.setBlock(pos, blockstate, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));
