@@ -56,7 +56,7 @@ public class VillageAddition {
      * Mod compat is best done here.
      */
     @SubscribeEvent
-    public static void addNewPlainsVillageBuilding(final ServerAboutToStartEvent event) {
+    public static void addNewVillageBuilding(final ServerAboutToStartEvent event) {
         Registry<StructureTemplatePool> templatePoolRegistry = event.getServer().registryAccess().registry(Registry.TEMPLATE_POOL_REGISTRY).orElseThrow();
         Registry<StructureProcessorList> processorListRegistry = event.getServer().registryAccess().registry(Registry.PROCESSOR_LIST_REGISTRY).orElseThrow();
 
@@ -68,15 +68,9 @@ public class VillageAddition {
                 new ResourceLocation("minecraft:village/savanna/houses"),
                 "cinchcraft:savanna_weaponsmith_is_to_rare", 20);
 
-    }
-
-    @SubscribeEvent
-    public static void addNewTaigaVillageBuilding(final ServerAboutToStartEvent event) {
-        Registry<StructureTemplatePool> templatePoolRegistry = event.getServer().registryAccess().registry(Registry.TEMPLATE_POOL_REGISTRY).orElseThrow();
-        Registry<StructureProcessorList> processorListRegistry = event.getServer().registryAccess().registry(Registry.PROCESSOR_LIST_REGISTRY).orElseThrow();
-
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/taiga/houses"),
                 "cinchcraft:taiga_bee_keeper_house", 100);
+
     }
 }
