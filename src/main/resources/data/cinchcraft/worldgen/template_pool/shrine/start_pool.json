@@ -1,0 +1,15 @@
+{
+  "name": "cinchcraft:shrine/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:shrine",
+        "processors": "cinchcraft:make_deepslate_bricks_mossy",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

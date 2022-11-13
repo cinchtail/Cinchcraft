@@ -93,15 +93,6 @@ public class cinchcraft
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
-    private void clientSetup(final FMLClientSetupEvent event) {
-        WoodType.register(ModWoodTypes.APPLE);
-        BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
-    }
-
-
-
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class commonSetup {
         @SubscribeEvent
