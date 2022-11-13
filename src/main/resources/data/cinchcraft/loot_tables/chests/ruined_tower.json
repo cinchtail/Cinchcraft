@@ -1,3 +1,4 @@
+
 {
   "type": "minecraft:chest",
   "pools": [
@@ -6,31 +7,8 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "effects": [
-                {
-                  "type": "minecraft:slowness",
-                  "duration": {
-                    "type": "minecraft:uniform",
-                    "max": 10.0,
-                    "min": 7.0
-                  }
-                }
-              ],
-              "function": "minecraft:set_stew_effect"
-            },
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 2.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:suspicious_stew"
+          "name": "minecraft:powder_snow_bucket",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -39,64 +17,14 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 5.0,
+                "max": 3.0,
                 "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:powder_snow_bucket"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "cinchcraft:deepslate_sword"
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 6.0,
-                "min": 3.0
               },
               "function": "minecraft:set_count"
             }
           ],
           "name": "minecraft:packed_ice",
-          "weight": 2
-        },
-        {
-        "name": "minecraft:iron_chestplate",
-        "weight": 1
-        },
-        {
-          "name": "minecraft:bow",
-          "weight": 1
-        },
-        {
-          "name": "minecraft:iron_boots",
-          "weight": 1
-        },
-        {
-          "name": "minecraft:chainmail_leggings",
-          "weight": 1
-        },
-        {
-          "name": "minecraft:chainmail_helmet",
-          "weight": 1
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -105,22 +33,102 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 6.0,
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:iron_ingot",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 9.0,
                 "min": 2.0
               },
               "function": "minecraft:set_count"
             }
           ],
           "name": "minecraft:snowball",
-          "weight": 4
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bread",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:chainmail_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cinchcraft:deepslate_sword",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 10.0,
+              "treasure": true
+            }
+          ],
+          "name": "minecraft:book"
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 10.0,
-        "min": 6.0
+        "max": 6.0,
+        "min": 3.0
       }
     }
   ]
 }
-///give Dev minecraft:chest{BlockEntityTag:{LootTable:"cinchcraft:chests/ruined_tower"}}
+
+///setblock ~ ~ ~ minecraft:barrel{LootTable:"cinchcraft:chests/ruined_tower"}

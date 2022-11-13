@@ -32,7 +32,7 @@ public class ModItems {
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
             () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
-                            .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
+                            .food(new FoodProperties.Builder().nutrition(2).saturationMod(.1f).build())));
 
     public static final RegistryObject<Item> BLUEBERRY_PIE = ITEMS.register("blueberry_pie",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)

@@ -99,7 +99,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> STRAWBERRY_PLACED = PLACED_FEATURES.register("strawberry_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.STRAWBERRY.getHolder().get(),
-                    List.of(RarityFilter.onAverageOnceEvery(22),
+                    List.of(RarityFilter.onAverageOnceEvery(50),
                             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 
 
