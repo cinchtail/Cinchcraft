@@ -85,7 +85,6 @@ public class cinchcraft
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModVillagers::registerPOIs);
 
-        // Given we only add two biomes, we should keep our weight relatively low.
         Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 1));
     }
 
