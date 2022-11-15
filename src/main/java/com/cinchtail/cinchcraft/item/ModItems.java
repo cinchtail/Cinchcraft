@@ -230,10 +230,10 @@ public class ModItems {
             () -> new ModStandingAndWallBlockItem(ModBlocks.GLOWSTONE_TORCH.get(), ModBlocks.GLOWSTONE_WALL_TORCH.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
-    public static final RegistryObject<Item> SUNFLOWER_SEEDS = ITEMS.register("sunflower_seeds",
+    /*public static final RegistryObject<Item> SUNFLOWER_SEEDS = ITEMS.register("sunflower_seeds",
             () -> new ItemNameBlockItem(BlocksOverriding.SUNFLOWER.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
-                            .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
+                            .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));*/
 
     public static final RegistryObject<Item> APPLE_TRAPDOOR = ITEMS.register("apple_trapdoor",
             () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_TRAPDOOR.get(),

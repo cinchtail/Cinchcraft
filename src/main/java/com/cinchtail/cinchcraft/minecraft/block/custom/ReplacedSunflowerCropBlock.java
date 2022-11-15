@@ -151,13 +151,13 @@ public class ReplacedSunflowerCropBlock extends DoublePlantBlock implements Bone
         super.entityInside(blockState, level, pos, entity);
     }
 
-    protected ItemLike getBaseSeedId() {
+    /*protected ItemLike getBaseSeedId() {
         return ModItems.SUNFLOWER_SEEDS.get();
     }
 
     public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {
         return new ItemStack(this.getBaseSeedId());
-    }
+    }*/
 
     public boolean isValidBonemealTarget(BlockGetter blockGetter, BlockPos pos, BlockState blockState, boolean b) {
         return this.isMaxAge(blockState);
