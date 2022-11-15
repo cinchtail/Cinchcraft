@@ -118,9 +118,6 @@ public class ModConfiguredFeatures {
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STRAWBERRY_PLANT.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
 
 
-
-
-
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURE.register(eventBus);
 
