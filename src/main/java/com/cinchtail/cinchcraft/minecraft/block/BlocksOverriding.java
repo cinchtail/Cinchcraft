@@ -26,18 +26,18 @@ public class BlocksOverriding {
             () -> new ReplacedMelonBlock(BlockBehaviour.Properties.of(Material.VEGETABLE,
                     MaterialColor.COLOR_LIGHT_GREEN).strength(1.0F).sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> SUNFLOWER = BLOCKS.register("sunflower",
+    /*public static final RegistryObject<Block> SUNFLOWER = BLOCKS.register("sunflower",
             () -> new DoublePlantBlock(BlockBehaviour.Properties.of(Material.PLANT)
-                    .noCollission().instabreak().sound(SoundType.CROP).offsetType(BlockBehaviour.OffsetType.XZ)));
+                    .noCollission().instabreak().sound(SoundType.CROP).offsetType(BlockBehaviour.OffsetType.XZ)));*/
 
     public static final RegistryObject<Block> SWEET_BERRY_BUSH = BLOCKS.register("sweet_berry_bush",
             () -> new ReplacedSweetBerryBushBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks()
                     .noCollission().sound(SoundType.SWEET_BERRY_BUSH)));
 
-    public static final RegistryObject<Block> MOSS_CARPET = BLOCKS.register("moss_carpet",
+    /*public static final RegistryObject<Block> MOSS_CARPET = BLOCKS.register("moss_carpet",
             () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_GREEN).strength(0.1F).sound(SoundType.MOSS_CARPET)));
 
-    /*public static final RegistryObject<Block> COMPOSTER = BLOCKS.register("composter",
+    public static final RegistryObject<Block> COMPOSTER = BLOCKS.register("composter",
             () -> new ComposterBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.6F).sound(SoundType.WOOD)));*/
 
     public static void register(IEventBus modEventBus) {
