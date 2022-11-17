@@ -3,7 +3,7 @@
   "start_pool": "cinchcraft:swamp_ruin_1/start_pool",
   "size": 2,
   "max_distance_from_center": 80,
-  "biomes": "#cinchcraft:has_structure/swamp_ruin_1",
+  "biomes": "#cinchcraft:has_structure/swamp_ruins",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
   "start_height": {
