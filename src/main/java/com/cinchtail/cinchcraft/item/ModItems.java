@@ -264,6 +264,10 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
                             .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
 
+    public static final RegistryObject<Item> FIRE_FERN = ITEMS.register("fire_fern",
+            () -> new ItemNameBlockItem(ModBlocks.FIRE_FERN.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_fire_fern_biomes",
+  "feature": "cinchcraft:fire_fern_placed"
+}

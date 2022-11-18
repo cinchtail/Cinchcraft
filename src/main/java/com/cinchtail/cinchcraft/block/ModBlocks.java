@@ -593,6 +593,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRAWBERRY_PLANT = BLOCKS.register("strawberry_plant",
             () -> new StrawberryPlantBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().sound(SoundType.CROP)));
 
+    public static final RegistryObject<Block> FIRE_FERN = BLOCKS.register("fire_fern",
+            () -> new FireFernBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

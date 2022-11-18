@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "cinchcraft:block/fire_fern_bottom"
+  },
+  "render_type": "cutout"
+}

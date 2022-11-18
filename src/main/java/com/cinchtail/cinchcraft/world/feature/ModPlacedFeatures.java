@@ -102,6 +102,11 @@ public class ModPlacedFeatures {
                     List.of(RarityFilter.onAverageOnceEvery(50),
                             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
 
+    public static final RegistryObject<PlacedFeature> FIRE_FERN_PLACED = PLACED_FEATURES.register("fire_fern_placed",
+            () -> new PlacedFeature(ModConfiguredFeatures.FIRE_FERN.getHolder().get(),
+                    List.of(RarityFilter.onAverageOnceEvery(5),
+                            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+
 
 
     public static List<PlacementModifier> orePlacement(PlacementModifier placementModifier, PlacementModifier placementModifier1) {

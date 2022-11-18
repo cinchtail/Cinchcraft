@@ -78,7 +78,7 @@ public class ModConfiguredFeatures {
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.CROCUS.get()))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> BLUE_BERRIE = CONFIGURED_FEATURE.register("blue_berrie",
-            () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+            () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BLUEBERRY_BUSH.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> BUBBLE_FLOWER = CONFIGURED_FEATURE.register("bubble_flower",
@@ -86,7 +86,7 @@ public class ModConfiguredFeatures {
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BUBBLE_FLOWER.get()))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> SMALL_CACTUS = CONFIGURED_FEATURE.register("small_cactus",
-            () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+            () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SMALL_CACTUS.get()))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> APPLE_TREE =
@@ -106,16 +106,20 @@ public class ModConfiguredFeatures {
                             0.5F)), ModPlacedFeatures.APPLE_TREE_CHECKED.getHolder().get())));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> PINEAPPLE_PLANT = CONFIGURED_FEATURE.register("pineapple_plant",
-            () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(15, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+            () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(15, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PINEAPPLE_PLANT.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> MOD_SWEET_BERRIE = CONFIGURED_FEATURE.register("mod_sweet_berrie",
-            () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+            () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> STRAWBERRY = CONFIGURED_FEATURE.register("strawberry",
-            () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+            () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STRAWBERRY_PLANT.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
+
+    public static final RegistryObject<ConfiguredFeature<?, ?>> FIRE_FERN = CONFIGURED_FEATURE.register("fire_fern",
+            () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                    new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get()))))));
 
 
     public static void register(IEventBus eventBus) {

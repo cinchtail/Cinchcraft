@@ -9,6 +9,10 @@
     {
       "structure": "cinchcraft:swamp_ruin_2",
       "weight": 1
+    },
+    {
+      "structure": "cinchcraft:swamp_ruin_3",
+      "weight": 1
     }
   ],
   "placement": {
