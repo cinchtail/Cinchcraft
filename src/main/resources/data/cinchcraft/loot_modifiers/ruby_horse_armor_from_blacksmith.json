@@ -1,0 +1,10 @@
+{
+  "type": "cinchcraft:add_item",
+  "conditions": [
+    {
+      "condition": "block_state_property",
+      "chests": "minecraft:village/village_weaponsmith"
+    }
+  ],
+  "item": "cinchcraft:ruby_horse_armor"
+}
