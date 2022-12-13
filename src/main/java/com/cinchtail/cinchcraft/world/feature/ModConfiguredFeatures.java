@@ -2,6 +2,8 @@ package com.cinchtail.cinchcraft.world.feature;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.block.custom.BlueBerryBushBlock;
+import com.cinchtail.cinchcraft.block.custom.PineapplePlantBlock;
+import com.cinchtail.cinchcraft.block.custom.StrawberryPlantBlock;
 import com.cinchtail.cinchcraft.cinchcraft;
 import com.google.common.base.Suppliers;
 import net.minecraft.core.Registry;
@@ -10,6 +12,7 @@ import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -107,19 +110,18 @@ public class ModConfiguredFeatures {
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> PINEAPPLE_PLANT = CONFIGURED_FEATURE.register("pineapple_plant",
             () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(15, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                    new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PINEAPPLE_PLANT.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
+                    new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PINEAPPLE_PLANT.get().defaultBlockState().setValue(PineapplePlantBlock.AGE, 3)))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> MOD_SWEET_BERRIE = CONFIGURED_FEATURE.register("mod_sweet_berrie",
             () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                    new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
+                    new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 3)))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> STRAWBERRY = CONFIGURED_FEATURE.register("strawberry",
             () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                    new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STRAWBERRY_PLANT.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
+                    new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STRAWBERRY_PLANT.get().defaultBlockState().setValue(StrawberryPlantBlock.AGE, 3)))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> FIRE_FERN = CONFIGURED_FEATURE.register("fire_fern",
-            () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                    new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get()))))));
+            () -> new ConfiguredFeature<>(Feature.NETHER_FOREST_VEGETATION, new NetherForestVegetationConfig(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get()), 8, 4)));
 
 
     public static void register(IEventBus eventBus) {
