@@ -118,7 +118,7 @@ public class ModConfiguredFeatures {
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STRAWBERRY_PLANT.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3)))))));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> FIRE_FERN = CONFIGURED_FEATURE.register("fire_fern",
-            () -> new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+            () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get()))))));
 
 
