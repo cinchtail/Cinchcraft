@@ -222,10 +222,6 @@ public class ModItems {
             () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_PRESSURE_PLATE.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
-    public static final RegistryObject<Item> OAK_CHEST = ITEMS.register("oak_chest",
-            () -> new ModWoodenFullBlockItem(ModBlocks.OAK_CHEST.get(),
-                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
-
     public static final RegistryObject<Item> GLOWSTONE_TORCH = ITEMS.register("glowstone_torch",
             () -> new ModStandingAndWallBlockItem(ModBlocks.GLOWSTONE_TORCH.get(), ModBlocks.GLOWSTONE_WALL_TORCH.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));

@@ -433,9 +433,6 @@ public class ModBlocks {
             () -> new ModBarrelBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5f).sound(SoundType.WOOD)),
             ModCreativeModeTab.CINCHCRAFT_TAB);
 
-    public static final RegistryObject<Block> OAK_CHEST = BLOCKS.register("oak_chest",
-            () -> new ModChestBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD), () -> BlockEntityType.CHEST));
-
     public static final RegistryObject<Block> GLOWSTONE_TORCH = BLOCKS.register("glowstone_torch",
             () -> new GlowStoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
                     .noOcclusion().sound(SoundType.WOOD).instabreak().lightLevel((blockState) -> 14).sound(SoundType.WOOD), ParticleTypes.ASH));
