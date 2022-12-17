@@ -187,8 +187,8 @@ publishing {
     }
 }
 mixin {
-    add sourceSets.main, "modid.cinchcraft.json"
-    config "modid.mixins.json"
+    add sourceSets.main, "cinchcraft.mixins.json"
+    config "cinchcraft.mixins.json"
 }
 
 tasks.withType(JavaCompile).configureEach {
