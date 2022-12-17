@@ -167,7 +167,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
 
     public static final RegistryObject<Item> APPLE_SIGN = ITEMS.register("apple_sign",
-            () -> new SignItem(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB).stacksTo(16),
+            () -> new SignItem(new Item.Properties().stacksTo(16),
                     ModBlocks.APPLE_SIGN.get(), ModBlocks.APPLE_WALL_SIGN.get()));
 
     public static final RegistryObject<Item> CHAINMAIL = ITEMS.register("chainmail",
@@ -267,6 +267,9 @@ public class ModItems {
     public static final RegistryObject<Item> FIRE_FERN = ITEMS.register("fire_fern",
             () -> new ItemNameBlockItem(ModBlocks.FIRE_FERN.get(),
                     new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));
+
+    public static final RegistryObject<Item> NETHER_SALAD = ITEMS.register("nether_salad",
+            () -> new BowlFoodItem(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB).stacksTo(1).food(ModFoods.NETHER_SALAD)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

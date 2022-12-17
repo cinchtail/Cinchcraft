@@ -18,9 +18,9 @@ public class BlocksOverriding {
             () -> new ReplacedCarrotsBlock(BlockBehaviour.Properties.of(Material.PLANT)
                     .noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
-    public static final RegistryObject<Block> STONECUTTER = BLOCKS.register("stonecutter",
+    /*public static final RegistryObject<Block> STONECUTTER = BLOCKS.register("stonecutter",
             () -> new ReplacedStonecutterBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .requiresCorrectToolForDrops().strength(3.5F)));
+                    .requiresCorrectToolForDrops().strength(3.5F)));*/
 
     public static final RegistryObject<Block> MELON = BLOCKS.register("melon",
             () -> new ReplacedMelonBlock(BlockBehaviour.Properties.of(Material.VEGETABLE,
