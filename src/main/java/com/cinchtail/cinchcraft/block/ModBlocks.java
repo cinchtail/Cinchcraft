@@ -435,7 +435,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> GLOWSTONE_TORCH = BLOCKS.register("glowstone_torch",
             () -> new GlowStoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
-                    .noOcclusion().sound(SoundType.WOOD).instabreak().lightLevel((blockState) -> 14).sound(SoundType.WOOD), ParticleTypes.ASH));
+                    .noOcclusion().sound(SoundType.WOOD).instabreak().lightLevel((blockState) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
 
     public static final RegistryObject<Block> GLOWSTONE_WALL_TORCH = BLOCKS.register("glowstone_wall_torch",
             () -> new GlowStoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)

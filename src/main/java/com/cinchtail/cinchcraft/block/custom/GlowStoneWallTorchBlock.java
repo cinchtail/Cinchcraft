@@ -52,7 +52,7 @@ public class GlowStoneWallTorchBlock extends WallTorchBlock implements SimpleWat
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(WATERLOGGED).add(FACING);
     }
-    public FluidState getFluidState(BlockState p_153492_) {
-        return p_153492_.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(p_153492_);
+    public FluidState getFluidState(BlockState value) {
+        return value.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(value);
     }
 }
