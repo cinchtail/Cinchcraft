@@ -187,7 +187,6 @@ publishing {
     }
 }
 mixin {
-    add sourceSets.main, "cinchcraft.mixins.json"
     config "cinchcraft.mixins.json"
 }
 
