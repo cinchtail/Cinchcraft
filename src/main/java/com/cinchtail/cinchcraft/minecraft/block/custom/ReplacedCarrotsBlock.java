@@ -2,7 +2,6 @@ package com.cinchtail.cinchcraft.minecraft.block.custom;
 
 import com.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
