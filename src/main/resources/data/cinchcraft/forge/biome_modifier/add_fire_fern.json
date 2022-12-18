@@ -1,5 +1,5 @@
 {
-  "type": "cinchcraft:vegetal",
+  "type": "cinchcraft:nether_vegetal_modifier",
   "biomes": "#minecraft:is_fire_fern_biomes",
   "feature": "cinchcraft:fire_fern_placed"
 }

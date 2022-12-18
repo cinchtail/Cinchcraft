@@ -35,6 +35,12 @@ public class ModBiomeModifiers {
                     MobSpawnSettings.SpawnerData.CODEC.fieldOf("entity").forGetter(ModEntityBiomeModifier::spawnerData)
             ).apply(builder, ModEntityBiomeModifier::new)));
 
+    public static RegistryObject<Codec<ModEntityBiomeModifier>> NETHER_VEGETAL_MODIFIER = BIOME_MODIFIERS.register("entities", () ->
+            RecordCodecBuilder.create(builder -> builder.group(
+                    Biome.LIST_CODEC.fieldOf("biomes").forGetter(ModEntityBiomeModifier::biomes),
+                    MobSpawnSettings.SpawnerData.CODEC.fieldOf("entity").forGetter(ModEntityBiomeModifier::spawnerData)
+            ).apply(builder, ModEntityBiomeModifier::new)));
+
 
     public static void register(IEventBus eventBus) {
         BIOME_MODIFIERS.register(eventBus);
