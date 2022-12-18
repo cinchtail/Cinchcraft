@@ -455,7 +455,7 @@ public class ModBlocks {
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)), ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
 
     public static final RegistryObject<Block> POLISHED_CALCITE = registerBlock("polished_calcite",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1f).sound(SoundType.TUFF).requiresCorrectToolForDrops()),
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1f).sound(SoundType.CALCITE).requiresCorrectToolForDrops()),
             ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
 
     public static final RegistryObject<Block> POLISHED_CALCITE_STAIRS = registerBlock("polished_calcite_stairs",
@@ -472,7 +472,7 @@ public class ModBlocks {
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)), ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
 
     public static final RegistryObject<Block> POLISHED_DRIPSTONE_BLOCK = registerBlock("polished_dripstone_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.TUFF).requiresCorrectToolForDrops()),
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()),
             ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
 
     public static final RegistryObject<Block> POLISHED_DRIPSTONE_STAIRS = registerBlock("polished_dripstone_stairs",
