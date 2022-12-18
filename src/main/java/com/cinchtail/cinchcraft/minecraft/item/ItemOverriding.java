@@ -13,9 +13,6 @@ public class ItemOverriding {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
             "minecraft");
 
-    /*public static final RegistryObject<Item> CARROT = ITEMS.register("carrot",
-            () -> new ReplacedItem(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)
-                    .food(new FoodProperties.Builder().nutrition(3).saturationMod(.6f).build())));*/
 
     public static final RegistryObject<Item> MELON = ITEMS.register("melon",
             () -> new ItemNameBlockItem(Blocks.MELON, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));

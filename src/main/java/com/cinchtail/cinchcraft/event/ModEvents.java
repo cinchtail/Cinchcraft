@@ -11,14 +11,14 @@ import net.minecraftforge.fml.common.Mod;
 public class ModEvents {
     @Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID)
     public static class ForgeEvents {
+        @SubscribeEvent
+        public static void PlayerRightCLickedBlock(PlayerInteractEvent.RightClickBlock event) {
+            ItemStack stack = event.getItemStack();
+            if (stack.is(Items.CARROT)) {
+                event.setCanceled(true);
 
-    }
-    @SubscribeEvent
-    public static void PlayerRightCLickedBlock(PlayerInteractEvent.RightClickBlock event) {
-        ItemStack stack = event.getItemStack();
-        if (stack.is(Items.CARROT)) {
-            event.setCanceled(true);
-
+            }
         }
+
     }
 }

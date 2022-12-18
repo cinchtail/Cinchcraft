@@ -11,7 +11,7 @@ public class ModFoods {
     static final FoodProperties PINEAPPLE = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.5F).build();
     static final FoodProperties SUNFLOWER_SEEDS = (new FoodProperties.Builder().fast()).nutrition(2).saturationMod(0.1F).build();
     static final FoodProperties STRAWBERRIES = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
-    static final FoodProperties NETHER_SALAD = stew(4).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300, 1), 1.0F).build();
+    static final FoodProperties NETHER_SALAD = stew(4).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300, 1), 1F).build();
 
     private static FoodProperties.Builder stew(int i) {
         return (new FoodProperties.Builder()).nutrition(i).saturationMod(0.6F);

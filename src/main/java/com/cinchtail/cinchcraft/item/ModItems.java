@@ -16,26 +16,6 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, cinchcraft.MOD_ID);
 
-    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)));
-
-    public static final RegistryObject<Item> COMPOST = ITEMS.register("compost",
-            () -> new CompostItem(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)));
-
-    public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)));
-
-    public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",
-            () -> new BowlFoodItem(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB).stacksTo(1).food(ModFoods.VEGETABLE_STEW)));
-
-    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
-            () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),
-                    new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)
-                            .food(new FoodProperties.Builder().nutrition(2).saturationMod(.1f).build())));
-
-    public static final RegistryObject<Item> BLUEBERRY_PIE = ITEMS.register("blueberry_pie",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)
-                    .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
 
     public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword",
             () -> new SwordItem(ModTiers.RUBY,4, -2.4f,
@@ -160,6 +140,27 @@ public class ModItems {
     public static final RegistryObject<Item> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor",
             () -> new HorseArmorItem(6, "emerald",
                     new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)));
+
+    public static final RegistryObject<Item> COMPOST = ITEMS.register("compost",
+            () -> new CompostItem(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)));
+
+    public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)));
+
+    public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",
+            () -> new BowlFoodItem(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB).stacksTo(1).food(ModFoods.VEGETABLE_STEW)));
+
+    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
+            () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),
+                    new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)
+                            .food(new FoodProperties.Builder().nutrition(2).saturationMod(.1f).build())));
+
+    public static final RegistryObject<Item> BLUEBERRY_PIE = ITEMS.register("blueberry_pie",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabItems.CINCHCRAFT_ITEMS_TAB)
+                    .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
 
     public static final RegistryObject<Item> CARROT_SEEDS = ITEMS.register("carrot_seeds",
             () -> new CarrotSeedItem(Blocks.CARROTS,
