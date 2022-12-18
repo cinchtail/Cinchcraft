@@ -27,7 +27,8 @@ public class FireFernBlock extends DoublePlantBlock {
 
         for(int i = 0; i < 3; ++i) {
             if (randomSource.nextBoolean()) {
-                level.addParticle(ParticleTypes.FLAME, d0 + randomSource.nextDouble() / 5.0D, (double)pos.getY() + (0.5D - randomSource.nextDouble()), d1 + randomSource.nextDouble() / 5.0D, 0.0D, 0.0D, 0.0D);
+                level.addParticle(ParticleTypes.FLAME, d0 + randomSource.nextDouble() / 5.0D, (double)pos.getY() + (0.5D - randomSource.nextDouble()),
+                        d1 + randomSource.nextDouble() / 5.0D, 0.0D, 0.0D, 0.0D);
             }
         }
 
