@@ -45,10 +45,6 @@ public class GlowStoneWallTorchBlock extends WallTorchBlock implements SimpleWat
         return super.updateShape(blockState, direction, blockState1, levelAccessor, pos, pos1);
     }
 
-    @Override
-    public void animateTick(BlockState blockState, Level level, BlockPos pos, RandomSource randomSource) {
-    }
-
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(WATERLOGGED).add(FACING);
     }
