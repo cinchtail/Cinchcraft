@@ -1,6 +1,6 @@
 package com.cinchtail.cinchcraft.datagen;
 
-import com.cinchtail.cinchcraft.Cinchcraft;
+import com.cinchtail.cinchcraft.cinchcraft;
 import com.cinchtail.cinchcraft.util.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BiomeTagsProvider;
@@ -9,7 +9,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModBiomeTagProvider extends BiomeTagsProvider {
     public ModBiomeTagProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, Cinchcraft.MOD_ID, exFileHelper);
+        super(gen, cinchcraft.MOD_ID, exFileHelper);
     }
 
     protected void addTags() {

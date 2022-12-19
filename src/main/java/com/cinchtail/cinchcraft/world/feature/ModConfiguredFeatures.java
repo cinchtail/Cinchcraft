@@ -4,7 +4,7 @@ import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.block.custom.BlueBerryBushBlock;
 import com.cinchtail.cinchcraft.block.custom.PineapplePlantBlock;
 import com.cinchtail.cinchcraft.block.custom.StrawberryPlantBlock;
-import com.cinchtail.cinchcraft.Cinchcraft;
+import com.cinchtail.cinchcraft.cinchcraft;
 import com.google.common.base.Suppliers;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -30,7 +30,7 @@ import java.util.function.Supplier;
 
 public class ModConfiguredFeatures {
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURE =
-            DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Cinchcraft.MOD_ID);
+            DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, cinchcraft.MOD_ID);
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_RUBY_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.RUBY_ORE.get().defaultBlockState()),

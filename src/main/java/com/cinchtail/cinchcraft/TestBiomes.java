@@ -29,6 +29,6 @@ public class TestBiomes
 
     private static ResourceKey<Biome> register(String name)
     {
-        return ResourceKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(Cinchcraft.MOD_ID, name));
+        return ResourceKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(cinchcraft.MOD_ID, name));
     }
 }

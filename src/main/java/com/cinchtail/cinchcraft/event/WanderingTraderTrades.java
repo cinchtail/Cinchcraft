@@ -1,7 +1,7 @@
 package com.cinchtail.cinchcraft.event;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
-import com.cinchtail.cinchcraft.Cinchcraft;
+import com.cinchtail.cinchcraft.cinchcraft;
 import com.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -10,7 +10,7 @@ import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID)
+@Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID)
 public class WanderingTraderTrades {
     @SubscribeEvent
     public void WanderingTraderTrades(WandererTradesEvent event)

@@ -36,13 +36,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 import terrablender.api.Regions;
 
-@Mod(Cinchcraft.MOD_ID)
-public class Cinchcraft
+@Mod(cinchcraft.MOD_ID)
+public class cinchcraft
 {
 
     public static final String MOD_ID = "cinchcraft";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public Cinchcraft()
+    public cinchcraft()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
@@ -89,7 +89,7 @@ public class Cinchcraft
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
-    @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class commonSetup {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
