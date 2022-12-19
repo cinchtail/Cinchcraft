@@ -16,7 +16,6 @@ import com.cinchtail.cinchcraft.villager.ModVillagers;
 import com.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import com.cinchtail.cinchcraft.world.feature.ModConfiguredFeatures;
 import com.cinchtail.cinchcraft.world.feature.ModPlacedFeatures;
-import com.cinchtail.cinchcraft.minecraft.item.ItemOverriding;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.resources.ResourceLocation;
@@ -53,7 +52,6 @@ public class cinchcraft
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        ItemOverriding.register(modEventBus);
         BlocksOverriding.register(modEventBus);
 
         ModSounds.register(modEventBus);
