@@ -1,8 +1,8 @@
 package com.cinchtail.cinchcraft.event;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import com.cinchtail.cinchcraft.cinchcraft;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import com.cinchtail.cinchcraft.item.ModItems;
 import com.cinchtail.cinchcraft.villager.ModVillagers;
 import net.minecraft.world.item.ItemStack;
