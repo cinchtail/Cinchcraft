@@ -2,7 +2,7 @@ package com.cinchtail.cinchcraft.world.biomemods;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.cinchtail.cinchcraft.cinchcraft;
+import com.cinchtail.cinchcraft.Cinchcraft;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
@@ -14,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBiomeModifiers {
     public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIERS =
-            DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, cinchcraft.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, Cinchcraft.MOD_ID);
 
 
     public static RegistryObject<Codec<ModVegetalBiomeModifier>> VEGETAL_MODIFIER = BIOME_MODIFIERS.register("vegetal", () ->

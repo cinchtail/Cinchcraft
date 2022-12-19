@@ -1,13 +1,12 @@
 package com.cinchtail.cinchcraft.item;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
-import com.cinchtail.cinchcraft.cinchcraft;
+import com.cinchtail.cinchcraft.Cinchcraft;
 import com.cinchtail.cinchcraft.item.custom.*;
 import com.cinchtail.cinchcraft.minecraft.block.BlocksOverriding;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, cinchcraft.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, Cinchcraft.MOD_ID);
 
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)));

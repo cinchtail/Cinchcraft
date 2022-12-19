@@ -1,6 +1,6 @@
 package com.cinchtail.cinchcraft.potion;
 
-import com.cinchtail.cinchcraft.cinchcraft;
+import com.cinchtail.cinchcraft.Cinchcraft;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.alchemy.Potion;
@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModPotions {
     public static DeferredRegister<Potion> POTIONS
-            = DeferredRegister.create(ForgeRegistries.POTIONS, cinchcraft.MOD_ID);
+            = DeferredRegister.create(ForgeRegistries.POTIONS, Cinchcraft.MOD_ID);
 
     public static final RegistryObject<Potion> GLOWING_POTION = POTIONS.register("glowing_potion",
             () -> new Potion(new MobEffectInstance(MobEffects.GLOWING,3600,0)));

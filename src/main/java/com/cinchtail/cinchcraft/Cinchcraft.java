@@ -19,14 +19,11 @@ import com.cinchtail.cinchcraft.world.feature.ModPlacedFeatures;
 import com.cinchtail.cinchcraft.minecraft.item.ItemOverriding;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
-import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -39,13 +36,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 import terrablender.api.Regions;
 
-@Mod(cinchcraft.MOD_ID)
-public class cinchcraft
+@Mod(Cinchcraft.MOD_ID)
+public class Cinchcraft
 {
 
     public static final String MOD_ID = "cinchcraft";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public cinchcraft()
+    public Cinchcraft()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
@@ -92,7 +89,7 @@ public class cinchcraft
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
-    @Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class commonSetup {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {

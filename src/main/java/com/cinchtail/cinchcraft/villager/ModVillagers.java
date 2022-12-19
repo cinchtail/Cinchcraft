@@ -1,14 +1,11 @@
 package com.cinchtail.cinchcraft.villager;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
-import com.cinchtail.cinchcraft.cinchcraft;
+import com.cinchtail.cinchcraft.Cinchcraft;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
-import net.minecraft.world.entity.ai.village.poi.PoiTypes;
-import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,9 +18,9 @@ import java.lang.reflect.InvocationTargetException;
 
 public class ModVillagers {
     public static DeferredRegister<PoiType> POI_TYPES =
-            DeferredRegister.create(ForgeRegistries.POI_TYPES, cinchcraft.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.POI_TYPES, Cinchcraft.MOD_ID);
     public static DeferredRegister<VillagerProfession> VILLAGER_PROFFESIONS =
-            DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS,cinchcraft.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, Cinchcraft.MOD_ID);
 
     public static final RegistryObject<PoiType> SMALL_ROSE_POI = POI_TYPES.register("small_rose_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.SMALL_ROSE.get().getStateDefinition().getPossibleStates()), 1, 1));

@@ -2,21 +2,17 @@ package com.cinchtail.cinchcraft.block;
 
 import com.cinchtail.cinchcraft.block.custom.*;
 import com.cinchtail.cinchcraft.block.entity.ModWoodTypes;
-import com.cinchtail.cinchcraft.cinchcraft;
+import com.cinchtail.cinchcraft.Cinchcraft;
 import com.cinchtail.cinchcraft.item.ModCreativeModeTab;
 import com.cinchtail.cinchcraft.item.ModItems;
 import com.cinchtail.cinchcraft.world.feature.tree.AppleTreeGrower;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -32,7 +28,7 @@ import java.util.function.ToIntFunction;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, cinchcraft.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, Cinchcraft.MOD_ID);
 
     public static final RegistryObject<Block> BLOCK_OF_RUBY = registerBlock("block_of_ruby",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).strength(5f).requiresCorrectToolForDrops()),

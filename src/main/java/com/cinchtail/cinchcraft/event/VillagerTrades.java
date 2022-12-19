@@ -2,7 +2,7 @@ package com.cinchtail.cinchcraft.event;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import com.cinchtail.cinchcraft.cinchcraft;
+import com.cinchtail.cinchcraft.Cinchcraft;
 import com.cinchtail.cinchcraft.item.ModItems;
 import com.cinchtail.cinchcraft.villager.ModVillagers;
 import net.minecraft.world.item.ItemStack;
@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID)
+@Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID)
 public class VillagerTrades {
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {

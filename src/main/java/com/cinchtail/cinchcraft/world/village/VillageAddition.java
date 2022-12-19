@@ -1,6 +1,6 @@
 package com.cinchtail.cinchcraft.world.village;
 
-import com.cinchtail.cinchcraft.cinchcraft;
+import com.cinchtail.cinchcraft.Cinchcraft;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.ArrayList;
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID)
+@Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID)
 public class VillageAddition {
     private static final ResourceKey<StructureProcessorList> EMPTY_PROCESSOR_LIST_KEY = ResourceKey.create(
             Registry.PROCESSOR_LIST_REGISTRY, new ResourceLocation("minecraft", "empty"));

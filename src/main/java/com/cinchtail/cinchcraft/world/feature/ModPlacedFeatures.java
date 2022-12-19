@@ -1,7 +1,7 @@
 package com.cinchtail.cinchcraft.world.feature;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
-import com.cinchtail.cinchcraft.cinchcraft;
+import com.cinchtail.cinchcraft.Cinchcraft;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static DeferredRegister<PlacedFeature> PLACED_FEATURES =
-            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, cinchcraft.MOD_ID);
+            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Cinchcraft.MOD_ID);
 
     public static final RegistryObject<PlacedFeature> RUBY_ORE_PLACED = PLACED_FEATURES.register("ruby_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.RUBY_ORE.getHolder().get(),
@@ -105,7 +105,7 @@ public class ModPlacedFeatures {
     public static final RegistryObject<PlacedFeature> FIRE_FERN_PLACED = PLACED_FEATURES.register("fire_fern_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.FIRE_FERN.getHolder().get(),
                     List.of(RarityFilter.onAverageOnceEvery(5),
-                            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
+                            InSquarePlacement.spread(), PlacementUtils.FULL_RANGE, BiomeFilter.biome())));
 
 
 
