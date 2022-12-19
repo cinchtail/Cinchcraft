@@ -16,9 +16,7 @@ public class ModEvents {
             ItemStack stack = event.getItemStack();
             if (stack.is(Items.CARROT)) {
                 event.setCanceled(true);
-
             }
         }
-
     }
 }

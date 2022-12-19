@@ -16,10 +16,6 @@ public class ItemOverriding {
 
     public static final RegistryObject<Item> MELON = ITEMS.register("melon",
             () -> new ItemNameBlockItem(Blocks.MELON, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-
-    /*public static final RegistryObject<Item> SUNFLOWER = ITEMS.register("sunflower",
-            () -> new ReplacedItem(new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB).craftRemainder(Items.YELLOW_DYE)));*/
-
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
     }

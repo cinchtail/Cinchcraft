@@ -121,7 +121,6 @@ public class ModConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?, ?>> FIRE_FERN = CONFIGURED_FEATURE.register("fire_fern",
             () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get())))));
 
-
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURE.register(eventBus);
 
