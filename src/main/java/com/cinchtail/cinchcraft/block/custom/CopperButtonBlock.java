@@ -9,6 +9,8 @@ import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
+
+
 public class CopperButtonBlock extends ButtonBlock implements ModWeatheringCopper {
 
     private final WeatheringCopper.WeatherState weatherState;
@@ -16,9 +18,8 @@ public class CopperButtonBlock extends ButtonBlock implements ModWeatheringCoppe
         super(false, properties);
         this.weatherState = weatherState;
     }
-
     @Override
-    protected SoundEvent getSound(boolean b) {
+    protected SoundEvent getSound(boolean p_51102_) {
         return null;
     }
 

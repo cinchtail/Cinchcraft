@@ -27,7 +27,8 @@ public class FireFernBlock extends DoublePlantBlock {
 
         for(int i = 0; i < 3; ++i) {
             if (randomSource.nextBoolean()) {
-                level.addParticle(ParticleTypes.FLAME, d0 + randomSource.nextDouble() / 5.0D, (double)pos.getY() + (0.5D - randomSource.nextDouble()), d1 + randomSource.nextDouble() / 5.0D, 0.0D, 0.0D, 0.0D);
+                level.addParticle(ParticleTypes.FLAME, d0 + randomSource.nextDouble() / 5.0D, (double)pos.getY() + (0.5D - randomSource.nextDouble()),
+                        d1 + randomSource.nextDouble() / 5.0D, 0.0D, 0.0D, 0.0D);
             }
         }
 
@@ -39,6 +40,7 @@ public class FireFernBlock extends DoublePlantBlock {
         }
         super.stepOn(level, pos, state, entity);
     }
+    @Override
     protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
         return super.mayPlaceOn(blockState, blockGetter, pos) || blockState.is(Blocks.NETHERRACK) || blockState.is(Blocks.SOUL_SAND) || blockState.is(Blocks.SOUL_SOIL) ||
                 blockState.is(Blocks.BASALT) || blockState.is(Blocks.MAGMA_BLOCK) || blockState.is(Blocks.CRIMSON_NYLIUM) || blockState.is(Blocks.WARPED_NYLIUM) || blockState.is(Blocks.BLACKSTONE);

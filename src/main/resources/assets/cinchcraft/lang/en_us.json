@@ -71,7 +71,8 @@
   "item.minecraft.sunflower": "Sunflower Head",
   "item.minecraft.melon": "Melon",
 
-  "itemGroup.cinchcraft": "Cinchcraft",
+  "itemGroup.cinchcraft_blocks": "Cinchcraft Blocks",
+  "itemGroup.cinchcraft_items": "Cinchcraft Items",
 
   "entity.minecraft.villager.cinchcraft.bee_keeper": "Bee Keeper",
 

@@ -14,9 +14,6 @@ public class BlocksOverriding {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, "minecraft");
 
-    public static final RegistryObject<Block> CARROTS = BLOCKS.register("carrots",
-            () -> new ReplacedCarrotsBlock(BlockBehaviour.Properties.of(Material.PLANT)
-                    .noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
     /*public static final RegistryObject<Block> STONECUTTER = BLOCKS.register("stonecutter",
             () -> new ReplacedStonecutterBlock(BlockBehaviour.Properties.of(Material.STONE)
