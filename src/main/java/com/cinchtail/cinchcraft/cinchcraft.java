@@ -11,6 +11,7 @@ import com.cinchtail.cinchcraft.loot.ModLootModifiers;
 import com.cinchtail.cinchcraft.minecraft.block.BlocksOverriding;
 import com.cinchtail.cinchcraft.potion.ModPotions;
 import com.cinchtail.cinchcraft.sound.ModSounds;
+import com.cinchtail.cinchcraft.tags.ModBlockTags;
 import com.cinchtail.cinchcraft.util.BetterBrewingRecipe;
 import com.cinchtail.cinchcraft.villager.ModVillagers;
 import com.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
