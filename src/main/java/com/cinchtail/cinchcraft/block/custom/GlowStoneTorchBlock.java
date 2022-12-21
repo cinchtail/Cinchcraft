@@ -25,7 +25,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 import java.util.Objects;
 
-public class GlowStoneTorchBlock extends Block {
+public class GlowStoneTorchBlock extends Block implements SimpleWaterloggedBlock{
     protected static final int AABB_STANDING_OFFSET = 2;
     protected static final VoxelShape AABB = Block.box(6.0D, 0.0D, 6.0D, 10.0D, 10.0D, 10.0D);
 
