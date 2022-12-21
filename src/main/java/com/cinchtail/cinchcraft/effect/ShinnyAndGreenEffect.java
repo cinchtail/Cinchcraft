@@ -30,16 +30,17 @@ public class ShinnyAndGreenEffect extends MobEffect {
         return this.offers;
     }
 
-    public void applyEffectTick(Player p_35541_) {
-        int i = this.getPlayerReputation(p_35541_);
+    public void applyEffectTick(Player b) {
+        int i = this.getPlayerReputation(b);
         if (i != 0) {
             for(MerchantOffer merchantoffer : this.getOffers()) {
                 merchantoffer.addToSpecialPriceDiff(-Mth.floor((float)i * merchantoffer.getPriceMultiplier()));
             }
         }
 
-        if (p_35541_.hasEffect(MobEffects.HERO_OF_THE_VILLAGE)) {
-            MobEffectInstance mobeffectinstance = p_35541_.getEffect(MobEffects.HERO_OF_THE_VILLAGE);
+        if (b.hasEffect(ModEffects.SHINNY_AND_GREEN.get())) {
+            MobEffectInstance mobeffectinstance = b.getEffect(ModEffects.SHINNY_AND_GREEN.get());
+            assert mobeffectinstance != null;
             int k = mobeffectinstance.getAmplifier();
 
             for(MerchantOffer merchantoffer1 : this.getOffers()) {
