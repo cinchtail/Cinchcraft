@@ -1,5 +1,4 @@
 package com.cinchtail.cinchcraft.util;
-import com.cinchtail.cinchcraft.cinchcraft;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
