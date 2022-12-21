@@ -42,18 +42,18 @@ public class GlowStoneWallTorchBlock extends GlowStoneTorchBlock {
         return this.asItem().getDescriptionId();
     }
 
-    public VoxelShape getShape(BlockState p_58152_, BlockGetter p_58153_, BlockPos p_58154_, CollisionContext p_58155_) {
-        return getShape(p_58152_);
+    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {
+        return getShape(blockState);
     }
-    public static VoxelShape getShape(BlockState p_58157_) {
-        return AABBS.get(p_58157_.getValue(FACING));
+    public static VoxelShape getShape(BlockState blockState) {
+        return AABBS.get(blockState.getValue(FACING));
     }
 
-    public boolean canSurvive(BlockState p_58133_, LevelReader p_58134_, BlockPos p_58135_) {
-        Direction direction = p_58133_.getValue(FACING);
-        BlockPos blockpos = p_58135_.relative(direction.getOpposite());
-        BlockState blockstate = p_58134_.getBlockState(blockpos);
-        return blockstate.isFaceSturdy(p_58134_, blockpos, direction);
+    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos) {
+        Direction direction = blockState.getValue(FACING);
+        BlockPos blockpos = pos.relative(direction.getOpposite());
+        BlockState blockstate = levelReader.getBlockState(blockpos);
+        return blockstate.isFaceSturdy(levelReader, blockpos, direction);
     }
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
@@ -69,7 +69,7 @@ public class GlowStoneWallTorchBlock extends GlowStoneTorchBlock {
                 Direction direction1 = direction.getOpposite();
                 blockstate = blockstate.setValue(FACING, direction1);
                 if (blockstate.canSurvive(levelreader, blockpos)) {
-                    return Objects.requireNonNull(super.getStateForPlacement(placeContext)).setValue(WATERLOGGED, flag);
+                    return blockstate.setValue(WATERLOGGED, flag);
                 }
             }
         }
