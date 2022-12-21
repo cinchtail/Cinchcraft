@@ -1,4 +1,5 @@
-package com.cinchtail.cinchcraft.tags;
+package com.cinchtail.cinchcraft.util;
+import com.cinchtail.cinchcraft.cinchcraft;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -18,5 +19,9 @@ public class ModBlockTags {
 
     public static TagKey<Block> create(ResourceLocation name) {
         return TagKey.create(Registry.BLOCK_REGISTRY, name);
+    }
+
+    private static TagKey<Block> ModBlockTag(String name) {
+        return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(cinchcraft.MOD_ID, name));
     }
 }
