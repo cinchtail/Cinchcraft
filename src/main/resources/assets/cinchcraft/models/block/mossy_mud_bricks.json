@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cinchcraft:block/mossy_mud_bricks"
+  }
+}

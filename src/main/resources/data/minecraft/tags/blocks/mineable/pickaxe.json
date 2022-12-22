@@ -98,6 +98,10 @@
     "cinchcraft:waxed_exposed_copper_button",
     "cinchcraft:waxed_weathered_copper_button",
     "cinchcraft:waxed_oxidized_copper_button",
-    "cinchcraft:cracked_mud_bricks"
+    "cinchcraft:cracked_mud_bricks",
+    "cinchcraft:mossy_mud_bricks",
+    "cinchcraft:mossy_mud_brick_wall",
+    "cinchcraft:mossy_mud_brick_slab",
+    "cinchcraft:mossy_mud_brick_stairs"
   ]
 }

@@ -222,5 +222,9 @@
   "block.cinchcraft.waxed_exposed_copper_button": "Waxed Exposed Copper Button",
   "block.cinchcraft.waxed_weathered_copper_button": "Waxed Weathered Copper Button",
   "block.cinchcraft.waxed_oxidized_copper_button": "Waxed Oxidized Copper Button",
-  "block.cinchcraft.cracked_mud_bricks": "Cracked Mud Bricks"
+  "block.cinchcraft.cracked_mud_bricks": "Cracked Mud Bricks",
+  "block.cinchcraft.mossy_mud_bricks": "Mossy Mud Bricks",
+  "block.cinchcraft.mossy_mud_brick_wall": "Mossy Mud Brick Wall",
+  "block.cinchcraft.mossy_mud_brick_slab": "Mossy Mud Brick Slab",
+  "block.cinchcraft.mossy_mud_brick_stairs": "Mossy Mud Brick Stairs"
 }
