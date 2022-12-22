@@ -13,9 +13,9 @@ public class ModSounds {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, cinchcraft.MOD_ID);
 
 
-    private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
-        return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(cinchcraft.MOD_ID, name )));
-    }
+    //private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
+        //return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(cinchcraft.MOD_ID, name )));
+    //}
 
     public  static  void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);
