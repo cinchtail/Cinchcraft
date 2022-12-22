@@ -35,9 +35,9 @@ public class ModBiomes
 
     public static void registerBiomes()
     {
-        register(TestBiomes.MIXED_FOREST, OverworldBiomes::mixedforest);
+        register(CinchcraftBiomes.MIXED_FOREST, OverworldBiomes::mixedforest);
+        register(CinchcraftBiomes.ICE_CAVE, OverworldBiomes::icecave);
     }
-
     public static RegistryObject<Biome> register(ResourceKey<Biome> key, Supplier<Biome> biomeSupplier)
     {
         return BIOME_REGISTER.register(key.location().getPath(), biomeSupplier);

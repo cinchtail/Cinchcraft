@@ -90,4 +90,12 @@ public class OverworldBiomes
         BiomeDefaultFeatures.addRareBerryBushes(biomeBuilder);
         return biome(Biome.Precipitation.RAIN, 1.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
+    public static Biome icecave()
+    {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+        BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
+        BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
+        globalOverworldGeneration(biomeBuilder);
+        return biome(Biome.Precipitation.SNOW, 0.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+    }
 }

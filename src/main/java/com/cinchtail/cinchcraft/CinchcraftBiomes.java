@@ -23,9 +23,11 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 
-public class TestBiomes
+public class CinchcraftBiomes
 {
     public static final ResourceKey<Biome> MIXED_FOREST = register("mixed_forest");
+
+    public static final ResourceKey<Biome> ICE_CAVE = register("ice_cave");
 
     private static ResourceKey<Biome> register(String name)
     {
