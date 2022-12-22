@@ -611,6 +611,10 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)), ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
 
+    public static final RegistryObject<Block> PERMAFROST = registerBlock("permafrost",
+            () -> new Block(BlockBehaviour.Properties.of(Material.ICE).strength(.9f).sound(SoundType.GLASS)),
+            ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

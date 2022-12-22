@@ -6,11 +6,15 @@ import com.cinchtail.cinchcraft.block.custom.PineapplePlantBlock;
 import com.cinchtail.cinchcraft.block.custom.StrawberryPlantBlock;
 import com.cinchtail.cinchcraft.cinchcraft;
 import com.google.common.base.Suppliers;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.util.valueproviders.ClampedNormalFloat;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformFloat;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -121,6 +125,15 @@ public class ModConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?, ?>> FIRE_FERN = CONFIGURED_FEATURE.register("fire_fern",
             () -> new ConfiguredFeature<>(Feature.RANDOM_PATCH, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get())))));
 
+    //public static final Feature<DripstoneClusterConfiguration> ICY_DRIPSTONE_CLUSTER_FEATURE = register("icy_dripstone_cluster_feature", new IcyDripstoneClusterFeature(DripstoneClusterConfiguration.CODEC));
+
+    //public static final Holder<ConfiguredFeature<DripstoneClusterConfiguration, ?>> ICY_DRIPSTONE_CLUSTER = FeatureUtils.register("icy_dripstone_cluster", ICY_DRIPSTONE_CLUSTER_FEATURE,
+            //new DripstoneClusterConfiguration(12, UniformInt.of(3, 6), UniformInt.of(2, 8), 1, 3, UniformInt.of(2, 4),
+                    //UniformFloat.of(0.3F, 0.7F), ClampedNormalFloat.of(0.1F, 0.3F, 0.1F, 0.9F), 0.1F, 3, 8));
+
+    private static <C extends FeatureConfiguration, F extends Feature<C>> F register(String s, F f) {
+        return Registry.register(Registry.FEATURE, s, f);
+    }
     public static void register(IEventBus eventBus) {
         CONFIGURED_FEATURE.register(eventBus);
 

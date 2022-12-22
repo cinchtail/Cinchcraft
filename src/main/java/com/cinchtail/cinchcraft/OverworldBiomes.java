@@ -87,7 +87,7 @@ public class OverworldBiomes
         BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
         BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
         BiomeDefaultFeatures.addPlainVegetation(biomeBuilder);
-        BiomeDefaultFeatures.addRareBerryBushes(biomeBuilder);
+        BiomeDefaultFeatures.addCommonBerryBushes(biomeBuilder);
         return biome(Biome.Precipitation.RAIN, 1.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
     public static Biome icecave()
@@ -97,7 +97,6 @@ public class OverworldBiomes
         BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         globalOverworldGeneration(biomeBuilder);
         BiomeDefaultFeatures.addDripstone(biomeBuilder);
-        BiomeDefaultFeatures.addBlueIce(biomeBuilder);
         return biome(Biome.Precipitation.SNOW, .5F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
 }
