@@ -23,7 +23,7 @@ public class TestRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
             List<Climate.ParameterPoint> iceCavesPoint = new ParameterUtils.ParameterPointListBuilder()
-                    .temperature(ParameterUtils.Temperature.ICY)
+                    .temperature(Climate.Parameter.span(-.5F, -0.45F))
                     .humidity(ParameterUtils.Humidity.span(ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.HUMID))
                     .continentalness(ParameterUtils.Continentalness.FULL_RANGE)
                     .erosion(ParameterUtils.Erosion.span(ParameterUtils.Erosion.EROSION_2, ParameterUtils.Erosion.EROSION_6))

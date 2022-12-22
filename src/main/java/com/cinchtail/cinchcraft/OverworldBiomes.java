@@ -98,6 +98,6 @@ public class OverworldBiomes
         globalOverworldGeneration(biomeBuilder);
         BiomeDefaultFeatures.addDripstone(biomeBuilder);
         BiomeDefaultFeatures.addBlueIce(biomeBuilder);
-        return biome(Biome.Precipitation.SNOW, 1.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+        return biome(Biome.Precipitation.SNOW, .5F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
 }
