@@ -96,6 +96,8 @@ public class OverworldBiomes
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         globalOverworldGeneration(biomeBuilder);
-        return biome(Biome.Precipitation.SNOW, 0.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+        BiomeDefaultFeatures.addDripstone(biomeBuilder);
+        BiomeDefaultFeatures.addBlueIce(biomeBuilder);
+        return biome(Biome.Precipitation.SNOW, 1.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
 }
