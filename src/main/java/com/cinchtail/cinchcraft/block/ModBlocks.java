@@ -612,7 +612,7 @@ public class ModBlocks {
                     .strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)), ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
 
     public static final RegistryObject<Block> PERMAFROST = registerBlock("permafrost",
-            () -> new Block(BlockBehaviour.Properties.of(Material.ICE).strength(.9f).sound(SoundType.GLASS)),
+            () -> new Block(BlockBehaviour.Properties.of(Material.ICE).strength(.9f).sound(SoundType.GRAVEL)),
             ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
 
 
