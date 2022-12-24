@@ -34,10 +34,16 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0).setValue(DISTANCE, 7).setValue(PERSISTENT, Boolean.FALSE).setValue(WATERLOGGED, Boolean.FALSE));
     }
 
+    @Override
     public boolean isRandomlyTicking(BlockState blockState) {
-        return blockState.getValue(AGE) < 3;
+        return blockState.getValue(DISTANCE) == 7 && !blockState.getValue(PERSISTENT);
+    }
+    @Override
+    protected boolean decaying(BlockState p221386) {
+        return !p221386.getValue(PERSISTENT) && p221386.getValue(DISTANCE) == 7;
     }
 
+    @Override
     public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos pos, RandomSource randomSource) {
         int i = blockState.getValue(AGE);
         if (i < 3 && serverLevel.getRawBrightness(pos.above(), 0) >= 9 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(serverLevel, pos, blockState, randomSource.nextInt(20) == 0)) {
@@ -45,6 +51,10 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
             serverLevel.setBlock(pos, blockstate, 2);
             serverLevel.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockstate));
             net.minecraftforge.common.ForgeHooks.onCropsGrowPost(serverLevel, pos, blockState);
+            if (this.decaying(blockState)) {
+                dropResources(blockState, serverLevel, pos);
+                serverLevel.removeBlock(pos, false);
+            }
         }
 
     }
