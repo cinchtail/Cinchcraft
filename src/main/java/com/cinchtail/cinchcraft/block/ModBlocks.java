@@ -615,6 +615,19 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.ICE).strength(.9f).sound(SoundType.GRAVEL)),
             ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
 
+    public static final RegistryObject<Block> END_STONE_STAIRS = registerBlock("end_stone_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)),
+            ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
+
+    public static final RegistryObject<Block> END_STONE_SLAB = registerBlock("end_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)), ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
+
+    public static final RegistryObject<Block> END_STONE_WALL = registerBlock("end_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)), ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -646,9 +659,4 @@ public class ModBlocks {
             event.register(((state, btGetter, pos, tintIndex) -> btGetter == null || pos == null ? 0 : btGetter.getBlockTint(pos, COLOR_RESOLVER)), APPLE_LEAVES.get());
         }
     }*/
-    private static ToIntFunction<BlockState> litBlockEmission(int i) {
-        return (blockState) -> {
-            return blockState.getValue(BlockStateProperties.LIT) ? i : 0;
-        };
-    }
 }

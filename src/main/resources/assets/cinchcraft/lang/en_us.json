@@ -227,5 +227,8 @@
   "block.cinchcraft.mossy_mud_brick_wall": "Mossy Mud Brick Wall",
   "block.cinchcraft.mossy_mud_brick_slab": "Mossy Mud Brick Slab",
   "block.cinchcraft.mossy_mud_brick_stairs": "Mossy Mud Brick Stairs",
-  "block.cinchcraft.permafrost": "Permafrost"
+  "block.cinchcraft.permafrost": "Permafrost",
+  "block.cinchcraft.end_stone_wall": "End Stone Wall",
+  "block.cinchcraft.end_stone_slab": "End Stone Slab",
+  "block.cinchcraft.end_stone_stairs": "End Stone Stairs"
 }
