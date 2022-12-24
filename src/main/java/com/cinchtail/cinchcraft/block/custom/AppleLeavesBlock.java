@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -14,6 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.LeavesBlock;
@@ -25,7 +27,6 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
-
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 
@@ -38,9 +39,37 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
     public boolean isRandomlyTicking(BlockState blockState) {
         return blockState.getValue(DISTANCE) == 7 && !blockState.getValue(PERSISTENT);
     }
+
+    public void tick(BlockState blockState, ServerLevel serverLevel, BlockPos pos, RandomSource randomSource) {
+        serverLevel.setBlock(pos, updateDistance(blockState, serverLevel, pos), 3);
+    }
+
+    private static BlockState updateDistance(BlockState blockState, LevelAccessor levelAccessor, BlockPos pos) {
+        int i = 7;
+        BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
+
+        for(Direction direction : Direction.values()) {
+            blockpos$mutableblockpos.setWithOffset(pos, direction);
+            i = Math.min(i, getDistanceAt(levelAccessor.getBlockState(blockpos$mutableblockpos)) + 1);
+            if (i == 1) {
+                break;
+            }
+        }
+
+        return blockState.setValue(DISTANCE, i);
+    }
+
+    private static int getDistanceAt(BlockState blockState) {
+        if (blockState.is(BlockTags.LOGS)) {
+            return 0;
+        } else {
+            return blockState.getBlock() instanceof LeavesBlock ? blockState.getValue(DISTANCE) : 7;
+        }
+    }
+
     @Override
-    protected boolean decaying(BlockState p221386) {
-        return !p221386.getValue(PERSISTENT) && p221386.getValue(DISTANCE) == 7;
+    protected boolean decaying(BlockState blockState) {
+        return !blockState.getValue(PERSISTENT) && blockState.getValue(DISTANCE) == 7;
     }
 
     @Override
@@ -51,13 +80,13 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
             serverLevel.setBlock(pos, blockstate, 2);
             serverLevel.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockstate));
             net.minecraftforge.common.ForgeHooks.onCropsGrowPost(serverLevel, pos, blockState);
-            if (this.decaying(blockState)) {
-                dropResources(blockState, serverLevel, pos);
-                serverLevel.removeBlock(pos, false);
-            }
         }
-
+        if (this.decaying(blockState)) {
+            dropResources(blockState, serverLevel, pos);
+            serverLevel.removeBlock(pos, false);
+        }
     }
+
     public InteractionResult use(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         int i = blockState.getValue(AGE);
         boolean flag = i == 3;
