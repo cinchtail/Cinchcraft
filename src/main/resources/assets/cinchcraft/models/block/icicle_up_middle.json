@@ -1,0 +1,7 @@
+{
+  "parent": "cinchcraft:block/icicle",
+  "textures": {
+    "cross": "cinchcraft:block/icicle_up_middle"
+  },
+  "render_type": "cutout"
+}

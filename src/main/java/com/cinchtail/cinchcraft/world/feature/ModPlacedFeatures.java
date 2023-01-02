@@ -2,10 +2,14 @@ package com.cinchtail.cinchcraft.world.feature;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.cinchcraft;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -106,6 +110,11 @@ public class ModPlacedFeatures {
             () -> new PlacedFeature(ModConfiguredFeatures.FIRE_FERN.getHolder().get(),
                     List.of(RarityFilter.onAverageOnceEvery(5),
                             InSquarePlacement.spread(), PlacementUtils.FULL_RANGE, BiomeFilter.biome())));
+
+    public static final Holder<PlacedFeature> ICICLE_CEILING = PlacementUtils.register("icicle_ceiling_vegetation", ModConfiguredFeatures.ICICLE.getHolder().get(),
+            CountPlacement.of(160), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT,
+            EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.solid(), BlockPredicate.ONLY_IN_AIR_PREDICATE,
+                    12), RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome());
 
 
 

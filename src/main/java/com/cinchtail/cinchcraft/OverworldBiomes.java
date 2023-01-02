@@ -24,8 +24,11 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
+import net.minecraft.world.level.levelgen.GenerationStep;
 
 import javax.annotation.Nullable;
+
+import static com.cinchtail.cinchcraft.world.feature.ModPlacedFeatures.ICICLE_CEILING;
 
 public class OverworldBiomes
 {
@@ -96,7 +99,7 @@ public class OverworldBiomes
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
         globalOverworldGeneration(biomeBuilder);
-        BiomeDefaultFeatures.addDripstone(biomeBuilder);
+        biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ICICLE_CEILING);
         return biome(Biome.Precipitation.SNOW, .5F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
     }
 }

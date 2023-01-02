@@ -628,6 +628,10 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)), ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
 
+    public static final RegistryObject<Block> ICICLE = registerBlock("icicle",
+            () -> new IcicleBlock(BlockBehaviour.Properties.of(Material.ICE, MaterialColor.ICE).noOcclusion().sound(SoundType.GLASS).randomTicks()
+                    .instabreak().dynamicShape().requiresCorrectToolForDrops().strength(1.0F, 2.0F).offsetType(BlockBehaviour.OffsetType.XZ)), ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
