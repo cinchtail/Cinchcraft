@@ -7,6 +7,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
@@ -111,10 +112,10 @@ public class ModPlacedFeatures {
                     List.of(RarityFilter.onAverageOnceEvery(5),
                             InSquarePlacement.spread(), PlacementUtils.FULL_RANGE, BiomeFilter.biome())));
 
-    public static final Holder<PlacedFeature> ICICLE_CEILING = PlacementUtils.register("icicle_ceiling_vegetation", ModConfiguredFeatures.ICICLE.getHolder().get(),
-            CountPlacement.of(160), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT,
-            EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.solid(), BlockPredicate.ONLY_IN_AIR_PREDICATE,
-                    12), RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome());
+    public static final Holder<PlacedFeature> ICICLE_CEILING = PlacementUtils.register("icicle_ceiling",
+            ModConfiguredFeatures.ICICLE.getHolder().get(), CountPlacement.of(160), InSquarePlacement.spread(),
+            PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.solid(),
+                    BlockPredicate.matchesTag(BlockTags.DRIPSTONE_REPLACEABLE), 12), RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome());
 
 
 
