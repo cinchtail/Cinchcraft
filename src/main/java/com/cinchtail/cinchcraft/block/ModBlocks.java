@@ -247,7 +247,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> STALK = BLOCKS.register("stalk",
             () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)));
 
-    /*public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button",
+    public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button",
             () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(1f).noCollission().sound(SoundType.METAL)));
 
@@ -259,10 +259,10 @@ public class ModBlocks {
             () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).noCollission().sound(SoundType.POLISHED_DEEPSLATE)));
 
-    public static final RegistryObject<Block> POLISHED_DEEPLSATE_PRESSURE_PLATE = registerBlock("polished_deepslate_pressure_plate",
+    public static final RegistryObject<Block> POLISHED_DEEPSLATE_PRESSURE_PLATE = registerBlock("polished_deepslate_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD,
                     OAK_PLANKS.defaultMaterialColor()).noCollission().strength(0.5F).sound(SoundType.WOOD), SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_OFF,
-                    SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_ON));*/
+                    SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_ON));
 
     public static final RegistryObject<Block> APPLE_LOG = BLOCKS.register("apple_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));

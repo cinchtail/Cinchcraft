@@ -18,11 +18,14 @@ import com.cinchtail.cinchcraft.villager.ModVillagers;
 import com.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -47,8 +50,8 @@ public class cinchcraft
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
 
-        //ModBiomes.BIOME_REGISTER.register(modEventBus);
-        //ModBiomes.registerBiomes();
+        ModBiomes.BIOME_REGISTER.register(modEventBus);
+        ModBiomes.registerBiomes();
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -69,6 +72,7 @@ public class cinchcraft
         ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::clientSetup);
 
         modEventBus.addListener(this::addCreative);
 
@@ -83,6 +87,41 @@ public class cinchcraft
         Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 1));
     }
 
+    {
+        LOGGER.info("HELLO FROM COMMON SETUP");
+        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+    }
+    @Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class commonSetup {
+
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            event.enqueueWork(() -> {
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BUTTER_CUP.getId(), ModBlocks.POTTED_BUTTER_CUP);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SMALL_ROSE.getId(), ModBlocks.POTTED_SMALL_ROSE);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CROCUS.getId(), ModBlocks.POTTED_CROCUS);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SMALL_CACTUS.getId(), ModBlocks.POTTED_SMALL_CACTUS);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.APPLE_SAPLING.getId(), ModBlocks.POTTED_APPLE_SAPLING);
+
+                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                        Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get()));
+                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                        Items.INK_SAC, ModPotions.BLINDNESS_POTION.get()));
+                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.GLOWING_POTION.get(),
+                        Items.REDSTONE, ModPotions.GLOWING_POTION_.get()));
+                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.BLINDNESS_POTION.get(),
+                        Items.REDSTONE, ModPotions.BLINDNESS_POTION_.get()));
+
+                Sheets.addWoodType(ModWoodTypes.APPLE);
+                ModVillagers.registerPOIs();
+            });
+        }
+    }
+    public void clientSetup(final FMLClientSetupEvent event) {
+
+        WoodType.register(ModWoodTypes.APPLE);
+        BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
+    }
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if(event.getTab() == ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB) {
             event.accept(ModBlocks.BLOCK_OF_RUBY);
@@ -187,6 +226,7 @@ public class cinchcraft
             event.accept(ModItems.APPLE_TRAPDOOR);
             event.accept(ModItems.APPLE_DOOR);
             event.accept(ModItems.APPLE_PRESSURE_PLATE);
+            //event.accept(ModBlocks.APPLE_BUTTON);
             event.accept(ModBlocks.OAK_BARREL);
             event.accept(ModBlocks.BIRCH_BARREL);
             event.accept(ModBlocks.APPLE_BARREL);
@@ -197,6 +237,10 @@ public class cinchcraft
             event.accept(ModBlocks.CRIMSON_BARREL);
             event.accept(ModBlocks.WARPED_BARREL);
             event.accept(ModBlocks.GLOWSTONE_TORCH);
+            event.accept(ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
+            //event.accept(ModBlocks.POLISHED_DEEPSLATE_BUTTON);
+            //event.accept(ModBlocks.IRON_BUTTON);
+            //event.accept(ModBlocks.GOLD_BUTTON);
             event.accept(ModBlocks.PERMAFROST);
             event.accept(ModBlocks.ICICLE);
             event.accept(ModItems.FIRE_FERN);
@@ -208,10 +252,7 @@ public class cinchcraft
             event.accept(ModBlocks.REEDS);
             event.accept(ModItems.STALK);
             event.accept(ModBlocks.NETHER_BRICK_FURNACE);
-
-
         }
-
         if(event.getTab() == ModCreativeModeTabItems.CINCHCRAFT_ITEM_TAB) {
             event.accept(ModItems.RUBY_SWORD);
             event.accept(ModItems.RUBY_PICKAXE);
@@ -255,37 +296,6 @@ public class cinchcraft
             event.accept(ModItems.PINEAPPLE);
             event.accept(ModItems.VEGETABLE_STEW);
             event.accept(ModItems.NETHER_SALAD);
-        }
-    }
-
-    {
-        LOGGER.info("HELLO FROM COMMON SETUP");
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
-    }
-    @Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class commonSetup {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-            event.enqueueWork(() -> {
-                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BUTTER_CUP.getId(), ModBlocks.POTTED_BUTTER_CUP);
-                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SMALL_ROSE.getId(), ModBlocks.POTTED_SMALL_ROSE);
-                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CROCUS.getId(), ModBlocks.POTTED_CROCUS);
-                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SMALL_CACTUS.getId(), ModBlocks.POTTED_SMALL_CACTUS);
-                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.APPLE_SAPLING.getId(), ModBlocks.POTTED_APPLE_SAPLING);
-
-                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
-                        Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get()));
-                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
-                        Items.INK_SAC, ModPotions.BLINDNESS_POTION.get()));
-                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.GLOWING_POTION.get(),
-                        Items.REDSTONE, ModPotions.GLOWING_POTION_.get()));
-                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.BLINDNESS_POTION.get(),
-                        Items.REDSTONE, ModPotions.BLINDNESS_POTION_.get()));
-
-                Sheets.addWoodType(ModWoodTypes.APPLE);
-
-                ModVillagers.registerPOIs();
-            });
         }
     }
 }

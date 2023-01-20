@@ -28,9 +28,8 @@ import net.minecraft.world.level.biome.*;
 import javax.annotation.Nullable;
 
 
-public class OverworldBiomes
-{
-    /*@Nullable
+public class OverworldBiomes {
+    @Nullable
     private static final Music NORMAL_MUSIC = null;
 
     protected static int calculateSkyColor(float color)
@@ -99,5 +98,5 @@ public class OverworldBiomes
         globalOverworldGeneration(biomeBuilder);
         //biomeBuilder.addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ICICLE_CEILING);
         return biome(Biome.Precipitation.SNOW, .5F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
-    }*/
+    }
 }
