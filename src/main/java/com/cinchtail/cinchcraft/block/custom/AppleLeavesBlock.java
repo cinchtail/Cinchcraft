@@ -16,6 +16,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.LeavesBlock;
@@ -109,7 +110,8 @@ public class AppleLeavesBlock extends LeavesBlock implements BonemealableBlock {
         state.add(AGE, PERSISTENT, WATERLOGGED, DISTANCE);
     }
 
-    public boolean isValidBonemealTarget(BlockGetter blockGetter, BlockPos pos, BlockState blockState, boolean b) {
+    @Override
+    public boolean isValidBonemealTarget(LevelReader p_256559_, BlockPos p_50898_, BlockState blockState, boolean p_50900_) {
         return blockState.getValue(AGE) < 3;
     }
 

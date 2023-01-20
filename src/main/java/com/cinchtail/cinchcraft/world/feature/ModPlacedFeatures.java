@@ -4,13 +4,19 @@ import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.cinchcraft;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,103 +25,102 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static DeferredRegister<PlacedFeature> PLACED_FEATURES =
-            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, cinchcraft.MOD_ID);
 
-    public static final RegistryObject<PlacedFeature> RUBY_ORE_PLACED = PLACED_FEATURES.register("ruby_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.RUBY_ORE.getHolder().get(),
-                    commonOrePlacement(14, // VeinsPerChunk
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(90)))));
+    public static final ResourceKey<PlacedFeature> APPLE_CHECKED_KEY = createKey("apple_checked");
+    public static final ResourceKey<PlacedFeature> APPLE_PLACED_KEY = createKey("apple_placed");
+    public static final ResourceKey<PlacedFeature> RUBY_PLACED_KEY = createKey("ruby_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_RUBY_PLACED_KEY = createKey("nether_ruby_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_COAL_PLACED_KEY = createKey("nether_coal_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_IRON_PLACED_KEY = createKey("nether_iron_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_COPPER_PLACED_KEY = createKey("nether_copper_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_LAPIS_LAZULI_ORE_PLACED_KEY = createKey("lapis_lazuli_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_REDSTONE_PLACED_PLACED_KEY = createKey("nether_redstone__placed");
+    public static final ResourceKey<PlacedFeature> NETHER_EMERALD_PLACED_KEY = createKey("nether_emeralde_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_DIAMOND_ORE_PLACED_PLACED_KEY = createKey("nether_diamond_placed");
+    public static final ResourceKey<PlacedFeature> BUTTER_CUP_PLACED_KEY = createKey("butter_cup_placed");
+    public static final ResourceKey<PlacedFeature> CROCUS_PLACED_KEY = createKey("crocus_placed");
+    public static final ResourceKey<PlacedFeature> BUBBLE_FLOWER_PLACED_KEY = createKey("bubble_flower_placed");
+    public static final ResourceKey<PlacedFeature> SMALL_CACTUS_PLACED_KEY = createKey("small_cactus_placed");
+    public static final ResourceKey<PlacedFeature> FIRE_FERN_PLACED_KEY = createKey("fire_fern_placed");
+    public static final ResourceKey<PlacedFeature> BLUE_BERRIE_PLACED_KEY = createKey("blue_berrie_placed");
+    public static final ResourceKey<PlacedFeature> PINEAPPLE_PLANT_PLACED_KEY = createKey("blue_berrie_placed");
+    public static final ResourceKey<PlacedFeature> STRAWBERRY_PLACED_KEY = createKey("strawberry_placed");
+    public static final ResourceKey<PlacedFeature> MOD_SWEET_BERRIE_PLACED_KEY = createKey("mod_sweet_berrie_placed");
 
-    public static final RegistryObject<PlacedFeature> NETHER_RUBY_ORE_PLACED = PLACED_FEATURES.register("nether_ruby_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_RUBY_ORE.getHolder().get(), commonOrePlacement(2, // VeinsPerChunk
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+        HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-    public static final RegistryObject<PlacedFeature> NETHER_IRON_ORE_PLACED = PLACED_FEATURES.register("nether_iron_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_IRON_ORE.getHolder().get(), commonOrePlacement(4, // VeinsPerChunk
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+        register(context, APPLE_CHECKED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.APPLE_KEY),
+                List.of(PlacementUtils.filteredByBlockSurvival(ModBlocks.APPLE_SAPLING.get())));
 
-    public static final RegistryObject<PlacedFeature> NETHER_COPPER_ORE_PLACED = PLACED_FEATURES.register("nether_copper_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_COPPER_ORE.getHolder().get(), commonOrePlacement(4, // VeinsPerChunk
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+        register(context, APPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.APPLE_KEY),
+                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(48)));
 
-    public static final RegistryObject<PlacedFeature> NETHER_COAL_ORE_PLACED = PLACED_FEATURES.register("nether_coal_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_COAL_ORE.getHolder().get(), commonOrePlacement(3, // VeinsPerChunk
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+        register(context, RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_RUBY_ORE_KEY),
+                commonOrePlacement(14, // VeinsPerChunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(90))));
+        register(context, NETHER_RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUBY_ORE_KEY),
+                commonOrePlacement(2, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_IRON_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_IRON_ORE_KEY),
+                commonOrePlacement(4, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_COPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COPPER_ORE_KEY),
+                commonOrePlacement(4, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_COAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COAL_ORE_KEY),
+                commonOrePlacement(3, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_LAPIS_LAZULI_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_LAPIS_LAZULI_ORE_KEY),
+                commonOrePlacement(2, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUBY_ORE_KEY),
+                commonOrePlacement(2, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_REDSTONE_PLACED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_REDSTONE_KEY),
+                commonOrePlacement(1, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_DIAMOND_ORE_PLACED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_DIAMOND_ORE_KEY),
+                commonOrePlacement(1, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_EMERALD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_EMERALD_KEY),
+                commonOrePlacement(1, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 
-    public static final RegistryObject<PlacedFeature> NETHER_LAPIS_LAZULI_ORE_PLACED = PLACED_FEATURES.register("nether_lapis_lazuli_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_LAPIS_LAZULI_ORE.getHolder().get(), commonOrePlacement(2, // VeinsPerChunk
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
-    public static final RegistryObject<PlacedFeature> NETHER_REDSTONE_ORE_PLACED = PLACED_FEATURES.register("nether_redstone_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_REDSTONE_ORE.getHolder().get(), commonOrePlacement(1, // VeinsPerChunk
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+        register(context, BUTTER_CUP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUTTER_CUP_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(16),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, CROCUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CROCUS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(16),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, BLUE_BERRIE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUE_BERRIE_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(18),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, BUBBLE_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUBBLE_FLOWER_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(42),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, SMALL_CACTUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_CACTUS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(42),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, PINEAPPLE_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINEAPPLE_PLANT_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(24),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, MOD_SWEET_BERRIE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOD_SWEET_BERRIE_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(18),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, STRAWBERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(50),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, FIRE_FERN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FIRE_FERN_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(5),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+    }
 
-    public static final RegistryObject<PlacedFeature> NETHER_DIAMOND_ORE_PLACED = PLACED_FEATURES.register("nether_diamond_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_DIAMOND_ORE.getHolder().get(), rareOrePlacement(1, // VeinsPerChunk
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
-
-    public static final RegistryObject<PlacedFeature> NETHER_EMERALD_ORE_PLACED = PLACED_FEATURES.register("nether_emerald_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.NETHER_EMERALD_ORE.getHolder().get(), rareOrePlacement(1, // VeinsPerChunk
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
-
-    public static final RegistryObject<PlacedFeature> BUTTER_CUP_PLACED = PLACED_FEATURES.register("butter_cup_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.BUTTER_CUP.getHolder().get(),
-                     List.of(RarityFilter.onAverageOnceEvery(16),
-                    InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-
-    public static final RegistryObject<PlacedFeature> CROCUS_PLACED = PLACED_FEATURES.register("crocus_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.CROCUS.getHolder().get(),
-                    List.of(RarityFilter.onAverageOnceEvery(16),
-                    InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-
-    public static final RegistryObject<PlacedFeature> BLUE_BERRIE_PLACED = PLACED_FEATURES.register("blue_berrie_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.BLUE_BERRIE.getHolder().get(),
-                     List.of(RarityFilter.onAverageOnceEvery(18),
-                    InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-
-    public static final RegistryObject<PlacedFeature> BUBBLE_FLOWER_PLACED = PLACED_FEATURES.register("bubble_flower_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.BUBBLE_FLOWER.getHolder().get(),
-                     List.of(RarityFilter.onAverageOnceEvery(42),
-                    InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-
-    public static final RegistryObject<PlacedFeature> SMALL_CACTUS_PLACED = PLACED_FEATURES.register("small_cactus_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.SMALL_CACTUS.getHolder().get(),
-                    List.of(RarityFilter.onAverageOnceEvery(42),
-                            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-
-    public static final RegistryObject<PlacedFeature> PINEAPPLE_PLACED = PLACED_FEATURES.register("pineapple_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.PINEAPPLE_PLANT.getHolder().get(),
-                    List.of(RarityFilter.onAverageOnceEvery(24),
-                            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-
-    public static final RegistryObject<PlacedFeature> APPLE_TREE_CHECKED = PLACED_FEATURES.register("apple_tree_checked",
-            () -> new PlacedFeature(ModConfiguredFeatures.APPLE_TREE.getHolder().get(),
-                    List.of(PlacementUtils.filteredByBlockSurvival(ModBlocks.APPLE_SAPLING.get()))));
-
-    public static final RegistryObject<PlacedFeature> APPLE_TREE_PLACED = PLACED_FEATURES.register("apple_tree_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.APPLE_TREE_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(
-                    RarityFilter.onAverageOnceEvery(48))));
-
-    public static final RegistryObject<PlacedFeature> MOD_SWEET_BERRIE_PLACED = PLACED_FEATURES.register("mod_sweet_berrie_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.MOD_SWEET_BERRIE.getHolder().get(),
-                    List.of(RarityFilter.onAverageOnceEvery(18),
-                            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-
-    public static final RegistryObject<PlacedFeature> STRAWBERRY_PLACED = PLACED_FEATURES.register("strawberry_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.STRAWBERRY.getHolder().get(),
-                    List.of(RarityFilter.onAverageOnceEvery(50),
-                            InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-
-    public static final RegistryObject<PlacedFeature> FIRE_FERN_PLACED = PLACED_FEATURES.register("fire_fern_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.FIRE_FERN.getHolder().get(),
-                    List.of(RarityFilter.onAverageOnceEvery(5),
-                            InSquarePlacement.spread(), PlacementUtils.FULL_RANGE, BiomeFilter.biome())));
-
-    public static final Holder<PlacedFeature> ICICLE_CEILING = PlacementUtils.register("icicle_ceiling",
-            ModConfiguredFeatures.ICICLE.getHolder().get(), CountPlacement.of(160), InSquarePlacement.spread(),
-            PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.solid(),
-                    BlockPredicate.matchesTag(BlockTags.DRIPSTONE_REPLACEABLE), 12), RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome());
+    //public static final Holder<PlacedFeature> ICICLE_CEILING = PlacementUtils.register("icicle_ceiling",
+            //ModConfiguredFeatures.ICICLE.getHolder().get(), CountPlacement.of(160), InSquarePlacement.spread(),
+            //PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.solid(),
+                    //BlockPredicate.matchesTag(BlockTags.DRIPSTONE_REPLACEABLE), 12), RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome());
 
 
 
@@ -129,10 +134,19 @@ public class ModPlacedFeatures {
         return orePlacement(RarityFilter.onAverageOnceEvery(i), placementModifier);
     }
 
-    public static void register(IEventBus eventBus) {
-        PLACED_FEATURES.register(eventBus);
+    private static ResourceKey<PlacedFeature> createKey(String name) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(cinchcraft.MOD_ID, name));
     }
 
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 List<PlacementModifier> modifiers) {
+        context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
+    }
+
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 PlacementModifier... modifiers) {
+        register(context, key, configuration, List.of(modifiers));
+    }
 
 
 }

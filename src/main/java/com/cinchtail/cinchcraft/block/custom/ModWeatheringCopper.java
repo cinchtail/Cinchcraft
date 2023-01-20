@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-public interface ModWeatheringCopper extends ChangeOverTimeBlock<WeatheringCopper.WeatherState> {
+public interface ModWeatheringCopper {} /*extends ChangeOverTimeBlock<WeatheringCopper.WeatherState> {
     Supplier<BiMap<Block, Block>> NEXT_BY_BLOCK = Suppliers.memoize(() -> {
         return ImmutableBiMap.<Block, Block>builder().put(ModBlocks.COPPER_BUTTON.get(), ModBlocks.EXPOSED_COPPER_BUTTON.get()).put(ModBlocks.EXPOSED_COPPER_BUTTON.get(), ModBlocks.WEATHERED_COPPER_BUTTON.get()).put(ModBlocks.WEATHERED_COPPER_BUTTON.get(), ModBlocks.OXIDIZED_COPPER_BUTTON.get()).build();
     });
@@ -64,4 +64,4 @@ public interface ModWeatheringCopper extends ChangeOverTimeBlock<WeatheringCoppe
         WEATHERED,
         OXIDIZED;
     }
-}
+}*/

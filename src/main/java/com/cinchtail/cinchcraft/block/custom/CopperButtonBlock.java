@@ -11,15 +11,14 @@ import net.minecraft.world.level.block.state.BlockState;
 
 
 
-public class CopperButtonBlock extends ButtonBlock implements ModWeatheringCopper {
+public class CopperButtonBlock{} /*extends ButtonBlock implements WeatheringCopper {
 
     private final WeatheringCopper.WeatherState weatherState;
-    public CopperButtonBlock(WeatheringCopper.WeatherState weatherState, BlockBehaviour.Properties properties) {
-        super(false, properties);
+
         this.weatherState = weatherState;
     }
     @Override
-    protected SoundEvent getSound(boolean p_51102_) {
+    protected SoundEvent getSound(boolean b) {
         return null;
     }
 
@@ -34,4 +33,4 @@ public class CopperButtonBlock extends ButtonBlock implements ModWeatheringCoppe
     public WeatheringCopper.WeatherState getAge() {
         return this.weatherState;
     }
-}
+}*/

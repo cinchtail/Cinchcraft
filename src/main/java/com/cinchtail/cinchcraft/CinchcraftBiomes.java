@@ -18,7 +18,7 @@ package com.cinchtail.cinchcraft;
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
@@ -31,6 +31,6 @@ public class CinchcraftBiomes
 
     private static ResourceKey<Biome> register(String name)
     {
-        return ResourceKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(cinchcraft.MOD_ID, name));
+        return ResourceKey.create(Registries.BIOME, new ResourceLocation(cinchcraft.MOD_ID, name));
     }
 }
