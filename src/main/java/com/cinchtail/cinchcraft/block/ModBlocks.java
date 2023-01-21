@@ -248,16 +248,19 @@ public class ModBlocks {
             () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LILAC)));
 
     public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button",
-            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f).noCollission().sound(SoundType.METAL)));
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> IRON_BUTTON = registerBlock("iron_button",
-            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f).noCollission().sound(SoundType.METAL)));
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> POLISHED_DEEPSLATE_BUTTON = registerBlock("polished_deepslate_button",
-            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(1f).noCollission().sound(SoundType.POLISHED_DEEPSLATE)));
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.STONE).noCollission()
+                    .strength(1F), 20, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> POLISHED_DEEPSLATE_PRESSURE_PLATE = registerBlock("polished_deepslate_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD,
@@ -311,9 +314,10 @@ public class ModBlocks {
                     OAK_PLANKS.defaultMaterialColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN));
 
-    //public static final RegistryObject<Block> APPLE_BUTTON = BLOCKS.register("apple_button",
-            //() -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    //.strength(1f).noCollission().sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> APPLE_BUTTON = registerBlock("apple_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission()
+                    .strength(0.5F), 20, false, SoundEvents.WOODEN_BUTTON_CLICK_OFF,
+                    SoundEvents.WOODEN_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> APPLE_PRESSURE_PLATE = BLOCKS.register("apple_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD,
@@ -321,10 +325,10 @@ public class ModBlocks {
                     SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_OFF, SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_ON));
 
     public static final RegistryObject<Block> APPLE_WALL_SIGN = BLOCKS.register("apple_wall_sign",
-            () -> new WallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.APPLE));
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.APPLE));
 
     public static final RegistryObject<Block> APPLE_SIGN = BLOCKS.register("apple_sign",
-            () -> new StandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.APPLE));
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.APPLE));
 
     public static final RegistryObject<Block> CRIMSON_MOSSY_NETHER_BRICKS = registerBlock("crimson_mossy_nether_bricks",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));

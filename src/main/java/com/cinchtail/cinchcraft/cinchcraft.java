@@ -50,8 +50,8 @@ public class cinchcraft
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
 
-        ModBiomes.BIOME_REGISTER.register(modEventBus);
-        ModBiomes.registerBiomes();
+        //ModBiomes.BIOME_REGISTER.register(modEventBus);
+        //ModBiomes.registerBiomes();
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -68,7 +68,6 @@ public class cinchcraft
         ModVillagers.register(modEventBus);
 
         ModBiomeModifiers.register(modEventBus);
-
         ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -84,7 +83,7 @@ public class cinchcraft
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModVillagers::registerPOIs);
 
-        Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 1));
+        //Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 1));
     }
 
     {
@@ -225,8 +224,9 @@ public class cinchcraft
             event.accept(ModItems.APPLE_FENCE_GATE);
             event.accept(ModItems.APPLE_TRAPDOOR);
             event.accept(ModItems.APPLE_DOOR);
+            event.accept(ModItems.APPLE_SIGN);
             event.accept(ModItems.APPLE_PRESSURE_PLATE);
-            //event.accept(ModBlocks.APPLE_BUTTON);
+            event.accept(ModBlocks.APPLE_BUTTON);
             event.accept(ModBlocks.OAK_BARREL);
             event.accept(ModBlocks.BIRCH_BARREL);
             event.accept(ModBlocks.APPLE_BARREL);
@@ -238,9 +238,9 @@ public class cinchcraft
             event.accept(ModBlocks.WARPED_BARREL);
             event.accept(ModBlocks.GLOWSTONE_TORCH);
             event.accept(ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
-            //event.accept(ModBlocks.POLISHED_DEEPSLATE_BUTTON);
-            //event.accept(ModBlocks.IRON_BUTTON);
-            //event.accept(ModBlocks.GOLD_BUTTON);
+            event.accept(ModBlocks.POLISHED_DEEPSLATE_BUTTON);
+            event.accept(ModBlocks.IRON_BUTTON);
+            event.accept(ModBlocks.GOLD_BUTTON);
             event.accept(ModBlocks.PERMAFROST);
             event.accept(ModBlocks.ICICLE);
             event.accept(ModItems.FIRE_FERN);

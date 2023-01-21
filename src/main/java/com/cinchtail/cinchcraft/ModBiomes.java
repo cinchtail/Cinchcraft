@@ -28,10 +28,10 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+//@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBiomes
 {
-    protected static DeferredRegister<Biome> BIOME_REGISTER = DeferredRegister.create(Registry.BIOME_REGISTRY, cinchcraft.MOD_ID);
+    /*protected static DeferredRegister<Biome> BIOME_REGISTER = DeferredRegister.create(Registry.BIOME_REGISTRY, cinchcraft.MOD_ID);
 
     public static void registerBiomes()
     {
@@ -41,5 +41,5 @@ public class ModBiomes
     public static RegistryObject<Biome> register(ResourceKey<Biome> key, Supplier<Biome> biomeSupplier)
     {
         return BIOME_REGISTER.register(key.location().getPath(), biomeSupplier);
-    }
+    }*/
 }

@@ -23,11 +23,11 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 
 public class TestSurfaceRuleData {
-    public static final SurfaceRules.RuleSource DIRT = makeStateRule(Blocks.DIRT);
+    /*public static final SurfaceRules.RuleSource DIRT = makeStateRule(Blocks.DIRT);
     public static final SurfaceRules.RuleSource GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
     public static final SurfaceRules.RuleSource STONE = makeStateRule(Blocks.STONE);
 
     private static SurfaceRules.RuleSource makeStateRule(Block block) {
         return SurfaceRules.state(block.defaultBlockState());
-    }
+    }*/
 }

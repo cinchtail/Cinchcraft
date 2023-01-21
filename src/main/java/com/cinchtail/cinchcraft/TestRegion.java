@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 
-public class TestRegion extends Region {
+public class TestRegion { /*extends Region {
     public TestRegion(ResourceLocation name, int weight) {
         super(name, RegionType.OVERWORLD, weight);
     }
@@ -33,5 +33,5 @@ public class TestRegion extends Region {
             iceCavesPoint.forEach(point -> addBiome(mapper, point, CinchcraftBiomes.ICE_CAVE));
             builder.replaceBiome(Biomes.FOREST, CinchcraftBiomes.MIXED_FOREST);
         });
-    }
+    }*/
 }
