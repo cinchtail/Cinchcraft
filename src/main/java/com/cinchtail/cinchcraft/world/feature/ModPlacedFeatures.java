@@ -26,24 +26,24 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> APPLE_CHECKED_KEY = createKey("apple_checked");
-    public static final ResourceKey<PlacedFeature> APPLE_PLACED_KEY = createKey("apple_placed");
-    public static final ResourceKey<PlacedFeature> RUBY_PLACED_KEY = createKey("ruby_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_RUBY_PLACED_KEY = createKey("nether_ruby_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_COAL_PLACED_KEY = createKey("nether_coal_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_IRON_PLACED_KEY = createKey("nether_iron_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_COPPER_PLACED_KEY = createKey("nether_copper_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_LAPIS_LAZULI_ORE_PLACED_KEY = createKey("lapis_lazuli_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_REDSTONE_PLACED_PLACED_KEY = createKey("nether_redstone__placed");
-    public static final ResourceKey<PlacedFeature> NETHER_EMERALD_PLACED_KEY = createKey("nether_emeralde_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_DIAMOND_ORE_PLACED_PLACED_KEY = createKey("nether_diamond_placed");
+    public static final ResourceKey<PlacedFeature> APPLE_CHECKED_KEY = createKey("apple_tree_checked");
+    public static final ResourceKey<PlacedFeature> APPLE_PLACED_KEY = createKey("apple_tree_placed");
+    public static final ResourceKey<PlacedFeature> RUBY_PLACED_KEY = createKey("ruby_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_RUBY_PLACED_KEY = createKey("nether_ruby_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_COAL_PLACED_KEY = createKey("nether_coal_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_IRON_PLACED_KEY = createKey("nether_iron_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_COPPER_PLACED_KEY = createKey("nether_copper_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_LAPIS_LAZULI_ORE_PLACED_KEY = createKey("lapis_lazuli_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_REDSTONE_PLACED_PLACED_KEY = createKey("nether_redstone_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_EMERALD_PLACED_KEY = createKey("nether_emeralde_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_DIAMOND_ORE_PLACED_PLACED_KEY = createKey("nether_diamond_ore_placed");
     public static final ResourceKey<PlacedFeature> BUTTER_CUP_PLACED_KEY = createKey("butter_cup_placed");
     public static final ResourceKey<PlacedFeature> CROCUS_PLACED_KEY = createKey("crocus_placed");
     public static final ResourceKey<PlacedFeature> BUBBLE_FLOWER_PLACED_KEY = createKey("bubble_flower_placed");
     public static final ResourceKey<PlacedFeature> SMALL_CACTUS_PLACED_KEY = createKey("small_cactus_placed");
     public static final ResourceKey<PlacedFeature> FIRE_FERN_PLACED_KEY = createKey("fire_fern_placed");
     public static final ResourceKey<PlacedFeature> BLUE_BERRIE_PLACED_KEY = createKey("blue_berrie_placed");
-    public static final ResourceKey<PlacedFeature> PINEAPPLE_PLANT_PLACED_KEY = createKey("blue_berrie_placed");
+    public static final ResourceKey<PlacedFeature> PINEAPPLE_PLANT_PLACED_KEY = createKey("pineapple_placed");
     public static final ResourceKey<PlacedFeature> STRAWBERRY_PLACED_KEY = createKey("strawberry_placed");
     public static final ResourceKey<PlacedFeature> MOD_SWEET_BERRIE_PLACED_KEY = createKey("mod_sweet_berrie_placed");
 

@@ -51,7 +51,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_COAL_ORE_KEY = registerKey("nether_coal_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_IRON_ORE_KEY = registerKey("nether_iron_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_COPPER_ORE_KEY = registerKey("nether_copper_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_LAPIS_LAZULI_ORE_KEY = registerKey("lapis_lazuli");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_LAPIS_LAZULI_ORE_KEY = registerKey("lapis_lazuli_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_REDSTONE_KEY = registerKey("nether_redstone_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_EMERALD_KEY = registerKey("nether_emerald_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_DIAMOND_ORE_KEY = registerKey("nether_diamond_ore");
@@ -61,7 +61,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_CACTUS_KEY = registerKey("small_cactus");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FIRE_FERN_KEY = registerKey("fire_fern");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLUE_BERRIE_KEY = registerKey("blue_berrie");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> PINEAPPLE_PLANT_KEY = registerKey("blue_berrie");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PINEAPPLE_PLANT_KEY = registerKey("pineapple");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_KEY = registerKey("strawberry");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOD_SWEET_BERRIE_KEY = registerKey("mod_sweet_berrie");
 
