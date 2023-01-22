@@ -25,9 +25,9 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> NETHER_COAL_PLACED_KEY = createKey("nether_coal_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_IRON_PLACED_KEY = createKey("nether_iron_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_COPPER_PLACED_KEY = createKey("nether_copper_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_LAPIS_LAZULI_ORE_PLACED_KEY = createKey("lapis_lazuli_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_LAPIS_LAZULI_ORE_PLACED_KEY = createKey("nether_lapis_lazuli_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_REDSTONE_PLACED_PLACED_KEY = createKey("nether_redstone_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_EMERALD_PLACED_KEY = createKey("nether_emeralde_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_EMERALD_PLACED_KEY = createKey("nether_emerald_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_DIAMOND_ORE_PLACED_PLACED_KEY = createKey("nether_diamond_ore_placed");
     public static final ResourceKey<PlacedFeature> BUTTER_CUP_PLACED_KEY = createKey("butter_cup_placed");
     public static final ResourceKey<PlacedFeature> CROCUS_PLACED_KEY = createKey("crocus_placed");
@@ -64,9 +64,6 @@ public class ModPlacedFeatures {
                 commonOrePlacement(3, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
         register(context, NETHER_LAPIS_LAZULI_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_LAPIS_LAZULI_ORE_KEY),
-                commonOrePlacement(2, // VeinsPerChunk
-                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
-        register(context, NETHER_RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUBY_ORE_KEY),
                 commonOrePlacement(2, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
         register(context, NETHER_REDSTONE_PLACED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_REDSTONE_KEY),

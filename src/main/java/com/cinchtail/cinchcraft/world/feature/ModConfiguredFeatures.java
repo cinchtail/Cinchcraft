@@ -134,10 +134,6 @@ public class ModConfiguredFeatures {
                 new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 3))))));
 
-        register(context, MOD_SWEET_BERRIE_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 3))))));
-
     }
 
     //public static final RegistryObject<ConfiguredFeature<BlockColumnConfiguration, ?>> ICICLE = CONFIGURED_FEATURE.register("icicle", () -> new ConfiguredFeature<>(Feature.BLOCK_COLUMN,
