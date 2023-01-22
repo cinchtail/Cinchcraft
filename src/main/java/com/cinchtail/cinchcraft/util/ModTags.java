@@ -9,15 +9,13 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Biomes {
-        //Geodes
+
         public static final TagKey<Biome> HAS_FIRE_FERN
                 = biomeTag("has_fire_fern");
         private static TagKey<Biome> biomeTag(String name) {
             return TagKey.create(Registries.BIOME, new ResourceLocation(cinchcraft.MOD_ID, name));
         }
-
     }
-
     public static class Blocks {
         public static final TagKey<Block> EXAMPLE_BLOCK_TAG
                 = blockTag("example_block_tag");
