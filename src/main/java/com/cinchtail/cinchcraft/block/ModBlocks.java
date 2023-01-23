@@ -299,7 +299,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> APPLE_STAIRS = BLOCKS.register("apple_stairs",
             () -> new ModFlammableStairBlock(() -> ModBlocks.APPLE_PLANKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1.5f)));
+                    BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(1.5f),
+                    true, 20, 5));
 
     public static final RegistryObject<Block> APPLE_SLAB = BLOCKS.register("apple_slab",
             () -> new ModFlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)
