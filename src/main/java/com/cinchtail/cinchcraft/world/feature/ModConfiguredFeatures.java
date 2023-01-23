@@ -46,7 +46,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BUBBLE_FLOWER_KEY = registerKey("bubble_flower");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_CACTUS_KEY = registerKey("small_cactus");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FIRE_FERN_KEY = registerKey("fire_fern");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> BLUE_BERRIE_KEY = registerKey("blue_berrie");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BLUEBERRIES_KEY = registerKey("blueberries");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PINEAPPLE_PLANT_KEY = registerKey("pineapple");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_KEY = registerKey("strawberry");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MOD_SWEET_BERRIE_KEY = registerKey("mod_sweet_berrie");
@@ -118,7 +118,7 @@ public class ModConfiguredFeatures {
                 new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get())))));
 
-        register(context, BLUE_BERRIE_KEY, Feature.FLOWER,
+        register(context, BLUEBERRIES_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BLUEBERRY_BUSH.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3))))));
 

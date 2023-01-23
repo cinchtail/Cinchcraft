@@ -34,7 +34,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BUBBLE_FLOWER_PLACED_KEY = createKey("bubble_flower_placed");
     public static final ResourceKey<PlacedFeature> SMALL_CACTUS_PLACED_KEY = createKey("small_cactus_placed");
     public static final ResourceKey<PlacedFeature> FIRE_FERN_PLACED_KEY = createKey("fire_fern_placed");
-    public static final ResourceKey<PlacedFeature> BLUE_BERRIE_PLACED_KEY = createKey("blue_berrie_placed");
+    public static final ResourceKey<PlacedFeature> BLUEBERRIES_PLACED_KEY = createKey("blueberries_placed");
     public static final ResourceKey<PlacedFeature> PINEAPPLE_PLANT_PLACED_KEY = createKey("pineapple_placed");
     public static final ResourceKey<PlacedFeature> STRAWBERRY_PLACED_KEY = createKey("strawberry_placed");
     public static final ResourceKey<PlacedFeature> MOD_SWEET_BERRIE_PLACED_KEY = createKey("mod_sweet_berrie_placed");
@@ -44,7 +44,6 @@ public class ModPlacedFeatures {
 
         register(context, APPLE_CHECKED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.APPLE_KEY),
                 List.of(PlacementUtils.filteredByBlockSurvival(ModBlocks.APPLE_SAPLING.get())));
-
         register(context, APPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.APPLE_KEY),
                 VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(48)));
 
@@ -83,7 +82,7 @@ public class ModPlacedFeatures {
         register(context, CROCUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CROCUS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(16),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-        register(context, BLUE_BERRIE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUE_BERRIE_KEY),
+        register(context, BLUEBERRIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUEBERRIES_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(18),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, BUBBLE_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUBBLE_FLOWER_KEY),

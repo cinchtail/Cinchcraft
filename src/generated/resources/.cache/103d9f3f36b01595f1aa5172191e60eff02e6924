@@ -1,7 +1,7 @@
-// 1.19.3	2023-01-22T14:52:04.7124642	Registries
+// 1.19.3	2023-01-22T16:53:38.2681694	Registries
 6da869ceaed6edfe37a2fbf6e1b92de254585f52 data/cinchcraft/worldgen/configured_feature/apple.json
 db77df41d749c91e21399867fda8268c2be3f416 data/cinchcraft/worldgen/configured_feature/apple_spawn.json
-92df84a7d9cdf13d72d83184c20146b65e5b8fb3 data/cinchcraft/worldgen/configured_feature/blue_berrie.json
+92df84a7d9cdf13d72d83184c20146b65e5b8fb3 data/cinchcraft/worldgen/configured_feature/blueberries.json
 f00ef514c715d19ce216e62b0bc018cdb21a042e data/cinchcraft/worldgen/configured_feature/bubble_flower.json
 3fd09cc6fdc3582e97a7676107ac189342f6bcae data/cinchcraft/worldgen/configured_feature/butter_cup.json
 1ac86230d9a66694a044eabd06aca9b5466487ce data/cinchcraft/worldgen/configured_feature/crocus.json
@@ -21,7 +21,7 @@ d9e09c9cb23431e92b3e89d385a5566bd1c7c04b data/cinchcraft/worldgen/configured_fea
 eadc9bfe32aa38babb9745842583005ba8e9a7af data/cinchcraft/worldgen/configured_feature/strawberry.json
 32e08409fc8410349744b0714e08723b97823e98 data/cinchcraft/worldgen/placed_feature/apple_tree_checked.json
 f9b5fa22142bd09916b17be4611cbf17239c1e7f data/cinchcraft/worldgen/placed_feature/apple_tree_placed.json
-700cc30b5e46727553ac86094b188421ad628623 data/cinchcraft/worldgen/placed_feature/blue_berrie_placed.json
+4973243185fd4a03d1a5627d8b23b5cfb5564ff2 data/cinchcraft/worldgen/placed_feature/blueberries_placed.json
 45cc2066f6e1bc2eb460ad886870244fd7a54b2a data/cinchcraft/worldgen/placed_feature/bubble_flower_placed.json
 ac5d0861e4a39ff5a79e6122371475e395002726 data/cinchcraft/worldgen/placed_feature/butter_cup_placed.json
 047b4ee3fe58432939e6cd86873af3ebd9448592 data/cinchcraft/worldgen/placed_feature/crocus_placed.json
