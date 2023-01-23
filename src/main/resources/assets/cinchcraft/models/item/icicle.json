@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cinchcraft:block/icicle"
+    "layer0": "cinchcraft:block/icicle_down_tip"
   },
   "display": {
     "thirdperson_righthand": {

@@ -1,5 +1,5 @@
 {
   "type": "cinchcraft:vegetal",
   "biomes": "#minecraft:is_blueberries_biomes",
-  "feature": "cinchcraft:blue_berrie_placed"
+  "feature": "cinchcraft:blueberries_placed"
 }
