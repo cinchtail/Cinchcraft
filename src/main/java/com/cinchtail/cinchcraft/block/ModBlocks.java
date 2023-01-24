@@ -283,7 +283,7 @@ public class ModBlocks {
             () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(OAK_PLANKS)));
 
     public static final RegistryObject<Block> SMALL_CACTUS = registerBlock("small_cactus",
-            () -> new SmallCactusBlock(MobEffects.DARKNESS, 0, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
+            () -> new SmallCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
 
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_CACTUS = BLOCKS.register("potted_small_cactus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_CACTUS, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
