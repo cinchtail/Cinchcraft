@@ -515,36 +515,44 @@ public class ModBlocks {
                     .noOcclusion(), SoundEvents.WOODEN_DOOR_CLOSE, SoundEvents.WOODEN_DOOR_OPEN));
 
     /*public static final RegistryObject<Block> COPPER_BUTTON = BLOCKS.register("copper_button",
-            () -> new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of(Material.METAL,
-                    MaterialColor.COLOR_ORANGE).strength(1f).sound(SoundType.COPPER)));
+            () -> new CopperButtonBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> EXPOSED_COPPER_BUTTON = BLOCKS.register("exposed_copper_button",
-            () -> new CopperButtonBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.of(Material.METAL,
-                    MaterialColor.TERRACOTTA_LIGHT_GRAY).strength(1f).sound(SoundType.COPPER)));
+            () -> new CopperButtonBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> WEATHERED_COPPER_BUTTON = BLOCKS.register("weathered_copper_button",
-            () -> new CopperButtonBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.of(Material.METAL,
-                    MaterialColor.WARPED_STEM).strength(1f).sound(SoundType.COPPER)));
+            () -> new CopperButtonBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> OXIDIZED_COPPER_BUTTON = BLOCKS.register("oxidized_copper_button",
-            () -> new CopperButtonBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.of(Material.METAL,
-                    MaterialColor.WARPED_NYLIUM).strength(1f).sound(SoundType.COPPER)));
+            () -> new CopperButtonBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));*/
 
     public static final RegistryObject<Block> WAXED_COPPER_BUTTON = registerBlock("waxed_copper_button",
-            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f).noCollission().sound(SoundType.COPPER)));
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_BUTTON = registerBlock("waxed_exposed_copper_button",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f).noCollission().sound(SoundType.COPPER)));
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_BUTTON = registerBlock("waxed_weathered_copper_button",
-            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f).noCollission().sound(SoundType.COPPER)));
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_BUTTON = registerBlock("waxed_oxidized_copper_button",
-            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(1f).noCollission().sound(SoundType.COPPER)));*/
+            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(1F), 25, false, SoundEvents.STONE_BUTTON_CLICK_OFF,
+                    SoundEvents.STONE_BUTTON_CLICK_ON));
 
     public static final RegistryObject<Block> STRAWBERRY_PLANT = BLOCKS.register("strawberry_plant",
             () -> new StrawberryPlantBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().sound(SoundType.CROP)));

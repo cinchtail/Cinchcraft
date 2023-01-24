@@ -33,29 +33,28 @@ public class ModEvents {
                 event.setCanceled(true);
             }
         }
+        /*@SubscribeEvent
+        public static InteractionResult MelonShearing(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+            ItemStack itemstack = player.getItemInHand(interactionHand);
+            if (itemstack.canPerformAction(net.minecraftforge.common.ToolActions.SHEARS_CARVE)) {
+                if (!level.isClientSide) {
+                    Direction direction = blockHitResult.getDirection();
+                    Direction direction1 = direction.getAxis() == Direction.Axis.Y ? player.getDirection().getOpposite() : direction;
+                    level.playSound((Player) null, pos, SoundEvents.PUMPKIN_CARVE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    level.setBlock(pos, ModBlocks.CARVED_MELON.get().defaultBlockState().setValue(CarvedPumpkinBlock.FACING, direction1), 11);
+                    ItemEntity itementity = new ItemEntity(level, (double) pos.getX() + 0.5D + (double) direction1.getStepX() * 0.65D, (double) pos.getY() + 0.1D, (double) pos.getZ() + 0.5D + (double) direction1.getStepZ() * 0.65D, new ItemStack(Items.MELON_SEEDS, 4));
+                    itementity.setDeltaMovement(0.05D * (double) direction1.getStepX() + level.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double) direction1.getStepZ() + level.random.nextDouble() * 0.02D);
+                    level.addFreshEntity(itementity);
+                    itemstack.hurtAndBreak(1, player, (p_55287_) -> {
+                        p_55287_.broadcastBreakEvent(interactionHand);
+                    });
+                    level.gameEvent(player, GameEvent.SHEAR, pos);
+                    player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));
+                }
+
+                return InteractionResult.sidedSuccess(level.isClientSide);
+            }
+            return null;
+        }*/
     }
 }
-
-/*@SubscribeEvent
-    public static InteractionResult MelonShearing(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
-        ItemStack itemstack = player.getItemInHand(interactionHand);
-        if (itemstack.canPerformAction(net.minecraftforge.common.ToolActions.SHEARS_CARVE)) {
-            if (!level.isClientSide) {
-                Direction direction = blockHitResult.getDirection();
-                Direction direction1 = direction.getAxis() == Direction.Axis.Y ? player.getDirection().getOpposite() : direction;
-                level.playSound((Player) null, pos, SoundEvents.PUMPKIN_CARVE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                level.setBlock(pos, ModBlocks.CARVED_MELON.get().defaultBlockState().setValue(CarvedPumpkinBlock.FACING, direction1), 11);
-                ItemEntity itementity = new ItemEntity(level, (double) pos.getX() + 0.5D + (double) direction1.getStepX() * 0.65D, (double) pos.getY() + 0.1D, (double) pos.getZ() + 0.5D + (double) direction1.getStepZ() * 0.65D, new ItemStack(Items.MELON_SEEDS, 4));
-                itementity.setDeltaMovement(0.05D * (double) direction1.getStepX() + level.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double) direction1.getStepZ() + level.random.nextDouble() * 0.02D);
-                level.addFreshEntity(itementity);
-                itemstack.hurtAndBreak(1, player, (p_55287_) -> {
-                    p_55287_.broadcastBreakEvent(interactionHand);
-                });
-                level.gameEvent(player, GameEvent.SHEAR, pos);
-                player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));
-            }
-
-            return InteractionResult.sidedSuccess(level.isClientSide);
-        }
-        return null;
-    }*/

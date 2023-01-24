@@ -249,8 +249,8 @@ public class cinchcraft
             event.accept(ModBlocks.CROCUS);
             event.accept(ModBlocks.SMALL_ROSE);
             event.accept(ModBlocks.SMALL_CACTUS);
-            event.accept(ModBlocks.REEDS);
-            event.accept(ModItems.STALK);
+            //event.accept(ModBlocks.REEDS);
+            //event.accept(ModItems.STALK);
             event.accept(ModBlocks.NETHER_BRICK_FURNACE);
         }
         if(event.getTab() == ModCreativeModeTabItems.CINCHCRAFT_ITEM_TAB) {
@@ -287,7 +287,7 @@ public class cinchcraft
             event.accept(ModItems.EMERALD_HORSE_ARMOR);
             event.accept(ModItems.RUBY);
             event.accept(ModItems.COPPER_NUGGET);
-            event.accept(ModItems.COMPOST);
+            //event.accept(ModItems.COMPOST);
             event.accept(ModItems.CARROT_SEEDS);
             event.accept(ModItems.CHAINMAIL);
             event.accept(ModItems.BLUEBERRIES);
