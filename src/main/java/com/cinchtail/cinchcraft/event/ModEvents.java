@@ -36,18 +36,6 @@ public class ModEvents {
                 event.setCanceled(true);
             }
         }
-
-        @SubscribeEvent
-        public static void CompostSweetBerryFix(PlayerInteractEvent.RightClickBlock event, BlockState blockState, Player player, InteractionHand interactionHand) {
-            ItemStack stack = event.getItemStack();
-            int i = blockState.getValue(AGE);
-            boolean flag = i == 3;
-            if (stack.is(ModItems.COMPOST.get())) {
-                if (!flag && player.getItemInHand(interactionHand).is(ModItems.COMPOST.get()) || player.getItemInHand(interactionHand).is(Items.BONE_MEAL)) {
-                    event.setCanceled(true);
-                }
-            }
-        }
         /*@SubscribeEvent
         public static void CancelSunflowerPlacing(PlayerInteractEvent.RightClickBlock event) {
             ItemStack stack = event.getItemStack();
@@ -55,6 +43,17 @@ public class ModEvents {
                 event.setCanceled(true);
             }
         }*/
+        @SubscribeEvent
+        public static void CompostSweetBerryFix(PlayerInteractEvent.RightClickBlock event, BlockState blockState, Player player, InteractionHand interactionHand) {
+            ItemStack stack = event.getItemStack();
+            int i = blockState.getValue(AGE);
+            boolean flag = i == 3;
+            if (stack.is(ModItems.COMPOST.get())) {
+                if (flag && player.getItemInHand(interactionHand).is(ModItems.COMPOST.get())) {
+                    event.setCanceled(true);
+                }
+            }
+        }
         /*@SubscribeEvent
         public static InteractionResult MelonShearing(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
             ItemStack itemstack = player.getItemInHand(interactionHand);
