@@ -5,7 +5,7 @@
   "mixins": [
   ],
   "client": [
-
+    "SunflowerItemCraftRemainder"
   ],
   "injectors": {
     "defaultRequire": 1

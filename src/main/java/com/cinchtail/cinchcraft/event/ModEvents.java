@@ -2,6 +2,7 @@ package com.cinchtail.cinchcraft.event;
 
 import com.cinchtail.cinchcraft.block.ModBlocks;
 import com.cinchtail.cinchcraft.cinchcraft;
+import com.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -22,6 +23,8 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import static net.minecraft.world.level.block.SweetBerryBushBlock.AGE;
+
 
 public class ModEvents {
     @Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID)
@@ -31,6 +34,18 @@ public class ModEvents {
             ItemStack stack = event.getItemStack();
             if (stack.is(Items.CARROT)) {
                 event.setCanceled(true);
+            }
+        }
+
+        @SubscribeEvent
+        public static void CompostSweetBerryFix(PlayerInteractEvent.RightClickBlock event, BlockState blockState, Player player, InteractionHand interactionHand) {
+            ItemStack stack = event.getItemStack();
+            int i = blockState.getValue(AGE);
+            boolean flag = i == 3;
+            if (stack.is(ModItems.COMPOST.get())) {
+                if (!flag && player.getItemInHand(interactionHand).is(ModItems.COMPOST.get()) || player.getItemInHand(interactionHand).is(Items.BONE_MEAL)) {
+                    event.setCanceled(true);
+                }
             }
         }
         /*@SubscribeEvent
