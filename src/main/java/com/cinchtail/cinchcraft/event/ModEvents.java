@@ -34,6 +34,13 @@ public class ModEvents {
             }
         }
         /*@SubscribeEvent
+        public static void CancelSunflowerPlacing(PlayerInteractEvent.RightClickBlock event) {
+            ItemStack stack = event.getItemStack();
+            if (stack.is(Items.SUNFLOWER)) {
+                event.setCanceled(true);
+            }
+        }*/
+        /*@SubscribeEvent
         public static InteractionResult MelonShearing(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
             ItemStack itemstack = player.getItemInHand(interactionHand);
             if (itemstack.canPerformAction(net.minecraftforge.common.ToolActions.SHEARS_CARVE)) {

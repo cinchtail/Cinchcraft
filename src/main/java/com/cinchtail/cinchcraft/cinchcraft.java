@@ -226,7 +226,7 @@ public class cinchcraft
             event.accept(ModItems.APPLE_DOOR);
             event.accept(ModItems.APPLE_SIGN);
             event.accept(ModItems.APPLE_PRESSURE_PLATE);
-            event.accept(ModBlocks.APPLE_BUTTON);
+            event.accept(ModItems.APPLE_BUTTON);
             event.accept(ModBlocks.OAK_BARREL);
             event.accept(ModBlocks.BIRCH_BARREL);
             event.accept(ModBlocks.APPLE_BARREL);
@@ -236,7 +236,7 @@ public class cinchcraft
             event.accept(ModBlocks.MANGROVE_BARREL);
             event.accept(ModBlocks.CRIMSON_BARREL);
             event.accept(ModBlocks.WARPED_BARREL);
-            event.accept(ModBlocks.GLOWSTONE_TORCH);
+            event.accept(ModItems.GLOWSTONE_TORCH);
             event.accept(ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
             event.accept(ModBlocks.POLISHED_DEEPSLATE_BUTTON);
             event.accept(ModBlocks.IRON_BUTTON);
@@ -289,6 +289,7 @@ public class cinchcraft
             event.accept(ModItems.COPPER_NUGGET);
             //event.accept(ModItems.COMPOST);
             event.accept(ModItems.CARROT_SEEDS);
+            //event.accept(ModItems.SUNFLOWER_SEEDS);
             event.accept(ModItems.CHAINMAIL);
             event.accept(ModItems.BLUEBERRIES);
             event.accept(ModItems.BLUEBERRY_PIE);

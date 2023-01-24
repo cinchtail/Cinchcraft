@@ -155,12 +155,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
             () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),
-                    new Item.Properties()
-                            .food(new FoodProperties.Builder().nutrition(2).saturationMod(.1f).build())));
+                    new Item.Properties().food(ModFoods.BLUEBERRIES)));
 
     public static final RegistryObject<Item> BLUEBERRY_PIE = ITEMS.register("blueberry_pie",
-            () -> new Item(new Item.Properties()
-                    .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
+            () -> new Item(new Item.Properties().food(ModFoods.BLUEBERRY_PIE)));
 
     public static final RegistryObject<Item> CARROT_SEEDS = ITEMS.register("carrot_seeds",
             () -> new CarrotSeedItem(Blocks.CARROTS,
@@ -175,8 +173,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> PINEAPPLE = ITEMS.register("pineapple",
             () -> new ItemNameBlockItem(ModBlocks.PINEAPPLE_PLANT.get(),
-                    new Item.Properties()
-                            .food(new FoodProperties.Builder().nutrition(6).saturationMod(0.5F).build())));
+                    new Item.Properties().food(ModFoods.PINEAPPLE)));
 
     public static final RegistryObject<Item> STALK = ITEMS.register("stalk",
             () -> new StalkItem(ModBlocks.STALK.get(),
@@ -214,9 +211,9 @@ public class ModItems {
             () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_FENCE_GATE.get(),
                     new Item.Properties()));
 
-    //public static final RegistryObject<Item> APPLE_BUTTON = ITEMS.register("apple_button",
-            //() -> new ModWoodenButtonItem(ModBlocks.APPLE_BUTTON.get(),
-                    //new Item.Properties()));
+    public static final RegistryObject<Item> APPLE_BUTTON = ITEMS.register("apple_button",
+            () -> new ModWoodenButtonItem(ModBlocks.APPLE_BUTTON.get(),
+                    new Item.Properties()));
 
     public static final RegistryObject<Item> APPLE_PRESSURE_PLATE = ITEMS.register("apple_pressure_plate",
             () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_PRESSURE_PLATE.get(),
@@ -226,10 +223,9 @@ public class ModItems {
             () -> new ModStandingAndWallBlockItem(ModBlocks.GLOWSTONE_TORCH.get(), ModBlocks.GLOWSTONE_WALL_TORCH.get(),
                     new Item.Properties()));
 
-    /*public static final RegistryObject<Item> SUNFLOWER_SEEDS = ITEMS.register("sunflower_seeds",
-            () -> new ItemNameBlockItem(BlocksOverriding.SUNFLOWER.get(),
-                    new Item.Properties().tab(ModCreativeModeTab.CINCHCRAFT_TAB)
-                            .food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));*/
+    public static final RegistryObject<Item> SUNFLOWER_SEEDS = ITEMS.register("sunflower_seeds",
+            () -> new SunflowerSeedItem(Blocks.SUNFLOWER,
+                    new Item.Properties().food(ModFoods.SUNFLOWER_SEEDS)));
 
     public static final RegistryObject<Item> APPLE_TRAPDOOR = ITEMS.register("apple_trapdoor",
             () -> new ModWoodenFullBlockItem(ModBlocks.APPLE_TRAPDOOR.get(),
@@ -257,7 +253,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> STRAWBERRIES = ITEMS.register("strawberries",
             () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_PLANT.get(),
-                    new Item.Properties().food(new FoodProperties.Builder().nutrition(8).saturationMod(.3f).build())));
+                    new Item.Properties().food(ModFoods.STRAWBERRIES)));
 
     public static final RegistryObject<Item> FIRE_FERN = ITEMS.register("fire_fern",
             () -> new ItemNameBlockItem(ModBlocks.FIRE_FERN.get(),

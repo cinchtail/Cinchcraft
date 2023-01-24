@@ -315,7 +315,7 @@ public class ModBlocks {
                     OAK_PLANKS.defaultMaterialColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD),
                     SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN));
 
-    public static final RegistryObject<Block> APPLE_BUTTON = registerBlock("apple_button",
+    public static final RegistryObject<Block> APPLE_BUTTON = BLOCKS.register("apple_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission()
                     .strength(0.5F), 20, false, SoundEvents.WOODEN_BUTTON_CLICK_OFF,
                     SoundEvents.WOODEN_BUTTON_CLICK_ON));
