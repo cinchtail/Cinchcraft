@@ -25,12 +25,11 @@ import net.minecraft.world.level.biome.Biome;
 
 public class CinchcraftBiomes
 {
-    /*public static final ResourceKey<Biome> MIXED_FOREST = register("mixed_forest");
-
+    public static final ResourceKey<Biome> MIXED_FOREST = register("mixed_forest");
     public static final ResourceKey<Biome> ICE_CAVE = register("ice_cave");
 
     private static ResourceKey<Biome> register(String name)
     {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(cinchcraft.MOD_ID, name));
-    }*/
+    }
 }

@@ -1,5 +1,6 @@
 package com.cinchtail.cinchcraft.item.custom;
 
+import com.cinchtail.cinchcraft.effect.ModEffects;
 import com.google.common.collect.ImmutableMap;
 import com.cinchtail.cinchcraft.item.ModArmorMaterials;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -21,7 +22,7 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ModArmorMaterials.EMERALD,
-                            new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 200, 1)).build();
+                            new MobEffectInstance(ModEffects.SHINNY_AND_GREEN.get(), 200, 0)).build();
 
     public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);

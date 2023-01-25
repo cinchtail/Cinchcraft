@@ -1,6 +1,7 @@
 {
   "values": [
     "minecraft:dark_forest",
-    "minecraft:plains"
+    "minecraft:plains",
+    "cinchcraft:mixed_forest"
   ]
 }

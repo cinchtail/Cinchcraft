@@ -51,6 +51,8 @@
     "minecraft:frozen_peaks",
     "minecraft:dripstone_caves",
     "minecraft:lush_caves",
-    "minecraft:deep_dark"
+    "minecraft:deep_dark",
+    "cinchcraft:mixed_forest",
+    "cinchcraft:ice_cave"
   ]
 }

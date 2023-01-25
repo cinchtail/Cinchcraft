@@ -20,7 +20,6 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
@@ -37,7 +36,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
-import terrablender.api.Regions;
 
 @Mod(cinchcraft.MOD_ID)
 public class cinchcraft
@@ -83,7 +81,8 @@ public class cinchcraft
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModVillagers::registerPOIs);
 
-        //Regions.register(new TestRegion(new ResourceLocation(MOD_ID, "overworld"), 1));
+        CinchcraftRegion.Region();
+        CinchcraftCaveRegion.Region();
     }
 
     {
