@@ -1,14 +1,15 @@
 package com.cinchtail.cinchcraft.mixin;
 
+import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 
-@Mixin(Class.class)
-public class SunflowerItemCraftRemainder {
+@Mixin(Items.class)
+public class SunflowerCraftRemainder {
 
-    //@Inject(at = @At("HEAD"), method = "Lnet/minecraft/world/level/block/SweetBerryBushBlock")
-    //private void method(){
+    //@Inject(method = "items", at = @At("HEAD"))
+    //protected void injectSunflowerCraftRemainder(){
     //}
 }
 

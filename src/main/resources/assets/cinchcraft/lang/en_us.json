@@ -228,8 +228,13 @@
   "block.cinchcraft.mossy_mud_brick_slab": "Mossy Mud Brick Slab",
   "block.cinchcraft.mossy_mud_brick_stairs": "Mossy Mud Brick Stairs",
   "block.cinchcraft.permafrost": "Permafrost",
+  "block.cinchcraft.icicle": "Icicle",
+  "block.cinchcraft.chiseled_end_stone_bricks": "Chiseled End Stone Bricks",
   "block.cinchcraft.end_stone_wall": "End Stone Wall",
   "block.cinchcraft.end_stone_slab": "End Stone Slab",
   "block.cinchcraft.end_stone_stairs": "End Stone Stairs",
-  "block.cinchcraft.icicle": "Icicle"
+  "block.cinchcraft.cracked_stone_brick_wall": "Cracked Stone Brick Wall",
+  "block.cinchcraft.cracked_stone_brick_slab": "Cracked Stone Brick Slab",
+  "block.cinchcraft.cracked_stone_brick_stairs": "Cracked Stone Brick Stairs"
+
 }

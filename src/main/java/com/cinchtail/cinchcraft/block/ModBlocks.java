@@ -582,8 +582,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> PERMAFROST = registerBlock("permafrost",
             () -> new Block(BlockBehaviour.Properties.of(Material.ICE).strength(.9f).sound(SoundType.GRAVEL)));
 
+    public static final RegistryObject<Block> CHISELED_END_STONE_BRICKS = registerBlock("chiseled_end_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3.0F, 9.0F).sound(SoundType.STONE)));
+
     public static final RegistryObject<Block> END_STONE_STAIRS = registerBlock("end_stone_stairs",
-            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.STONE).strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> END_STONE_SLAB = registerBlock("end_stone_slab",
@@ -597,6 +600,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> ICICLE = registerBlock("icicle",
             () -> new IcicleBlock(BlockBehaviour.Properties.of(Material.ICE, MaterialColor.ICE).noOcclusion().sound(SoundType.GLASS).randomTicks()
                     .instabreak().dynamicShape().requiresCorrectToolForDrops().strength(1.0F, 2.0F).offsetType(BlockBehaviour.OffsetType.XZ)));
+
+    public static final RegistryObject<Block> CRACKED_STONE_BRICK_STAIRS = registerBlock("cracked_stone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> CRACKED_STONE_BRICK_SLAB = registerBlock("cracked_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> CRACKED_STONE_BRICK_WALL = registerBlock("cracked_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

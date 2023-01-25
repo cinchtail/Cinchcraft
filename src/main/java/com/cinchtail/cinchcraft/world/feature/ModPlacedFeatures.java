@@ -103,7 +103,7 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(50),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, FIRE_FERN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FIRE_FERN_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(5),
+                List.of(RarityFilter.onAverageOnceEvery(1),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
     }
 

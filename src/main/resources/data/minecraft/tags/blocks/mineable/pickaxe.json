@@ -106,6 +106,10 @@
     "cinchcraft:end_stone_wall",
     "cinchcraft:end_stone_slab",
     "cinchcraft:end_stone_stairs",
+    "cinchcraft:chiseled_end_stone_bricks",
+    "cinchcraft:cracked_stone_brick_wall",
+    "cinchcraft:cracked_stone_brick_slab",
+    "cinchcraft:cracked_stone_brick_stairs",
     "cinchcraft:icicle"
   ]
 }

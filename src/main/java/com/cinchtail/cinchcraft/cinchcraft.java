@@ -154,9 +154,13 @@ public class cinchcraft
             event.accept(ModBlocks.POLISHED_DRIPSTONE_STAIRS);
             event.accept(ModBlocks.POLISHED_DRIPSTONE_SLAB);
             event.accept(ModBlocks.POLISHED_DRIPSTONE_WALL);
+            event.accept(ModBlocks.CRACKED_STONE_BRICK_STAIRS);
+            event.accept(ModBlocks.CRACKED_STONE_BRICK_SLAB);
+            event.accept(ModBlocks.CRACKED_STONE_BRICK_WALL);
             event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.QUARTZ_BRICK_WALL);
+            event.accept(ModBlocks.CHISELED_END_STONE_BRICKS);
             event.accept(ModBlocks.END_STONE_STAIRS);
             event.accept(ModBlocks.END_STONE_SLAB);
             event.accept(ModBlocks.END_STONE_WALL);
