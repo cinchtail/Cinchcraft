@@ -27,7 +27,7 @@ public class WanderingTraderTrades {
                 , 7, 3));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.BLUEBERRIES.get(), 3)
                 , 7, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.BLUEBERRIES.get(), 3)
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.STRAWBERRIES.get(), 3)
                 , 7, 3));
         event.getRareTrades().add(new BasicItemListing(6, new ItemStack(Items.SPYGLASS, 1)
                 , 1, 10));
@@ -35,8 +35,8 @@ public class WanderingTraderTrades {
                 , 1, 10));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.GLOW_LICHEN, 2)
                 , 5, 5));
-        event.getRareTrades().add(new BasicItemListing(1, new ItemStack(ModItems.STRAWBERRIES.get(), 1)
-                , 5, 5));
+        event.getRareTrades().add(new BasicItemListing(2, new ItemStack(ModBlocks.ICICLE.get(), 1)
+                , 8, 5));
         event.getRareTrades().add(new BasicItemListing(10, new ItemStack(Items.WITHER_ROSE, 1)
                 , 1, 10));
         event.getGenericTrades().add(new BasicItemListing(2, new ItemStack(Items.POWDER_SNOW_BUCKET, 1)
@@ -53,5 +53,11 @@ public class WanderingTraderTrades {
                 , 8, 3));
         event.getGenericTrades().add(new BasicItemListing(2, new ItemStack(ModBlocks.SMALL_CACTUS.get(), 1)
                 , 8, 3));
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.HONEYCOMB, 1)
+                , 6, 3));
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.INK_SAC, 1)
+                , 5, 3));
+        event.getGenericTrades().add(new BasicItemListing(2, new ItemStack(Items.GLOW_INK_SAC, 1)
+                , 5, 3));
     }
 }
