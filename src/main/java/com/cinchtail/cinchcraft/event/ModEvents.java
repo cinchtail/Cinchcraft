@@ -10,6 +10,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -36,26 +37,15 @@ public class ModEvents {
                 event.setCanceled(true);
             }
         }
-        /*@SubscribeEvent
+        @SubscribeEvent
         public static void CancelSunflowerPlacing(PlayerInteractEvent.RightClickBlock event) {
             ItemStack stack = event.getItemStack();
             if (stack.is(Items.SUNFLOWER)) {
                 event.setCanceled(true);
             }
-        }*/
-        @SubscribeEvent
-        public static void CompostSweetBerryFix(PlayerInteractEvent.RightClickBlock event, BlockState blockState, Player player, InteractionHand interactionHand) {
-            ItemStack stack = event.getItemStack();
-            int i = blockState.getValue(AGE);
-            boolean flag = i == 3;
-            if (stack.is(ModItems.COMPOST.get())) {
-                if (flag && player.getItemInHand(interactionHand).is(ModItems.COMPOST.get())) {
-                    event.setCanceled(true);
-                }
-            }
         }
         /*@SubscribeEvent
-        public static InteractionResult MelonShearing(BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+        public static InteractionResult MelonShearing(PlayerInteractEvent.RightClickBlock event, BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
             ItemStack itemstack = player.getItemInHand(interactionHand);
             if (itemstack.canPerformAction(net.minecraftforge.common.ToolActions.SHEARS_CARVE)) {
                 if (!level.isClientSide) {
@@ -72,10 +62,20 @@ public class ModEvents {
                     level.gameEvent(player, GameEvent.SHEAR, pos);
                     player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));
                 }
-
                 return InteractionResult.sidedSuccess(level.isClientSide);
             }
             return null;
+        }*/
+        /*@SubscribeEvent
+        public static void CompostSweetBerryFix(PlayerInteractEvent.RightClickBlock event) {
+            ItemStack stack = ((LivingEntity) eventEntity).getMainHandItem();
+            int i = blockState.getValue(AGE);
+            boolean flag = i == 3;
+            if (stack.is(ModItems.COMPOST.get())) {
+                if (flag && player.getItemInHand(interactionHand).is(ModItems.COMPOST.get())) {
+                    event.setCanceled(true);
+                }
+            }
         }*/
     }
 }
