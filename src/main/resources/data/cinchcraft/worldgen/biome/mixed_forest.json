@@ -27,7 +27,6 @@
     "water_fog_color": 329011
   },
   "features": [
-    [],
     [
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
@@ -39,7 +38,6 @@
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
-    [],
     [
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
@@ -77,7 +75,10 @@
     ],
     [
       "minecraft:glow_lichen",
-      "nature_arise:mixed_forest_trees",
+      "minecraft:birch_bees_002",
+      "minecraft:birch_tall",
+      "minecraft:spruce",
+      "minecraft:trees_badlands",
       "minecraft:flower_default",
       "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",

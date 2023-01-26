@@ -48,9 +48,6 @@ public class cinchcraft
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
 
-        //ModBiomes.BIOME_REGISTER.register(modEventBus);
-        //ModBiomes.registerBiomes();
-
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 

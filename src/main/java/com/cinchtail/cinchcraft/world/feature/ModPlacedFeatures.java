@@ -42,7 +42,6 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> PINEAPPLE_PLANT_PLACED_KEY = createKey("pineapple_placed");
     public static final ResourceKey<PlacedFeature> STRAWBERRY_PLACED_KEY = createKey("strawberry_placed");
     public static final ResourceKey<PlacedFeature> MOD_SWEET_BERRIE_PLACED_KEY = createKey("mod_sweet_berrie_placed");
-
     public static final ResourceKey<PlacedFeature> ICICLE_CEILING = createKey("icicle_ceiling");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
@@ -54,7 +53,7 @@ public class ModPlacedFeatures {
                 VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(48)));
 
         register(context, RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_RUBY_ORE_KEY),
-                commonOrePlacement(14, // VeinsPerChunk
+                commonOrePlacement(12, // VeinsPerChunk
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(90))));
 
 
