@@ -1,4 +1,4 @@
-package com.cinchtail.cinchcraft;
+package com.cinchtail.cinchcraft.world.biomes;
 
 /**
  * Copyright (C) Glitchfiend
@@ -18,6 +18,7 @@ package com.cinchtail.cinchcraft;
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+import com.cinchtail.cinchcraft.cinchcraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;

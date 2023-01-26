@@ -16,6 +16,8 @@ import com.cinchtail.cinchcraft.sound.ModSounds;
 import com.cinchtail.cinchcraft.util.BetterBrewingRecipe;
 import com.cinchtail.cinchcraft.villager.ModVillagers;
 import com.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
+import com.cinchtail.cinchcraft.world.biomes.CinchcraftCaveRegion;
+import com.cinchtail.cinchcraft.world.biomes.CinchcraftRegion;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;

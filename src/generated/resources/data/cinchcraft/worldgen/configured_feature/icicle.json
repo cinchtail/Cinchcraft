@@ -1,0 +1,56 @@
+{
+  "type": "minecraft:block_column",
+  "config": {
+    "allowed_placement": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:air",
+        "minecraft:water"
+      ]
+    },
+    "direction": "down",
+    "layers": [
+      {
+        "height": {
+          "type": "minecraft:weighted_list",
+          "distribution": [
+            {
+              "data": 1,
+              "weight": 2
+            },
+            {
+              "data": 0,
+              "weight": 1
+            }
+          ]
+        },
+        "provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "cinchcraft:icicle",
+            "Properties": {
+              "thickness": "frustum",
+              "vertical_direction": "down",
+              "waterlogged": "false"
+            }
+          }
+        }
+      },
+      {
+        "height": 1,
+        "provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "cinchcraft:icicle",
+            "Properties": {
+              "thickness": "tip",
+              "vertical_direction": "down",
+              "waterlogged": "false"
+            }
+          }
+        }
+      }
+    ],
+    "prioritize_tip": true
+  }
+}

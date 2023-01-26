@@ -111,9 +111,10 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(1),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
-        register(context, ICICLE_CEILING, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICICLE_KEY), CountPlacement.of(256), InSquarePlacement.spread(),
-                PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP, BlockPredicate.solid(),
-                        BlockPredicate.matchesTag(BlockTags.DRIPSTONE_REPLACEABLE), 12), RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome());
+        register(context, ICICLE_CEILING, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICICLE_KEY), CountPlacement.of(256),
+                InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP,
+                        BlockPredicate.solid(), BlockPredicate.matchesTag(BlockTags.DRIPSTONE_REPLACEABLE), 12),
+                RandomOffsetPlacement.vertical(ConstantInt.of(-1)), BiomeFilter.biome());
     }
 
 

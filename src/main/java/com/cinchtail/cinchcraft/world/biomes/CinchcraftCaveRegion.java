@@ -1,4 +1,4 @@
-package com.cinchtail.cinchcraft;
+package com.cinchtail.cinchcraft.world.biomes;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;

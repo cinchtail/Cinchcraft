@@ -50,13 +50,13 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'naturearise'
+            property 'forge.enabledGameTestNamespaces', 'cinchcraft'
 
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile',"${buildDir}/createSrgToMcp/output.srg"
 
             mods {
-                naturearise {
+                cinchcraft {
                     source sourceSets.main
                 }
             }
@@ -69,13 +69,13 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'naturearise'
+            property 'forge.enabledGameTestNamespaces', 'cinchcraft'
 
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile',"${buildDir}/createSrgToMcp/output.srg"
 
             mods {
-                naturearise {
+                cinchcraft {
                     source sourceSets.main
                 }
             }
