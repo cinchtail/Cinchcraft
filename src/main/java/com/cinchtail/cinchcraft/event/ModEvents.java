@@ -37,13 +37,13 @@ public class ModEvents {
                 event.setCanceled(true);
             }
         }
-        @SubscribeEvent
+        /*@SubscribeEvent
         public static void CancelSunflowerPlacing(PlayerInteractEvent.RightClickBlock event) {
             ItemStack stack = event.getItemStack();
             if (stack.is(Items.SUNFLOWER)) {
                 event.setCanceled(true);
             }
-        }
+        }*/
         /*@SubscribeEvent
         public static InteractionResult MelonShearing(PlayerInteractEvent.RightClickBlock event, BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
             ItemStack itemstack = player.getItemInHand(interactionHand);

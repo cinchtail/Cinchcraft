@@ -37,6 +37,7 @@ public class CinchcraftRegion extends Region {
                     .weirdness(ParameterUtils.Weirdness.span(ParameterUtils.Weirdness.LOW_SLICE_NORMAL_DESCENDING, ParameterUtils.Weirdness.LOW_SLICE_VARIANT_ASCENDING))
                     .build();
             mixedForestPoint.forEach(point -> addBiome(mapper, point, CinchcraftBiomes.MIXED_FOREST));
+            builder.build().forEach(mapper::accept);
         });
     }
 }

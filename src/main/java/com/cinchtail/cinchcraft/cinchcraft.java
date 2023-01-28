@@ -83,11 +83,6 @@ public class cinchcraft
         CinchcraftRegion.Region();
         CinchcraftCaveRegion.Region();
     }
-
-    {
-        LOGGER.info("HELLO FROM COMMON SETUP");
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
-    }
     @Mod.EventBusSubscriber(modid = cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class commonSetup {
 
@@ -300,5 +295,9 @@ public class cinchcraft
             event.accept(ModItems.VEGETABLE_STEW);
             event.accept(ModItems.NETHER_SALAD);
         }
+    }
+    {
+        LOGGER.info("HELLO FROM COMMON SETUP");
+        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
 }
