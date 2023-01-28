@@ -9,7 +9,6 @@
   "downfall": 0.8,
   "effects": {
     "fog_color": 12638463,
-    "grass_color" : 8960871,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -75,11 +74,13 @@
     ],
     [
       "minecraft:glow_lichen",
+      "minecraft:forest_flowers",
       "minecraft:birch_bees_002",
       "minecraft:birch_tall",
       "minecraft:spruce",
       "minecraft:trees_badlands",
       "minecraft:trees_windswept_forest",
+      "minecraft:oak",
       "minecraft:flower_default",
       "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
@@ -129,16 +130,16 @@
         "weight": 8
       },
       {
-        "type": "minecraft:fox",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 5
+        "type": "minecraft:rabbit",
+        "maxCount": 3,
+        "minCount": 2,
+        "weight": 4
       },
       {
-        "type": "minecraft:rabbit",
+        "type": "minecraft:fox",
         "maxCount": 4,
-        "minCount": 4,
-        "weight": 5
+        "minCount": 2,
+        "weight": 8
       }
     ],
     "misc": [],

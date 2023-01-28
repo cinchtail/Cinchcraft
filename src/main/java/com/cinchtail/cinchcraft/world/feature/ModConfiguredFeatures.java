@@ -144,7 +144,7 @@ public class ModConfiguredFeatures {
         register(context, ICICLE_KEY, Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(BlockColumnConfiguration.layer(new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(ConstantInt.of(1),
                 2).add(ConstantInt.of(0), 1).build()), BlockStateProvider.simple(ModBlocks.ICICLE.get().defaultBlockState().setValue(IcicleBlock.TIP_DIRECTION,
                 Direction.DOWN).setValue(IcicleBlock.THICKNESS, DripstoneThickness.FRUSTUM))), BlockColumnConfiguration.layer(ConstantInt.of(1),
-                BlockStateProvider.simple(ModBlocks.ICICLE.get().defaultBlockState().setValue(IcicleBlock.TIP_DIRECTION, Direction.DOWN)))), Direction.DOWN, BlockPredicate.ONLY_IN_AIR_OR_WATER_PREDICATE, true));
+                BlockStateProvider.simple(ModBlocks.ICICLE.get().defaultBlockState().setValue(IcicleBlock.TIP_DIRECTION, Direction.DOWN)))), Direction.DOWN, BlockPredicate.ONLY_IN_AIR_PREDICATE, true));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
