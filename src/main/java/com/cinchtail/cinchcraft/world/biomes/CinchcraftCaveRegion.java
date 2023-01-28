@@ -20,7 +20,7 @@ public class CinchcraftCaveRegion extends Region {
     }
 
     public static void Region() {
-        Regions.register(new CinchcraftCaveRegion(new ResourceLocation("cinchcraft", "cave"), 6));
+        Regions.register(new CinchcraftCaveRegion(new ResourceLocation("cinchcraft", "cave"), 4));
     }
 
     @Override
@@ -35,6 +35,18 @@ public class CinchcraftCaveRegion extends Region {
                     .weirdness(ParameterUtils.Weirdness.FULL_RANGE)
                     .build();
             frozenCavesPoint.forEach(point -> addBiome(mapper, point, CinchcraftBiomes.ICE_CAVE));
+
+            List<Climate.ParameterPoint> mixedForestPoint = new ParameterUtils.ParameterPointListBuilder()
+                    .temperature(ParameterUtils.Temperature.span(ParameterUtils.Temperature.COOL, ParameterUtils.Temperature.NEUTRAL))
+                    .humidity(ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.WET, ParameterUtils.Humidity.HUMID)
+                    .continentalness(Climate.Parameter.span(-0.2F, 1.0F))
+                    .erosion(ParameterUtils.Erosion.span(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_4))
+                    .depth(ParameterUtils.Depth.SURFACE)
+                    .weirdness(ParameterUtils.Weirdness.span(ParameterUtils.Weirdness.LOW_SLICE_NORMAL_DESCENDING, ParameterUtils.Weirdness.LOW_SLICE_VARIANT_ASCENDING))
+                    .build();
+            mixedForestPoint.forEach(point -> addBiome(mapper, point, CinchcraftBiomes.MIXED_FOREST));
+            builder.build().forEach(mapper::accept);
+
         });
     }
 }
