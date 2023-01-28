@@ -3,6 +3,7 @@ package com.cinchtail.cinchcraft.block.custom;
 import com.cinchtail.cinchcraft.util.ModBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -84,14 +85,6 @@ public class ReedsBlock extends DoublePlantBlock implements SimpleWaterloggedBlo
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(HALF, WATERLOGGED, FACING);
-    }
-
-    public BlockState rotate(BlockState blockState, Rotation rotation) {
-        return blockState.setValue(FACING, rotation.rotate(blockState.getValue(FACING)));
-    }
-
-    public BlockState mirror(BlockState blockState, Mirror mirror) {
-        return blockState.rotate(mirror.getRotation(blockState.getValue(FACING)));
     }
 
     public float getMaxVerticalOffset() {
