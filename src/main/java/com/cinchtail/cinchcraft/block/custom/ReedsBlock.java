@@ -31,6 +31,7 @@ import javax.annotation.Nullable;
 public class ReedsBlock extends DoublePlantBlock implements SimpleWaterloggedBlock {
     private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    protected static final float AABB_OFFSET = 6.0F;
     protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 
     public ReedsBlock(BlockBehaviour.Properties properties) {
@@ -43,7 +44,7 @@ public class ReedsBlock extends DoublePlantBlock implements SimpleWaterloggedBlo
     }
 
     protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
-        return blockState.is(ModBlockTags.REEDS_PLACEABLE) || blockGetter.getBlockState(pos.above()).is(Blocks.AIR) ||
+        return blockState.is(ModBlockTags.REEDS_PLACEABLE) && blockGetter.getBlockState(pos.above()).is(Blocks.AIR) ||
                 blockGetter.getBlockState(pos.below()).is(ModBlocks.REEDS.get()) && super.mayPlaceOn(blockState, blockGetter, pos);
     }
 

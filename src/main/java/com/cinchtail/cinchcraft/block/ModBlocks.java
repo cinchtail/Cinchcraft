@@ -619,7 +619,7 @@ public class ModBlocks {
                     .strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> ALYSSUM = registerBlock("alyssum",
-            () -> new AlyssumFlowerBlock(MobEffects.CONFUSION, 5, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
+            () -> new AlyssumFlowerBlock(MobEffects.CONFUSION, 12, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
 
     public static final RegistryObject<FlowerPotBlock> POTTED_ALYSSUM = BLOCKS.register("potted_alyssum",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.ALYSSUM, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
