@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "cinchcraft:block/alyssum"
+  },
+  "render_type": "cutout"
+}

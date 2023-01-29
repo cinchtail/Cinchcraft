@@ -7,7 +7,6 @@ import net.minecraft.world.level.block.Block;
 public class ModBlockTags {
 
     public static final TagKey<Block> REEDS_PLACEABLE = create("reeds_placeable");
-    public static final TagKey<Block> APPLE_LOGS = create("apple_logs");
 
     private ModBlockTags() {
     }

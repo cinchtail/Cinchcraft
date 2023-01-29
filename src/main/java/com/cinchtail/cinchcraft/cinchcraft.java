@@ -94,6 +94,7 @@ public class cinchcraft
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CROCUS.getId(), ModBlocks.POTTED_CROCUS);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SMALL_CACTUS.getId(), ModBlocks.POTTED_SMALL_CACTUS);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.APPLE_SAPLING.getId(), ModBlocks.POTTED_APPLE_SAPLING);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.ALYSSUM.getId(), ModBlocks.POTTED_ALYSSUM);
 
                 BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
                         Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get()));
@@ -244,6 +245,7 @@ public class cinchcraft
             event.accept(ModBlocks.BUBBLE_FLOWER);
             event.accept(ModBlocks.BUTTER_CUP);
             event.accept(ModBlocks.CROCUS);
+            event.accept(ModBlocks.ALYSSUM);
             event.accept(ModBlocks.SMALL_ROSE);
             event.accept(ModBlocks.SMALL_CACTUS);
             //event.accept(ModBlocks.REEDS);
