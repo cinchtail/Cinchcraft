@@ -122,7 +122,7 @@ public class ModConfiguredFeatures {
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ALYSSUM.get())))));
 
         register(context, ALYSSUM_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(32, 20, 5, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ALYSSUM.get())))));
 
         register(context, BUBBLE_FLOWER_KEY, Feature.FLOWER,
