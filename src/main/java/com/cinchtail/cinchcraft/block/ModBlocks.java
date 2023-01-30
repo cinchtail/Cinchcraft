@@ -667,7 +667,7 @@ public class ModBlocks {
 
         @SubscribeEvent
         static void registerBlockColor(RegisterColorHandlersEvent.Block event) {
-            //event.register(((state, btGetter, pos, tintIndex) -> btGetter == null || pos == null ? 0 : btGetter.getBlockTint(pos, COLOR_RESOLVER)), APPLE_LEAVES.get());
+            //event.register(((state, btGetter, pos, tintIndex) -> btGetter == null || pos == null ? 0 : btGetter.getBlockTint(pos, COLOR_RESOLVER)), REEDS.get());
         }
     }
 }
