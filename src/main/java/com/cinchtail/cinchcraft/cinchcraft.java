@@ -224,6 +224,7 @@ public class cinchcraft
             event.accept(ModItems.APPLE_SIGN);
             event.accept(ModItems.APPLE_PRESSURE_PLATE);
             event.accept(ModItems.APPLE_BUTTON);
+            event.accept(ModBlocks.APPLE_LEAVES);
             event.accept(ModBlocks.OAK_BARREL);
             event.accept(ModBlocks.BIRCH_BARREL);
             event.accept(ModBlocks.APPLE_BARREL);
@@ -247,7 +248,7 @@ public class cinchcraft
             event.accept(ModBlocks.ALYSSUM);
             event.accept(ModBlocks.SMALL_ROSE);
             event.accept(ModBlocks.SMALL_CACTUS);
-            //event.accept(ModBlocks.REEDS);
+            event.accept(ModBlocks.REEDS);
             //event.accept(ModItems.STALK);
             event.accept(ModBlocks.NETHER_BRICK_FURNACE);
         }

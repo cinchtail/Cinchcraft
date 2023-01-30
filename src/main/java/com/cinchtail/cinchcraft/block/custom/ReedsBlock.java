@@ -41,11 +41,6 @@ public class ReedsBlock extends DoublePlantBlock implements SimpleWaterloggedBlo
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {
         return SHAPE;
     }
-    protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
-        return blockState.is(ModBlockTags.REEDS_PLACEABLE)
-                && blockGetter.getFluidState(pos.above()).is(Fluids.WATER)
-                && blockGetter.getFluidState(pos.below(2)).isEmpty();
-    }
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
         BlockState blockstate = super.getStateForPlacement(placeContext);
@@ -63,21 +58,25 @@ public class ReedsBlock extends DoublePlantBlock implements SimpleWaterloggedBlo
         return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
     }
     @Override
-    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos) {
+    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos)
+    {
         if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER)
         {
             BlockState blockstate = levelReader.getBlockState(pos.below());
             return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER;
         }
+
         else if(blockState.getValue(HALF) == DoubleBlockHalf.LOWER && blockState.getValue(WATERLOGGED))
         {
-            return this.mayPlaceOn(levelReader.getBlockState(pos.below()), levelReader, pos.below());
+            return levelReader.getBlockState(pos.below()).is(ModBlockTags.REEDS_PLACEABLE)
+                    && levelReader.getFluidState(pos).is(Fluids.WATER)
+                    && levelReader.getFluidState(pos.above()).isEmpty();
         }
+
         else
         {
             return false;
         }
-
     }
     public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState1, LevelAccessor levelAccessor, BlockPos pos, BlockPos pos1) {
         if (blockState.getValue(WATERLOGGED)) {
