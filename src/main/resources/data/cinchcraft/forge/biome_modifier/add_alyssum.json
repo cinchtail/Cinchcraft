@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_alyssum_biomes",
+  "feature": "cinchcraft:alyssum_placed"
+}
