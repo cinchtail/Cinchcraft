@@ -28,6 +28,7 @@ public class CinchcraftBiomes
 {
     public static final ResourceKey<Biome> MIXED_FOREST = register("mixed_forest");
     public static final ResourceKey<Biome> ICE_CAVE = register("ice_cave");
+    public static final ResourceKey<Biome> ALYSSUM_FIELDS = register("alyssum_fields");
 
     private static ResourceKey<Biome> register(String name)
     {

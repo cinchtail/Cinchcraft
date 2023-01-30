@@ -43,6 +43,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> STRAWBERRY_PLACED_KEY = createKey("strawberry_placed");
     public static final ResourceKey<PlacedFeature> MOD_SWEET_BERRIE_PLACED_KEY = createKey("mod_sweet_berrie_placed");
     public static final ResourceKey<PlacedFeature> ICICLE_CEILING = createKey("icicle_ceiling");
+    public static final ResourceKey<PlacedFeature> REEDS_PLACED_KEY = createKey("reeds_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -115,6 +116,10 @@ public class ModPlacedFeatures {
                 InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP,
                         BlockPredicate.solid(), BlockPredicate.matchesTag(BlockTags.DRIPSTONE_REPLACEABLE), 12),
                 RandomOffsetPlacement.vertical(ConstantInt.of(0)), BiomeFilter.biome());
+
+        register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(1),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BiomeFilter.biome()));
     }
 
 

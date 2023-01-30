@@ -28,6 +28,16 @@ public class CinchcraftRegion extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
+            List<Climate.ParameterPoint> alyssumfieldsPoint = new ParameterUtils.ParameterPointListBuilder()
+                    .temperature(ParameterUtils.Temperature.span(ParameterUtils.Temperature.COOL, ParameterUtils.Temperature.NEUTRAL))
+                    .humidity(ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.WET, ParameterUtils.Humidity.HUMID)
+                    .continentalness(Climate.Parameter.span(-0.2F, 1.0F))
+                    .erosion(ParameterUtils.Erosion.span(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_4))
+                    .depth(ParameterUtils.Depth.SURFACE)
+                    .weirdness(ParameterUtils.Weirdness.span(ParameterUtils.Weirdness.LOW_SLICE_NORMAL_DESCENDING, ParameterUtils.Weirdness.LOW_SLICE_VARIANT_ASCENDING))
+                    .build();
+            alyssumfieldsPoint.forEach(point -> addBiome(mapper, point, CinchcraftBiomes.ALYSSUM_FIELDS));
+
             List<Climate.ParameterPoint> mixedForestPoint = new ParameterUtils.ParameterPointListBuilder()
                     .temperature(ParameterUtils.Temperature.span(ParameterUtils.Temperature.COOL, ParameterUtils.Temperature.NEUTRAL))
                     .humidity(ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.WET, ParameterUtils.Humidity.HUMID)
@@ -37,7 +47,8 @@ public class CinchcraftRegion extends Region {
                     .weirdness(ParameterUtils.Weirdness.span(ParameterUtils.Weirdness.LOW_SLICE_NORMAL_DESCENDING, ParameterUtils.Weirdness.LOW_SLICE_VARIANT_ASCENDING))
                     .build();
             mixedForestPoint.forEach(point -> addBiome(mapper, point, CinchcraftBiomes.MIXED_FOREST));
-            builder.build().forEach(mapper::accept);
+
+            builder.build().forEach(mapper);
 
         });
     }
