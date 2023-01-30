@@ -84,7 +84,6 @@ public class ModPlacedFeatures {
                 commonOrePlacement(4, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 
-
         register(context, BUTTER_CUP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUTTER_CUP_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(16),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
@@ -97,13 +96,11 @@ public class ModPlacedFeatures {
         register(context, ALYSSUM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ALYSSUM_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(16),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
         register(context, BLUEBERRIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUEBERRIES_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(18),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, BUBBLE_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUBBLE_FLOWER_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(42),
-                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-        register(context, SMALL_CACTUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_CACTUS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(42),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, PINEAPPLE_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINEAPPLE_PLANT_KEY),
@@ -115,18 +112,23 @@ public class ModPlacedFeatures {
         register(context, STRAWBERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(50),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+        register(context, SMALL_CACTUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_CACTUS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(42),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, FIRE_FERN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FIRE_FERN_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(1),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(1), InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
 
         register(context, ICICLE_CEILING, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICICLE_KEY), CountPlacement.of(256),
                 InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP,
                         BlockPredicate.solid(), BlockPredicate.matchesTag(BlockTags.DRIPSTONE_REPLACEABLE), 12),
                 RandomOffsetPlacement.vertical(ConstantInt.of(0)), BiomeFilter.biome());
 
-        register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(1),
-                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BiomeFilter.biome()));
+
     }
 
 

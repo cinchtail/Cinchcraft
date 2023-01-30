@@ -482,34 +482,34 @@ public class ModBlocks {
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICKS = registerBlock("mossy_deepslate_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).sound(SoundType.DEEPSLATE_BRICKS).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICK_STAIRS = registerBlock("mossy_deepslate_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICK_SLAB = registerBlock("mossy_deepslate_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICK_WALL = registerBlock("mossy_deepslate_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_TILES = registerBlock("mossy_deepslate_tiles",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).sound(SoundType.DEEPSLATE_TILES).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_TILE_STAIRS = registerBlock("mossy_deepslate_tile_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    BlockBehaviour.Properties.of(Material.STONE).strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_TILE_SLAB = registerBlock("mossy_deepslate_tile_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_TILE_WALL = registerBlock("mossy_deepslate_tile_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
 
     public static final RegistryObject<Block> APPLE_TRAPDOOR = BLOCKS.register("apple_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).sound(SoundType.WOOD)
@@ -623,6 +623,18 @@ public class ModBlocks {
 
     public static final RegistryObject<FlowerPotBlock> POTTED_ALYSSUM = BLOCKS.register("potted_alyssum",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.ALYSSUM, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_BRICK_STAIRS = registerBlock("cracked_deepslate_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(3.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
+
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_BRICK_SLAB = registerBlock("cracked_deepslate_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
+
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_BRICK_WALL = registerBlock("cracked_deepslate_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
