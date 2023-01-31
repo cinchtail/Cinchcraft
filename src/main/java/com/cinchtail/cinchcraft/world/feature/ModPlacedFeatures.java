@@ -120,8 +120,9 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(1),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
-                List.of(CountPlacement.of(100), InSquarePlacement.spread(),
+                List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
+
 
         register(context, ICICLE_CEILING, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICICLE_KEY), CountPlacement.of(256),
                 InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP,

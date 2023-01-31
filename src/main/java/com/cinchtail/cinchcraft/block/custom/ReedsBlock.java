@@ -35,7 +35,7 @@ public class ReedsBlock extends DoublePlantBlock implements SimpleWaterloggedBlo
 
     public ReedsBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(HALF, DoubleBlockHalf.LOWER).setValue(WATERLOGGED, Boolean.FALSE).setValue(FACING, Direction.NORTH));
+        this.registerDefaultState(this.stateDefinition.any().setValue(HALF, DoubleBlockHalf.LOWER).setValue(WATERLOGGED, Boolean.TRUE).setValue(FACING, Direction.NORTH));
     }
 
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {
