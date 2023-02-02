@@ -39,7 +39,6 @@ public class NetherBrickFurnaceBlock extends AbstractFurnaceBlock {
 
     }
 
-
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState blockState) {

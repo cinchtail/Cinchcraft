@@ -18,6 +18,7 @@ import net.minecraft.world.level.ColorResolver;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,6 +31,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 import static net.minecraft.world.level.block.Blocks.OAK_PLANKS;
 
@@ -239,7 +241,8 @@ public class ModBlocks {
             () -> new BubbleFlowerBlock(MobEffects.LEVITATION, 4, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
 
     public static final RegistryObject<Block> NETHER_BRICK_FURNACE = registerBlock("nether_brick_furnace",
-            () -> new NetherBrickFurnaceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
+            () -> new NetherBrickFurnaceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHER_BRICKS).lightLevel(litBlockEmission(13))));
 
     public static final RegistryObject<Block> CARVED_MELON = registerBlock("carved_melon",
             () -> new CarvedMelonBlock(BlockBehaviour.Properties.copy(Blocks.CARVED_PUMPKIN).strength(1f).sound(SoundType.WOOD)));
@@ -653,6 +656,11 @@ public class ModBlocks {
 
     private static Boolean never(BlockState p_50779_, BlockGetter p_50780_, BlockPos p_50781_, EntityType<?> p_50782_) {
         return false;
+    }
+    private static ToIntFunction<BlockState> litBlockEmission(int i) {
+        return (p_50763_) -> {
+            return p_50763_.getValue(BlockStateProperties.LIT) ? i : 0;
+        };
     }
 
    @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
