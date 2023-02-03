@@ -153,6 +153,9 @@ public class cinchcraft
             event.accept(ModBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS);
             event.accept(ModBlocks.CRACKED_DEEPSLATE_BRICK_SLAB);
             event.accept(ModBlocks.CRACKED_DEEPSLATE_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_DEEPSLATE_TILE_STAIRS);
+            event.accept(ModBlocks.CRACKED_DEEPSLATE_TILE_SLAB);
+            event.accept(ModBlocks.CRACKED_DEEPSLATE_TILE_WALL);
             event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.QUARTZ_BRICK_WALL);

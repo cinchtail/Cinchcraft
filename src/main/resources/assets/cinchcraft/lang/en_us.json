@@ -240,5 +240,8 @@
   "Block.cinchcraft.potted_alyssum": "Potted Alyssum",
   "block.cinchcraft.cracked_deepslate_brick_wall": "Cracked Deepslate Brick Wall",
   "block.cinchcraft.cracked_deepslate_brick_slab": "Cracked Deepslate Brick Slab",
-  "block.cinchcraft.cracked_deepslate_brick_stairs": "Cracked Deepslate Brick Stairs"
+  "block.cinchcraft.cracked_deepslate_brick_stairs": "Cracked Deepslate Brick Stairs",
+  "block.cinchcraft.cracked_deepslate_tile_wall": "Cracked Deepslate Tile Wall",
+  "block.cinchcraft.cracked_deepslate_tile_slab": "Cracked Deepslate Tile Slab",
+  "block.cinchcraft.cracked_deepslate_tile_stairs": "Cracked Deepslate Tile Stairs"
 }

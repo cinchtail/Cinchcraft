@@ -113,6 +113,9 @@
     "cinchcraft:icicle",
     "cinchcraft:cracked_deepslate_brick_wall",
     "cinchcraft:cracked_deepslate_brick_slab",
-    "cinchcraft:cracked_deepslate_brick_stairs"
+    "cinchcraft:cracked_deepslate_brick_stairs",
+    "cinchcraft:cracked_deepslate_tile_wall",
+    "cinchcraft:cracked_deepslate_tile_slab",
+    "cinchcraft:cracked_deepslate_tile_stairs"
   ]
 }
