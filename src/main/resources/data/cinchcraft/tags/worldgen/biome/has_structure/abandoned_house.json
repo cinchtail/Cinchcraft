@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:forest",
-    "minecraft:meadow"
+    "minecraft:meadow",
+    "cinchcraft:alyssum_fields"
   ]
 }
