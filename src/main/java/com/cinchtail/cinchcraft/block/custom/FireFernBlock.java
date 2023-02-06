@@ -18,6 +18,11 @@ public class FireFernBlock extends DoublePlantBlock {
     public FireFernBlock(Properties properties) {
         super(properties);
     }
+    @Override
+    protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
+        return super.mayPlaceOn(blockState, blockGetter, pos) || blockState.is(Blocks.NETHERRACK) || blockState.is(Blocks.SOUL_SAND) || blockState.is(Blocks.SOUL_SOIL) ||
+                blockState.is(Blocks.BASALT) || blockState.is(Blocks.MAGMA_BLOCK) || blockState.is(Blocks.CRIMSON_NYLIUM) || blockState.is(Blocks.WARPED_NYLIUM) || blockState.is(Blocks.BLACKSTONE);
+    }
 
     public void animateTick(BlockState blockState, Level level, BlockPos pos, RandomSource randomSource) {
         VoxelShape voxelshape = this.getShape(blockState, level, pos, CollisionContext.empty());
@@ -39,10 +44,5 @@ public class FireFernBlock extends DoublePlantBlock {
             entity.setSecondsOnFire(4);
         }
         super.stepOn(level, pos, state, entity);
-    }
-    @Override
-    protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
-        return super.mayPlaceOn(blockState, blockGetter, pos) || blockState.is(Blocks.NETHERRACK) || blockState.is(Blocks.SOUL_SAND) || blockState.is(Blocks.SOUL_SOIL) ||
-                blockState.is(Blocks.BASALT) || blockState.is(Blocks.MAGMA_BLOCK) || blockState.is(Blocks.CRIMSON_NYLIUM) || blockState.is(Blocks.WARPED_NYLIUM) || blockState.is(Blocks.BLACKSTONE);
     }
 }

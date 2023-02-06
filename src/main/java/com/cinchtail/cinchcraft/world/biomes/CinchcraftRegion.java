@@ -22,7 +22,7 @@ public class CinchcraftRegion extends Region {
     }
 
     public static void Region() {
-        Regions.register(new CinchcraftCaveRegion(new ResourceLocation("cinchcraft", "overworld"), 6));
+        Regions.register(new CinchcraftRegion(new ResourceLocation("cinchcraft", "overworld"), 6));
     }
 
     @Override
