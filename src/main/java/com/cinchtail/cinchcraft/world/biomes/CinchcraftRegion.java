@@ -30,11 +30,11 @@ public class CinchcraftRegion extends Region {
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
             List<Climate.ParameterPoint> alyssumfieldsPoint = new ParameterUtils.ParameterPointListBuilder()
                     .temperature(ParameterUtils.Temperature.span(ParameterUtils.Temperature.COOL, ParameterUtils.Temperature.NEUTRAL))
-                    .humidity(ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.WET, ParameterUtils.Humidity.HUMID)
+                    .humidity(ParameterUtils.Humidity.WET, ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Humidity.HUMID)
                     .continentalness(Climate.Parameter.span(-0.2F, 1.0F))
-                    .erosion(ParameterUtils.Erosion.span(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_4))
+                    .erosion(ParameterUtils.Erosion.span(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_1))
                     .depth(ParameterUtils.Depth.SURFACE)
-                    .weirdness(ParameterUtils.Weirdness.span(ParameterUtils.Weirdness.LOW_SLICE_NORMAL_DESCENDING, ParameterUtils.Weirdness.LOW_SLICE_VARIANT_ASCENDING))
+                    .weirdness(ParameterUtils.Weirdness.span(ParameterUtils.Weirdness.VALLEY, ParameterUtils.Weirdness.LOW_SLICE_VARIANT_ASCENDING))
                     .build();
             alyssumfieldsPoint.forEach(point -> addBiome(mapper, point, CinchcraftBiomes.ALYSSUM_FIELDS));
 
